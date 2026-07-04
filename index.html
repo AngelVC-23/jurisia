@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JurisIA – Asistente Legal Peruano con Inteligencia Artificial</title>
 <meta name="description" content="JurisIA: redacción de escritos legales, chat legal con IA, jurisprudencia y guías legales para el Perú. Democratizando el acceso a la justicia.">
+<meta property="og:title" content="JurisIA – Asistente Legal Peruano con IA">
+<meta property="og:description" content="61 modelos de escritos legales, chat legal inteligente, jurisprudencia, calculadoras y guías paso a paso. Gratis, privado y hecho para el Perú.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://angelvc-23.github.io/jurisia/">
+<meta property="og:image" content="https://angelvc-23.github.io/jurisia/og.png">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%232C4C3B"/><text x="32" y="44" font-size="34" text-anchor="middle">⚖️</text></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,6 +33,7 @@
   --penal:#B0483A;
   --admin:#6B5CA5;
   --consti:#A0752F;
+  --tribu:#7A6234;
   --bg:#F5F5F0;
   --surface:#ffffff;
   --ink:#1F2421;
@@ -156,11 +165,13 @@ a{color:var(--navy);text-decoration:none}
 .tag-penal{background:#F2E2DF;color:var(--penal)}
 .tag-administrativo{background:#E9E6F2;color:var(--admin)}
 .tag-constitucional{background:#F0E9D8;color:var(--consti)}
+.tag-tributario{background:#EFE9DC;color:var(--tribu)}
 .bl-civil{border-left:4px solid var(--civil)}
 .bl-laboral{border-left:4px solid var(--laboral)}
 .bl-penal{border-left:4px solid var(--penal)}
 .bl-administrativo{border-left:4px solid var(--admin)}
 .bl-constitucional{border-left:4px solid var(--consti)}
+.bl-tributario{border-left:4px solid var(--tribu)}
 
 /* ---------- Wizard ---------- */
 .wiz-progress{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:22px}
@@ -355,10 +366,10 @@ a{color:var(--navy);text-decoration:none}
         <button class="btn btn-outline" onclick="enterApp('chat')">💬 Consultar al Chat Legal</button>
       </div>
       <div class="hero-stats">
-        <div class="hstat"><b>38</b><span>Modelos de escritos</span></div>
+        <div class="hstat"><b>61</b><span>Modelos de escritos</span></div>
         <div class="hstat"><b>24</b><span>Precedentes clave</span></div>
-        <div class="hstat"><b>5</b><span>Áreas del derecho</span></div>
-        <div class="hstat"><b>55+</b><span>Temas en el chat</span></div>
+        <div class="hstat"><b>6</b><span>Áreas del derecho</span></div>
+        <div class="hstat"><b>60+</b><span>Temas en el chat</span></div>
       </div>
     </div>
   </section>
@@ -370,7 +381,7 @@ a{color:var(--navy);text-decoration:none}
     </div>
     <div class="legal-banner" style="border-color:#059669;color:#047857;background:#ecfdf5;margin-top:12px">
       <span class="lb-icon">🔒</span>
-      <span><strong>Privacidad garantizada:</strong> JurisIA funciona íntegramente en su navegador. Los datos personales y hechos que usted escribe <strong>no se envían a ningún servidor</strong>, no se usan cookies ni rastreadores, y todo se borra al cerrar la página (salvo los archivos que usted mismo descargue).</span>
+      <span><strong>Privacidad garantizada:</strong> JurisIA funciona íntegramente en su navegador. Los datos personales y hechos que usted escribe <strong>no se envían a ningún servidor</strong>, no se usan cookies ni rastreadores, y todo se borra al cerrar la página (salvo los archivos que usted mismo descargue). Única conexión externa: la descarga de la tipografía desde Google Fonts, que no transmite ningún dato suyo.</span>
     </div>
   </section>
 
@@ -382,7 +393,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="feature-card">
         <div class="fc-icon">📝</div>
         <h3>Redacción asistida</h3>
-        <p>38 modelos de escritos con encabezados procesales reales: expediente, juzgado, sumilla, fundamentos, petitorio, medios probatorios y otrosíes.</p>
+        <p>61 modelos de escritos con encabezados procesales reales: expediente, juzgado, sumilla, fundamentos, petitorio, medios probatorios y otrosíes.</p>
       </div>
       <div class="feature-card">
         <div class="fc-icon">💬</div>
@@ -405,33 +416,38 @@ a{color:var(--navy);text-decoration:none}
   <section class="land-section alt" id="l-areas">
     <div>
       <div class="sec-kicker">Áreas del derecho</div>
-      <h2 class="sec-title">Cinco áreas, una sola plataforma</h2>
+      <h2 class="sec-title">Seis áreas, una sola plataforma</h2>
       <p class="sec-sub">Cada área incluye modelos de escritos con su base legal específica y jurisprudencia relevante.</p>
       <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
         <div class="area-card" style="background:linear-gradient(140deg,var(--laboral),#155D4B)" onclick="enterApp('redactar','laboral')">
-          <span style="font-size:26px">👷</span><span class="ac-count">11 modelos</span>
+          <span style="font-size:26px">👷</span><span class="ac-count">14 modelos</span>
           <h3>Laboral</h3>
           <p>Despidos, CTS, beneficios sociales, SUNAFIL. Ley 29497 NLPT y DS 003-97-TR.</p>
         </div>
         <div class="area-card" style="background:linear-gradient(140deg,var(--civil),#27436F)" onclick="enterApp('redactar','civil')">
-          <span style="font-size:26px">🏠</span><span class="ac-count">11 modelos</span>
+          <span style="font-size:26px">🏠</span><span class="ac-count">19 modelos</span>
           <h3>Civil / Familia</h3>
           <p>Alimentos, desalojo, filiación, prescripción adquisitiva. Código Civil y CPC.</p>
         </div>
         <div class="area-card" style="background:linear-gradient(140deg,var(--penal),#8F3A2F)" onclick="enterApp('redactar','penal')">
-          <span style="font-size:26px">🚨</span><span class="ac-count">4 modelos</span>
+          <span style="font-size:26px">🚨</span><span class="ac-count">8 modelos</span>
           <h3>Penal</h3>
           <p>Denuncias, actor civil, prisión preventiva, hábeas corpus. NCPP y Código Penal.</p>
         </div>
         <div class="area-card" style="background:linear-gradient(140deg,var(--admin),#544883)" onclick="enterApp('redactar','administrativo')">
-          <span style="font-size:26px">🏢</span><span class="ac-count">10 modelos</span>
+          <span style="font-size:26px">🏢</span><span class="ac-count">12 modelos</span>
           <h3>Administrativo</h3>
           <p>Recursos, INDECOPI, ONP, acceso a la información. TUO de la LPAG.</p>
         </div>
         <div class="area-card" style="background:linear-gradient(140deg,var(--consti),#7E5B24)" onclick="enterApp('redactar','constitucional')">
-          <span style="font-size:26px">📜</span><span class="ac-count">2 modelos</span>
+          <span style="font-size:26px">📜</span><span class="ac-count">3 modelos</span>
           <h3>Constitucional</h3>
           <p>Acción de amparo y acción de cumplimiento. Ley 31307, Nuevo CPConst.</p>
+        </div>
+        <div class="area-card" style="background:linear-gradient(140deg,var(--tribu),#5F4C26)" onclick="enterApp('redactar','tributario')">
+          <span style="font-size:26px">🏦</span><span class="ac-count">5 modelos</span>
+          <h3>Tributario / Municipal</h3>
+          <p>Reclamaciones SUNAT, Tribunal Fiscal, prescripción, papeletas. Código Tributario.</p>
         </div>
       </div>
     </div>
@@ -442,7 +458,7 @@ a{color:var(--navy);text-decoration:none}
     <h2 class="sec-title">Su escrito legal en 4 pasos</h2>
     <p class="sec-sub">Un asistente guiado que valida sus datos y muestra el documento en tiempo real mientras escribe.</p>
     <div class="steps-row">
-      <div class="step-card"><h3>Elija el tipo de escrito</h3><p>Seleccione entre 38 modelos organizados por área del derecho, cada uno con su base legal.</p></div>
+      <div class="step-card"><h3>Elija el tipo de escrito</h3><p>Seleccione entre 61 modelos organizados por área del derecho, cada uno con su base legal.</p></div>
       <div class="step-card"><h3>Complete el formulario</h3><p>Campos guiados con explicaciones, contador de caracteres y vista previa en vivo.</p></div>
       <div class="step-card"><h3>Revise el documento</h3><p>Escrito con estructura procesal real: sumilla, hechos, fundamentos, petitorio y otrosíes.</p></div>
       <div class="step-card"><h3>Descargue y presente</h3><p>Descargue el archivo, cópielo o guárdelo en su sesión. Revíselo con un abogado antes de presentarlo.</p></div>
@@ -456,7 +472,7 @@ a{color:var(--navy);text-decoration:none}
   </div>
 
   <footer class="land-footer">
-    <b>JurisIA</b> · Asistente legal peruano · Normativa referencial: Ley 29497 (NLPT), DS 003-97-TR (LPCL), Código Civil (DS 295-1984-JUS), NCPP (DS 957-2004), TUO LPAG (DS 004-2019-JUS), Ley 31307 (NCPConst.)<br>
+    <b>JurisIA</b> · Asistente legal peruano · Normativa referencial: Ley 29497 (NLPT), DS 003-97-TR (LPCL), Código Civil (DS 295-1984-JUS), NCPP (DS 957-2004), TUO LPAG (DS 004-2019-JUS), Ley 31307 (NCPConst.), TUO Código Tributario (DS 133-2013-EF)<br>
     Herramienta orientativa — no sustituye la asesoría de un abogado colegiado. Perú, 2026.
   </footer>
 </div>
@@ -475,7 +491,7 @@ a{color:var(--navy);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">JurisIA v2.2 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.</div>
+      <div class="sidebar-foot">JurisIA v2.3.1 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.</div>
     </aside>
 
     <main class="main">
@@ -493,7 +509,7 @@ a{color:var(--navy);text-decoration:none}
         </div>
         <div class="quick-grid">
           <div class="quick-card" onclick="showView('redactar')"><span class="qc-icon">📝</span><h3>Redactar un escrito</h3><p>Demandas, denuncias, recursos y solicitudes con estructura procesal real, en 4 pasos guiados.</p></div>
-          <div class="quick-card" onclick="showView('chat')"><span class="qc-icon">💬</span><h3>Consultar al Chat Legal</h3><p>Pregunte por artículos específicos, plazos, derechos laborales, alimentos y más de 55 temas.</p></div>
+          <div class="quick-card" onclick="showView('chat')"><span class="qc-icon">💬</span><h3>Consultar al Chat Legal</h3><p>Pregunte por artículos específicos, plazos, derechos laborales, alimentos y más de 60 temas.</p></div>
           <div class="quick-card" onclick="showView('juris')"><span class="qc-icon">🏛️</span><h3>Buscar jurisprudencia</h3><p>Precedentes del TC, casaciones de la Corte Suprema y Plenos, filtrables por área y palabra clave.</p></div>
           <div class="quick-card" onclick="showView('guias')"><span class="qc-icon">📚</span><h3>Leer guías legales</h3><p>Artículos paso a paso: cómo demandar por despido, plazos de prescripción, documentos para alimentos.</p></div>
           <div class="quick-card" onclick="showView('tools')"><span class="qc-icon">🧮</span><h3>Usar herramientas</h3><p>Calculadoras de indemnización, CTS y liquidación; simulador de plazos y enlaces oficiales del Estado.</p></div>
@@ -692,7 +708,7 @@ a{color:var(--navy);text-decoration:none}
 <!-- Modal genérico -->
 <div id="modal-back" class="modal-back hidden" onclick="if(event.target===this)closeModal()">
   <div class="modal">
-    <div class="modal-head"><h2 id="modal-title"></h2><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <div class="modal-head"><h2 id="modal-title"></h2><button class="modal-close" aria-label="Cerrar ventana" onclick="closeModal()">✕</button></div>
     <div class="modal-body" id="modal-body"></div>
   </div>
 </div>
@@ -709,7 +725,8 @@ const AREAS = {
   civil:{name:"Civil / Familia",icon:"🏠",color:"var(--civil)"},
   penal:{name:"Penal",icon:"🚨",color:"var(--penal)"},
   administrativo:{name:"Administrativo",icon:"🏢",color:"var(--admin)"},
-  constitucional:{name:"Constitucional",icon:"📜",color:"var(--consti)"}
+  constitucional:{name:"Constitucional",icon:"📜",color:"var(--consti)"},
+  tributario:{name:"Tributario / Municipal",icon:"🏦",color:"var(--tribu)"}
 };
 
 const HDR_LABORAL = "SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO DE TRABAJO DE {ciudad}\n(Ley N° 29497 – Nueva Ley Procesal del Trabajo)";
@@ -1914,6 +1931,728 @@ const DOC_TYPES = [
   "Se ha cumplido el requisito especial de procedencia: el requerimiento previo por documento de fecha cierta, cursado el {fecha_requerimiento}, sin que la autoridad haya dado cumplimiento dentro de los diez días hábiles posteriores."
  ],
  pruebas:["Copia de la norma o acto administrativo cuyo cumplimiento se exige","Carta notarial de requerimiento previo con cargo de recepción","Documentos que acreditan la renuencia de la autoridad"]
+},
+/* ==================== AMPLIACIÓN v2.3 — LABORAL (3) ==================== */
+{
+ id:"desnaturalizacion", area:"laboral", icon:"📄",
+ name:"Desnaturalización de Contratos Modales",
+ desc:"Reconocimiento de contrato a plazo indeterminado – Art. 77 LPCL",
+ complexity:"high", sumilla:"DEMANDA DE DESNATURALIZACIÓN DE CONTRATOS Y RECONOCIMIENTO DE VÍNCULO A PLAZO INDETERMINADO",
+ hdr:HDR_LABORAL,
+ base_legal:[
+  "Art. 77° DS 003-97-TR LPCL – Supuestos de desnaturalización de los contratos modales",
+  "Art. 4° LPCL – Presunción de contrato de trabajo a plazo indeterminado",
+  "Art. 72°-73° LPCL – Requisitos formales de los contratos sujetos a modalidad",
+  "Art. 23.2° Ley 29497 NLPT – Presunción de laboralidad"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del trabajador",type:"text",required:true,help:"Nombre completo según DNI."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento Nacional de Identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"empleador",label:"Razón social del empleador",type:"text",required:true,help:"Empresa que celebró los contratos modales."},
+  {key:"dir_empleador",label:"Domicilio del empleador",type:"text",required:true,help:"Dirección para notificar la demanda."},
+  {key:"fecha_ingreso",label:"Fecha de ingreso",type:"text",required:true,help:"Inicio real de la prestación de servicios."},
+  {key:"modalidad",label:"Modalidad contractual utilizada",type:"select",required:true,options:["Inicio o incremento de actividad","Necesidades del mercado","Obra determinada o servicio específico","Suplencia","Intermitente / de temporada","Contratos encadenados por más de 5 años"],help:"Modalidad que figura en sus contratos y que considera simulada o fraudulenta."},
+  {key:"causal_desnat",label:"Hechos de la desnaturalización",type:"textarea",required:true,help:"Ej.: laboró después del vencimiento, la causa objetiva es falsa (el puesto es permanente), renovaciones superan los topes, labores distintas a las pactadas."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado laboral",type:"text",required:true,help:"Competencia territorial."}
+ ],
+ petitorio:"Interpongo demanda de DESNATURALIZACIÓN DE CONTRATOS SUJETOS A MODALIDAD contra {empleador}, a fin de que se declare la existencia de una relación laboral a PLAZO INDETERMINADO desde el {fecha_ingreso}, por haberse configurado la causal prevista en el Art. 77° del DS 003-97-TR, con costas y costos.",
+ fundamentos:[
+  "El Art. 77° del DS 003-97-TR dispone que los contratos sujetos a modalidad se consideran de duración indeterminada cuando el trabajador continúa laborando vencido el plazo, cuando la causa objetiva es simulada o fraudulenta, o cuando se exceden los límites temporales legales.",
+  "Rige además la presunción del Art. 4° LPCL: en toda prestación personal de servicios remunerados y subordinados se presume la existencia de un contrato de trabajo a plazo indeterminado, presunción reforzada por el Art. 23.2 de la Ley 29497.",
+  "Los hechos expuestos evidencian que la contratación modal fue utilizada para encubrir labores de naturaleza permanente, correspondiendo declarar la desnaturalización con todos sus efectos, incluida la protección contra el despido arbitrario."
+ ],
+ pruebas:["Contratos modales suscritos y sus renovaciones","Boletas de pago de todo el período","Documentos que acreditan la naturaleza permanente de las labores (memorandos, correos, organigramas)"]
+},
+{
+ id:"inclusion-planilla", area:"laboral", icon:"📑",
+ name:"Reconocimiento de Vínculo Laboral (Inclusión en Planilla)",
+ desc:"Primacía de la realidad – Art. 4 LPCL + Art. 23.2 NLPT",
+ complexity:"high", sumilla:"DEMANDA DE RECONOCIMIENTO DE RELACIÓN LABORAL E INCLUSIÓN EN PLANILLA",
+ hdr:HDR_LABORAL,
+ base_legal:[
+  "Art. 4° DS 003-97-TR LPCL – Elementos del contrato de trabajo y presunción de laboralidad",
+  "Art. 23.2° Ley 29497 NLPT – Acreditada la prestación personal, se presume vínculo laboral indeterminado",
+  "Principio de primacía de la realidad – Los hechos prevalecen sobre los documentos",
+  "DS 018-2007-TR – Planilla electrónica (T-Registro)"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del trabajador",type:"text",required:true,help:"Quien labora sin estar registrado en planilla (ej. con recibos por honorarios)."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento Nacional de Identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"empleador",label:"Razón social del empleador",type:"text",required:true,help:"Empresa para la que presta servicios."},
+  {key:"dir_empleador",label:"Domicilio del empleador",type:"text",required:true,help:"Dirección para notificar."},
+  {key:"fecha_ingreso",label:"Fecha de inicio de los servicios",type:"text",required:true,help:"Desde cuándo presta servicios de manera personal."},
+  {key:"cargo",label:"Labor que realiza",type:"text",required:true,help:"Funciones concretas que desempeña."},
+  {key:"remuneracion",label:"Contraprestación mensual (S/.)",type:"text",required:true,help:"Lo que percibe mensualmente, aunque se pague contra recibos por honorarios."},
+  {key:"hechos",label:"Indicios de subordinación",type:"textarea",required:true,help:"Horario impuesto, órdenes y supervisión, herramientas del empleador, exclusividad, marcado de asistencia, correo corporativo, etc."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado laboral",type:"text",required:true,help:"Competencia territorial."}
+ ],
+ petitorio:"Interpongo demanda de RECONOCIMIENTO DE RELACIÓN LABORAL a plazo indeterminado contra {empleador} desde el {fecha_ingreso}, solicitando se ordene mi inclusión en la planilla electrónica (T-Registro), con el consiguiente pago de los beneficios sociales devengados (CTS, gratificaciones, vacaciones y asignación familiar) e intereses legales, con costas y costos.",
+ fundamentos:[
+  "Concurren en los hechos los tres elementos esenciales del contrato de trabajo: prestación personal, remuneración y subordinación (Art. 4° LPCL), esta última evidenciada en los indicios detallados.",
+  "Por el principio de primacía de la realidad, ante la discordancia entre lo que ocurre en los hechos y lo que fluye de los documentos (recibos por honorarios, contratos civiles), debe otorgarse preferencia a lo primero.",
+  "Acreditada la prestación personal de servicios, opera la presunción de laboralidad del Art. 23.2 de la Ley 29497, correspondiendo al demandado desvirtuarla, lo que no podrá hacer dada la subordinación evidente."
+ ],
+ pruebas:["Recibos por honorarios emitidos al demandado","Correos, memorandos y comunicaciones que evidencian órdenes y horario","Constancias de ingreso, fotocheck, registros de asistencia (cuya exhibición se solicitará)"]
+},
+{
+ id:"utilidades", area:"laboral", icon:"📊",
+ name:"Demanda de Pago de Utilidades",
+ desc:"Participación en las utilidades – DL 892",
+ complexity:"medium", sumilla:"DEMANDA DE PAGO DE PARTICIPACIÓN EN LAS UTILIDADES",
+ hdr:HDR_LABORAL,
+ base_legal:[
+  "DL 892 – Participación de los trabajadores en las utilidades de la empresa",
+  "Art. 2° DL 892 – Porcentajes según actividad (pesqueras/industriales/telecom 10%, minería/comercio 8%, otras 5%)",
+  "Art. 6° DL 892 – Oportunidad de pago: dentro de los 30 días de vencido el plazo de la declaración anual del IR",
+  "Ley 27321 – Prescripción laboral: 4 años desde el cese"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del trabajador",type:"text",required:true,help:"Nombre completo según DNI."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento Nacional de Identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"empleador",label:"Razón social del empleador",type:"text",required:true,help:"Empresa generadora de renta de tercera categoría con más de 20 trabajadores."},
+  {key:"dir_empleador",label:"Domicilio del empleador",type:"text",required:true,help:"Dirección para notificar."},
+  {key:"ejercicios",label:"Ejercicios reclamados",type:"text",required:true,help:"Ej.: «utilidades de los ejercicios 2023, 2024 y 2025»."},
+  {key:"remuneracion",label:"Remuneración mensual (S/.)",type:"text",required:true,help:"Base del cálculo junto con los días laborados."},
+  {key:"hechos",label:"Detalle del incumplimiento",type:"textarea",required:true,help:"Indique si nunca pagaron utilidades, si pagaron montos diminutos, o si no le entregaron la hoja de liquidación de utilidades."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado",type:"text",required:true,help:"Competencia territorial."}
+ ],
+ petitorio:"Interpongo demanda de PAGO DE PARTICIPACIÓN EN LAS UTILIDADES contra {empleador}, respecto de los ejercicios {ejercicios}, a fin de que cumpla con abonar el monto que resulte de la liquidación conforme al DL 892, más el interés legal y, de ser el caso, el interés moratorio previsto en el Art. 6° in fine, con costas y costos.",
+ fundamentos:[
+  "Los trabajadores de empresas generadoras de rentas de tercera categoría con más de veinte (20) trabajadores participan en las utilidades mediante la distribución del porcentaje de la renta anual antes de impuestos que fija el Art. 2° del DL 892.",
+  "La participación se distribuye en función a los días real y efectivamente laborados (50%) y en proporción a las remuneraciones percibidas (50%), debiendo pagarse dentro de los 30 días naturales de vencido el plazo para la declaración jurada anual del Impuesto a la Renta (Art. 6° DL 892).",
+  "El empleador incumplió el pago pese al requerimiento efectuado, generándose desde entonces el interés moratorio conforme al Art. 6° del DL 892, sin perjuicio de la exhibición de sus declaraciones juradas que se solicitará."
+ ],
+ pruebas:["Boletas de pago de los ejercicios reclamados","Hojas de liquidación de utilidades entregadas (o su omisión)","Exhibición de la declaración jurada anual del IR del empleador (a requerir por el juzgado)"]
+},
+
+/* ==================== AMPLIACIÓN v2.3 — CIVIL / FAMILIA (8) ==================== */
+{
+ id:"tenencia", area:"civil", icon:"🤱",
+ name:"Demanda de Tenencia de Menor",
+ desc:"Tenencia y custodia – Arts. 81-86 Código de los Niños y Adolescentes",
+ complexity:"high", sumilla:"DEMANDA DE TENENCIA Y CUSTODIA DE MENOR",
+ hdr:"SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO DE FAMILIA DE {ciudad}",
+ base_legal:[
+  "Arts. 81°-86° Ley 27337 CNA – Tenencia de niños, niñas y adolescentes",
+  "Art. 84° CNA – Criterios: el hijo debe permanecer con quien convivió mayor tiempo, siempre que sea favorable",
+  "Art. 85° CNA – El juez debe escuchar la opinión del niño y tomar en cuenta la del adolescente",
+  "Art. IX TP CNA – Interés superior del niño"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del padre/madre demandante",type:"text",required:true,help:"Quien solicita que se le reconozca la tenencia."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones; será evaluada como entorno del menor."},
+  {key:"demandado",label:"Nombre del otro progenitor",type:"text",required:true,help:"Padre o madre contra quien se dirige la demanda."},
+  {key:"dir_demandado",label:"Domicilio del demandado",type:"text",required:true,help:"Dirección para notificación."},
+  {key:"hijos",label:"Nombre(s) y edad(es) del/los menor(es)",type:"text",required:true,help:"Ej.: «menor L.M.P.G. (6 años)». Use iniciales para proteger su identidad."},
+  {key:"situacion_actual",label:"¿Con quién vive actualmente el menor y desde cuándo?",type:"text",required:true,help:"El Art. 84 CNA privilegia la permanencia con quien convivió más tiempo, si le es favorable."},
+  {key:"hechos",label:"Hechos que sustentan la tenencia a su favor",type:"textarea",required:true,help:"Entorno estable, escolaridad, cuidado cotidiano, disponibilidad, y hechos relevantes del otro progenitor. Evite agravios: céntrese en el bienestar del menor."},
+  {key:"ciudad",label:"Ciudad / Juzgado de Familia",type:"text",required:true,help:"Competente el juez del domicilio del menor."}
+ ],
+ petitorio:"Interpongo demanda de TENENCIA Y CUSTODIA de {hijos} contra {demandado}, a fin de que se me otorgue judicialmente la tenencia, fijándose a favor del demandado un régimen de visitas acorde con el interés superior del niño.",
+ fundamentos:[
+  "Conforme a los Arts. 81° y siguientes del CNA, cuando los padres estén separados de hecho, la tenencia se determina de común acuerdo o, a falta de este, la resuelve el juez especializado atendiendo al interés superior del niño.",
+  "El Art. 84° del CNA establece como criterios que el hijo deberá permanecer con el progenitor con quien convivió mayor tiempo siempre que le sea favorable, y que el juez debe garantizar el derecho del menor a mantener contacto con el otro progenitor.",
+  "El entorno que ofrece el recurrente garantiza estabilidad material y emocional conforme al relato de hechos, lo que será corroborado con el informe del equipo multidisciplinario y la opinión del menor (Art. 85° CNA)."
+ ],
+ pruebas:["Partida de nacimiento del menor","Constancias de estudios, atención médica y controles a cargo del demandante","Informe social y psicológico del equipo multidisciplinario (a disponerse por el juzgado)"]
+},
+{
+ id:"regimen-visitas", area:"civil", icon:"📅",
+ name:"Demanda de Régimen de Visitas",
+ desc:"Derecho a mantener contacto con los hijos – Arts. 88-91 CNA",
+ complexity:"medium", sumilla:"DEMANDA DE RÉGIMEN DE VISITAS",
+ hdr:"SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO DE FAMILIA DE {ciudad}",
+ base_legal:[
+  "Art. 88° Ley 27337 CNA – Los padres que no ejerzan la tenencia tienen derecho a visitar a sus hijos",
+  "Art. 88° in fine CNA – Requisito: acreditar el cumplimiento (o imposibilidad) de la obligación alimentaria",
+  "Art. 90° CNA – Extensión del régimen a otros familiares",
+  "Art. 9° Convención sobre los Derechos del Niño – Derecho a mantener relaciones personales con ambos padres"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del progenitor solicitante",type:"text",required:true,help:"Padre o madre que no tiene la tenencia y desea un régimen de visitas."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"demandado",label:"Nombre de quien tiene la tenencia",type:"text",required:true,help:"Progenitor o persona que tiene al menor consigo y obstaculiza el contacto."},
+  {key:"dir_demandado",label:"Domicilio del demandado",type:"text",required:true,help:"Dirección para notificación."},
+  {key:"hijos",label:"Nombre(s) y edad(es) del/los menor(es)",type:"text",required:true,help:"Use iniciales para proteger su identidad."},
+  {key:"alimentos_estado",label:"Situación de la obligación alimentaria",type:"text",required:true,help:"REQUISITO LEGAL: acredite que viene cumpliendo con los alimentos (o la imposibilidad justificada de hacerlo). Ej.: «cumplo pensión de S/ 600 fijada en Exp. 123-2023»."},
+  {key:"regimen_propuesto",label:"Régimen de visitas que propone",type:"textarea",required:true,help:"Sea concreto: días, horarios, con o sin externamiento (salida del hogar), vacaciones, fiestas, cumpleaños. Ej.: «sábados de 10 a 18 horas con externamiento, y mitad de vacaciones escolares»."},
+  {key:"ciudad",label:"Ciudad / Juzgado de Familia",type:"text",required:true,help:"Competente el juez del domicilio del menor."}
+ ],
+ petitorio:"Interpongo demanda de RÉGIMEN DE VISITAS respecto de {hijos} contra {demandado}, a fin de que se establezca judicialmente el siguiente régimen: {regimen_propuesto}; bajo apercibimiento, en caso de incumplimiento del demandado, de aplicarse las medidas previstas por ley, incluida la variación de la tenencia (Art. 91° CNA).",
+ fundamentos:[
+  "El Art. 88° del CNA reconoce el derecho de los padres que no ejercen la patria potestad o tenencia a visitar a sus hijos, para lo cual se acredita el cumplimiento de la obligación alimentaria conforme al detalle expuesto: {alimentos_estado}.",
+  "El derecho de visitas no es solo un derecho del progenitor sino fundamentalmente del niño, quien tiene derecho a mantener relaciones personales y contacto directo con ambos padres de modo regular (Art. 9.3 de la Convención sobre los Derechos del Niño).",
+  "La conducta obstruccionista del demandado, descrita en los hechos, lesiona el desarrollo integral del menor, correspondiendo fijar judicialmente un régimen claro y de obligatorio cumplimiento."
+ ],
+ pruebas:["Partida de nacimiento del menor","Constancias de pago de la pensión alimenticia (depósitos, vouchers)","Comunicaciones que acreditan la negativa injustificada a las visitas"]
+},
+{
+ id:"autorizacion-viaje", area:"civil", icon:"✈️",
+ name:"Autorización Judicial de Viaje de Menor",
+ desc:"Cuando falta el asentimiento de un progenitor – Arts. 111-112 CNA",
+ complexity:"low", sumilla:"SOLICITUD DE AUTORIZACIÓN JUDICIAL DE VIAJE DE MENOR",
+ hdr:"SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO DE FAMILIA DE {ciudad}",
+ base_legal:[
+  "Art. 111° Ley 27337 CNA – Autorización de viaje notarial con asentimiento de ambos padres",
+  "Art. 112° CNA – Ante disenso, ausencia o negativa de uno de los padres, autoriza el juez (proceso no contencioso)",
+  "Art. 749° y ss. CPC – Trámite de los procesos no contenciosos",
+  "Art. IX TP CNA – Interés superior del niño"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del padre/madre solicitante",type:"text",required:true,help:"Progenitor que viajará con el menor o autoriza el viaje."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"hijos",label:"Nombre y edad del/de la menor",type:"text",required:true,help:"Datos del menor que viajará."},
+  {key:"otro_progenitor",label:"Nombre del progenitor que no autoriza (o ausente)",type:"text",required:true,help:"Quien se niega a firmar la autorización o cuyo paradero se desconoce."},
+  {key:"motivo_negativa",label:"Situación del otro progenitor",type:"select",required:true,options:["Se niega injustificadamente a autorizar","Se desconoce su paradero","Se encuentra fuera del país","Ha fallecido (acompañar partida de defunción)"],help:"El juez autoriza el viaje cuando falta el asentimiento de uno de los padres."},
+  {key:"destino",label:"Destino, motivo y fechas del viaje",type:"text",required:true,help:"Ej.: «Santiago de Chile, vacaciones familiares, del 15 al 30 de enero de 2027»."},
+  {key:"hechos",label:"Detalle del viaje y garantía de retorno",type:"textarea",required:true,help:"Itinerario, con quién viaja el menor, dónde se alojará, matrícula escolar que asegura el retorno, pasajes de ida y vuelta."},
+  {key:"ciudad",label:"Ciudad / Juzgado de Familia",type:"text",required:true,help:"Competente el juez del domicilio del menor."}
+ ],
+ petitorio:"Solicito AUTORIZACIÓN JUDICIAL DE VIAJE a favor del menor {hijos}, con destino y fechas: {destino}; ante la situación del otro progenitor consistente en «{motivo_negativa}», conforme al Art. 112° del Código de los Niños y Adolescentes, disponiéndose la expedición del parte respectivo para las autoridades migratorias.",
+ fundamentos:[
+  "Conforme al Art. 112° del CNA, cuando existe disentimiento de uno de los padres o se desconoce su paradero, corresponde al juez especializado autorizar el viaje del menor, en proceso no contencioso y con la celeridad que el caso amerita.",
+  "El viaje proyectado responde al interés superior del niño (Art. IX TP CNA): tiene finalidad lícita, duración determinada y garantías objetivas de retorno conforme al detalle de los hechos.",
+  "La negativa u omisión del otro progenitor carece de justificación razonable y no puede convertirse en un obstáculo al desarrollo y bienestar del menor."
+ ],
+ pruebas:["Partida de nacimiento del menor","Itinerario, reservas o pasajes de ida y vuelta","Constancia de matrícula escolar u otros arraigos que garantizan el retorno","Carta notarial de requerimiento al otro progenitor, de ser el caso"]
+},
+{
+ id:"medidas-proteccion", area:"civil", icon:"🛑",
+ name:"Solicitud de Medidas de Protección (Violencia Familiar)",
+ desc:"Tutela urgente – Ley 30364",
+ complexity:"medium", sumilla:"DENUNCIA POR VIOLENCIA FAMILIAR Y SOLICITUD DE MEDIDAS DE PROTECCIÓN",
+ hdr:"SEÑOR JUEZ DEL JUZGADO DE FAMILIA DE {ciudad}\n(Ley N° 30364 – Ley para prevenir, sancionar y erradicar la violencia contra las mujeres y los integrantes del grupo familiar)",
+ base_legal:[
+  "Ley 30364 – Prevención, sanción y erradicación de la violencia contra las mujeres y el grupo familiar",
+  "Art. 16° Ley 30364 – El Juzgado de Familia dicta medidas de protección en 24 a 72 horas según el riesgo",
+  "Art. 22° Ley 30364 – Catálogo de medidas: retiro del agresor, prohibición de acercamiento y comunicación, entre otras",
+  "DS 004-2020-MP (TUO) y DS 016-2021-MP – Reglamento de la Ley 30364"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre de la víctima (o de quien denuncia por ella)",type:"text",required:true,help:"Puede denunciar la propia víctima o cualquier persona en su favor, sin abogado y sin costo."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio de la víctima",type:"text",required:true,help:"Donde reside actualmente; puede solicitar reserva si teme por su seguridad."},
+  {key:"denunciado",label:"Nombre del denunciado (agresor)",type:"text",required:true,help:"Cónyuge, conviviente, expareja, familiar u otro integrante del grupo familiar."},
+  {key:"vinculo",label:"Vínculo con el denunciado",type:"select",required:true,options:["Cónyuge / conviviente","Excónyuge / exconviviente / expareja","Padre / madre de mi hijo(a)","Familiar (padre, hijo, hermano, etc.)","Otro integrante del grupo familiar"],help:"El vínculo determina la aplicación de la Ley 30364."},
+  {key:"tipo_violencia",label:"Tipo(s) de violencia sufrida",type:"select",required:true,options:["Física","Psicológica","Física y psicológica","Sexual","Económica o patrimonial"],help:"La ley protege contra los cuatro tipos de violencia."},
+  {key:"hechos",label:"Relato de los hechos de violencia",type:"textarea",required:true,help:"Último episodio (fecha, lugar, qué ocurrió) y antecedentes. Si hay lesiones, pase por el médico legista; si hay hijos que presenciaron, indíquelo."},
+  {key:"medidas",label:"Medidas de protección que solicita",type:"textarea",required:true,help:"Ej.: retiro del agresor del hogar, prohibición de acercarse a menos de 300 metros, prohibición de todo tipo de comunicación, inventario de bienes."},
+  {key:"ciudad",label:"Ciudad / Juzgado de Familia",type:"text",required:true,help:"Juzgado del lugar donde ocurrieron los hechos o del domicilio de la víctima."}
+ ],
+ petitorio:"Denuncio los hechos de violencia familiar cometidos por {denunciado} en mi agravio y SOLICITO se dicten con carácter URGENTE las siguientes medidas de protección: {medidas}; asimismo, se remitan los actuados a la Fiscalía Penal para la persecución del delito o falta correspondiente.",
+ fundamentos:[
+  "La Ley 30364 garantiza a las víctimas de violencia una tutela urgente y sin formalismos: la denuncia no requiere firma de abogado ni pago alguno, y puede presentarse verbalmente o por escrito ante la Policía, la Fiscalía o el Juzgado de Familia.",
+  "Conforme al Art. 16° de la Ley 30364, el Juzgado de Familia debe evaluar el caso y dictar las medidas de protección en un plazo máximo de 24, 48 o 72 horas según el nivel de riesgo determinado en la ficha de valoración.",
+  "Los hechos descritos configuran violencia en la modalidad de «{tipo_violencia}», resultando las medidas solicitadas idóneas y proporcionales para neutralizar el riesgo; su incumplimiento por el denunciado constituye delito de resistencia o desobediencia a la autoridad (Art. 24° Ley 30364)."
+ ],
+ pruebas:["Certificado médico legal y/o pericia psicológica","Denuncias policiales previas, capturas de mensajes y amenazas","Ficha de valoración de riesgo (la aplica la autoridad que recibe la denuncia)"]
+},
+{
+ id:"sucesion-intestada", area:"civil", icon:"🕯️",
+ name:"Solicitud de Sucesión Intestada",
+ desc:"Declaratoria de herederos – Art. 815 CC + Arts. 830-836 CPC",
+ complexity:"medium", sumilla:"SOLICITUD DE SUCESIÓN INTESTADA (DECLARATORIA DE HEREDEROS)",
+ hdr:"SEÑOR JUEZ DEL JUZGADO DE PAZ LETRADO / CIVIL DE {ciudad}",
+ base_legal:[
+  "Art. 815° Código Civil – Casos en que procede la sucesión intestada",
+  "Art. 816° Código Civil – Órdenes sucesorios",
+  "Arts. 830°-836° CPC – Proceso no contencioso de sucesión intestada",
+  "Ley 26662 – Alternativa notarial para asuntos no contenciosos"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del solicitante (presunto heredero)",type:"text",required:true,help:"Hijo, cónyuge, conviviente reconocido, padre u otro heredero del fallecido."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"causante",label:"Nombre del causante (fallecido)",type:"text",required:true,help:"Persona cuya sucesión se solicita declarar."},
+  {key:"fecha_fallecimiento",label:"Fecha y lugar del fallecimiento",type:"text",required:true,help:"Según la partida de defunción."},
+  {key:"ultimo_domicilio",label:"Último domicilio del causante",type:"text",required:true,help:"Determina la competencia del juez y del registro."},
+  {key:"herederos",label:"Relación de presuntos herederos",type:"textarea",required:true,help:"Nombres, DNI y vínculo de TODOS los posibles herederos (hijos, cónyuge/conviviente, padres). Omitir a uno puede anular el trámite."},
+  {key:"bienes",label:"Bienes conocidos de la masa hereditaria",type:"textarea",required:true,help:"Inmuebles con partida registral, vehículos, cuentas. Referencial: la declaratoria no adjudica bienes, solo declara herederos."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado",type:"text",required:true,help:"Juez del último domicilio del causante. Si todos los herederos están de acuerdo, la vía notarial (Ley 26662) es más rápida."}
+ ],
+ petitorio:"Solicito se declare la SUCESIÓN INTESTADA de quien en vida fue {causante}, fallecido el {fecha_fallecimiento}, y en consecuencia se declare como sus herederos a las personas detalladas en la presente solicitud, disponiéndose la inscripción de la declaratoria en el Registro de Sucesiones Intestadas y en los registros de los bienes correspondientes.",
+ fundamentos:[
+  "Habiendo fallecido el causante sin dejar testamento, procede la declaración judicial (o notarial) de sucesión intestada conforme al Art. 815° del Código Civil.",
+  "Los solicitantes se encuentran comprendidos en los órdenes sucesorios del Art. 816° del Código Civil, conforme al entroncamiento que se acredita con las partidas que se acompañan.",
+  "El trámite se sujeta a los Arts. 830° y siguientes del CPC: publicación de la solicitud, plazo para apersonamiento de otros herederos y resolución declaratoria, la cual se inscribe en SUNARP."
+ ],
+ pruebas:["Partida de defunción del causante","Partidas de nacimiento y/o de matrimonio que acreditan el entroncamiento","Certificado registral de ausencia de testamento (SUNARP)"]
+},
+{
+ id:"nulidad-acto", area:"civil", icon:"❌",
+ name:"Demanda de Nulidad de Acto Jurídico",
+ desc:"Invalidez del acto – Art. 219 CC",
+ complexity:"high", sumilla:"DEMANDA DE NULIDAD DE ACTO JURÍDICO",
+ hdr:"SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO EN LO CIVIL DE {ciudad}",
+ base_legal:[
+  "Art. 219° Código Civil – Causales de nulidad absoluta del acto jurídico",
+  "Art. 220° Código Civil – La nulidad puede ser alegada por quien tenga interés y no es subsanable",
+  "Art. 2001° inc. 1 Código Civil – La acción de nulidad prescribe a los 10 años",
+  "Art. 475° CPC – Proceso de conocimiento"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del demandante",type:"text",required:true,help:"Quien tiene interés legítimo en la nulidad (parte del acto o tercero afectado)."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"demandado",label:"Demandado(s): partes del acto cuestionado",type:"text",required:true,help:"Todas las personas que celebraron el acto. Si está inscrito, considere incluir a los adquirentes posteriores."},
+  {key:"dir_demandado",label:"Domicilio de los demandados",type:"text",required:true,help:"Direcciones para notificación."},
+  {key:"acto",label:"Acto jurídico cuya nulidad se demanda",type:"text",required:true,help:"Ej.: «compraventa del inmueble X contenida en la escritura pública del 05/03/2022, Notaría Z»."},
+  {key:"causal",label:"Causal de nulidad invocada",type:"select",required:true,options:["Falta de manifestación de voluntad (Art. 219.1)","Objeto física o jurídicamente imposible o indeterminable (219.3)","Fin ilícito (219.4)","Simulación absoluta (219.5)","No revestir la forma prescrita bajo sanción de nulidad (219.6)","Contrario a normas imperativas / orden público (Art. V TP y 219.8)"],help:"Elija la causal del Art. 219 CC que corresponde a los hechos. Si hubo vicios de voluntad (error, dolo, intimidación) la vía es la ANULABILIDAD (Art. 221), con plazo de solo 2 años."},
+  {key:"hechos",label:"Hechos que configuran la causal",type:"textarea",required:true,help:"Relate cómo se celebró el acto y por qué incurre en la causal: firma falsificada, precio nunca pagado en simulación, ausencia de formalidad, etc."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado civil",type:"text",required:true,help:"Competente el juez del domicilio del demandado o donde se celebró el acto."}
+ ],
+ petitorio:"Interpongo demanda de NULIDAD DE ACTO JURÍDICO contra {demandado}, a fin de que se declare la NULIDAD del acto consistente en {acto} por la causal «{causal}», y como pretensión accesoria, la nulidad del asiento registral correspondiente y la cancelación de su inscripción, con costas y costos.",
+ fundamentos:[
+  "El Art. 219° del Código Civil sanciona con nulidad absoluta el acto jurídico incurso en las causales que enumera; la nulidad puede ser alegada por quien tenga interés legítimo y no admite confirmación (Art. 220° CC).",
+  "Los hechos expuestos configuran de manera objetiva la causal invocada, conforme se acreditará con los medios probatorios ofrecidos, incluida, de ser necesaria, la pericia correspondiente.",
+  "La acción se encuentra dentro del plazo prescriptorio de diez (10) años previsto en el Art. 2001° inc. 1 del Código Civil, y se tramita en la vía del proceso de conocimiento."
+ ],
+ pruebas:["Documento que contiene el acto cuestionado (escritura, contrato, acta)","Partida registral donde consta inscrito, de ser el caso","Pericia grafotécnica, documentos y testigos que acreditan la causal"]
+},
+{
+ id:"resolucion-contrato", area:"civil", icon:"📃",
+ name:"Resolución de Contrato por Incumplimiento",
+ desc:"Arts. 1428-1429 CC – con indemnización",
+ complexity:"medium", sumilla:"DEMANDA DE RESOLUCIÓN DE CONTRATO POR INCUMPLIMIENTO E INDEMNIZACIÓN",
+ hdr:"SEÑOR JUEZ DEL JUZGADO ESPECIALIZADO EN LO CIVIL DE {ciudad}",
+ base_legal:[
+  "Art. 1428° Código Civil – Resolución judicial por incumplimiento en contratos con prestaciones recíprocas",
+  "Art. 1429° Código Civil – Resolución extrajudicial por intimación (15 días)",
+  "Art. 1371°-1372° Código Civil – Efectos de la resolución",
+  "Art. 1321° Código Civil – Indemnización por inejecución de obligaciones"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del contratante fiel (demandante)",type:"text",required:true,help:"Parte que cumplió (o estuvo dispuesta a cumplir) su prestación."},
+  {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"demandado",label:"Nombre del contratante incumplidor",type:"text",required:true,help:"Parte que incumplió su prestación."},
+  {key:"dir_demandado",label:"Domicilio del demandado",type:"text",required:true,help:"Dirección para notificar."},
+  {key:"contrato",label:"Contrato celebrado (tipo, fecha y objeto)",type:"text",required:true,help:"Ej.: «contrato de compraventa de vehículo del 10/02/2026 por S/ 45,000»."},
+  {key:"incumplimiento",label:"Prestación incumplida",type:"text",required:true,help:"Qué obligación concreta no cumplió el demandado: no pagó el saldo, no entregó el bien, no ejecutó la obra."},
+  {key:"hechos",label:"Relato del incumplimiento y requerimientos",type:"textarea",required:true,help:"Cronología del contrato, cumplimiento propio, requerimientos cursados (cartas notariales) y daños sufridos."},
+  {key:"monto",label:"Indemnización pretendida (S/.)",type:"text",required:true,help:"Daños y perjuicios derivados del incumplimiento (daño emergente + lucro cesante)."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado",type:"text",required:true,help:"Competente el juez del domicilio del demandado o del lugar de cumplimiento del contrato."}
+ ],
+ petitorio:"Interpongo demanda de RESOLUCIÓN DE CONTRATO contra {demandado}, a fin de que se declare RESUELTO el contrato consistente en {contrato} por incumplimiento de la prestación a su cargo; con restitución de las prestaciones ejecutadas y, acumulativamente, el pago de una indemnización de S/ {monto} por los daños y perjuicios ocasionados, más intereses, costas y costos.",
+ fundamentos:[
+  "En los contratos con prestaciones recíprocas, cuando una parte falta al cumplimiento de su prestación, la parte perjudicada puede solicitar la resolución del contrato y la indemnización de daños y perjuicios (Art. 1428° del Código Civil).",
+  "El demandante cumplió las prestaciones a su cargo conforme al relato de los hechos, mientras que el demandado incumplió de manera injustificada la prestación esencial consistente en: {incumplimiento}.",
+  "Por efecto de la resolución, las partes deben restituirse las prestaciones en el estado en que se encontraran (Art. 1372° CC), sin perjuicio de la reparación integral del daño conforme al Art. 1321° CC."
+ ],
+ pruebas:["Contrato celebrado y sus anexos","Comprobantes del cumplimiento del demandante (pagos, entregas)","Cartas notariales de requerimiento y constancias del incumplimiento"]
+},
+{
+ id:"consignacion", area:"civil", icon:"🏛️",
+ name:"Ofrecimiento de Pago y Consignación",
+ desc:"Cuando el acreedor se niega a recibir – Art. 1251 CC",
+ complexity:"low", sumilla:"SOLICITUD DE OFRECIMIENTO DE PAGO Y CONSIGNACIÓN",
+ hdr:"SEÑOR JUEZ DEL JUZGADO DE PAZ LETRADO / CIVIL DE {ciudad}",
+ base_legal:[
+  "Art. 1251° Código Civil – El deudor queda libre de su obligación si consigna la prestación",
+  "Art. 1252° Código Civil – Ofrecimiento judicial y extrajudicial",
+  "Arts. 802°-816° CPC – Proceso no contencioso de ofrecimiento de pago y consignación",
+  "Art. 1254° Código Civil – El pago se reputa válido con efecto retroactivo a la fecha de ofrecimiento"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del deudor solicitante",type:"text",required:true,help:"Quien quiere pagar y no puede hacerlo por causa imputable al acreedor."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"demandado",label:"Nombre del acreedor",type:"text",required:true,help:"Quien se niega a recibir el pago o no puede recibirlo (ausente, incierto)."},
+  {key:"dir_demandado",label:"Domicilio del acreedor",type:"text",required:true,help:"Dirección para notificar el ofrecimiento."},
+  {key:"deuda",label:"Obligación que se paga",type:"text",required:true,help:"Ej.: «renta del mes de junio 2026 del contrato de arrendamiento del inmueble X», «cuota N° 8 del préstamo»."},
+  {key:"monto",label:"Monto que consigna (S/.)",type:"text",required:true,help:"Suma exacta adeudada; se deposita en el Banco de la Nación a la orden del juzgado."},
+  {key:"hechos",label:"Negativa del acreedor y gestiones realizadas",type:"textarea",required:true,help:"Cómo intentó pagar y cómo el acreedor se negó (no recoge la renta, rechazó la transferencia, se niega a dar recibo, paradero desconocido)."},
+  {key:"ciudad",label:"Ciudad / sede del juzgado",type:"text",required:true,help:"Competente el juez del lugar del cumplimiento de la obligación."}
+ ],
+ petitorio:"Formulo OFRECIMIENTO JUDICIAL DE PAGO y solicito la CONSIGNACIÓN de la suma de S/ {monto} correspondiente a {deuda}, mediante depósito judicial en el Banco de la Nación, a fin de que se me tenga por liberado de la obligación con efecto a la fecha del presente ofrecimiento, ante la negativa injustificada del acreedor a recibir el pago.",
+ fundamentos:[
+  "Conforme al Art. 1251° del Código Civil, el deudor queda libre de su obligación si consigna la prestación debida cuando el acreedor se niega injustificadamente a recibirla o no puede recibirla.",
+  "La negativa del acreedor consta de las gestiones detalladas en los hechos, configurándose el supuesto que habilita la consignación conforme a los Arts. 802° y siguientes del CPC.",
+  "Efectuada la consignación y declarada su validez, el pago surte efectos desde la fecha del ofrecimiento (Art. 1254° CC), cesando la generación de intereses moratorios y cualquier imputación de incumplimiento — de especial utilidad para el arrendatario que desea evitar el desalojo por falta de pago."
+ ],
+ pruebas:["Documento que contiene la obligación (contrato, cronograma)","Constancias del intento de pago y de la negativa (cartas, vouchers rechazados)","Certificado de depósito judicial del Banco de la Nación (se adjunta al consignar)"]
+},
+
+/* ==================== AMPLIACIÓN v2.3 — PENAL (4) ==================== */
+{
+ id:"apelacion-penal", area:"penal", icon:"⚖️",
+ name:"Apelación de Sentencia Penal",
+ desc:"Segunda instancia – Arts. 414 y 416-419 NCPP",
+ complexity:"high", sumilla:"RECURSO DE APELACIÓN CONTRA SENTENCIA",
+ hdr:"SEÑOR JUEZ DEL JUZGADO PENAL (UNIPERSONAL / COLEGIADO) DE {ciudad}\n(DS 957-2004 – Nuevo Código Procesal Penal)",
+ base_legal:[
+  "Art. 414.1.b° NCPP – Plazo de apelación de sentencias: 5 días hábiles",
+  "Art. 416° NCPP – Resoluciones apelables",
+  "Art. 419° NCPP – Facultades de la Sala Penal Superior",
+  "Art. 405° NCPP – Formalidades del recurso: fundamentación fáctica y jurídica y pretensión concreta"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del apelante",type:"text",required:true,help:"Sentenciado, actor civil o parte legitimada que impugna (usualmente mediante su abogado defensor)."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"expediente",label:"N° de expediente",type:"text",required:true,help:"Proceso penal en el que se emitió la sentencia."},
+  {key:"sentencia",label:"Sentencia apelada (número, fecha y fallo)",type:"text",required:true,help:"Ej.: «sentencia del 20/06/2026 que condena a 4 años de pena privativa de libertad». Plazo: 5 días desde su lectura o notificación."},
+  {key:"delito",label:"Delito materia de la condena",type:"text",required:true,help:"Delito por el que fue sentenciado."},
+  {key:"agravios",label:"Agravios (errores de la sentencia)",type:"textarea",required:true,help:"Indebida valoración de la prueba, vulneración de la presunción de inocencia, errónea aplicación de la ley penal, pena desproporcionada, motivación aparente."},
+  {key:"pretension_impugnatoria",label:"Pretensión concreta",type:"select",required:true,options:["Revocatoria: se me absuelva de la acusación","Revocatoria: se reduzca la pena impuesta","Revocatoria: se varíe la modalidad de la pena (suspendida)","Nulidad de la sentencia y nuevo juicio","Revocatoria del extremo de la reparación civil"],help:"Qué debe decidir la Sala Penal Superior."},
+  {key:"ciudad",label:"Ciudad / distrito judicial",type:"text",required:true,help:"Sede del juzgado que emitió la sentencia."}
+ ],
+ petitorio:"Interpongo RECURSO DE APELACIÓN contra la {sentencia} recaída en el expediente {expediente}, solicitando que la Sala Penal Superior, estimando los agravios expuestos, resuelva conforme a la siguiente pretensión: «{pretension_impugnatoria}».",
+ fundamentos:[
+  "El recurso se interpone dentro del plazo de cinco (5) días previsto en el Art. 414.1.b del NCPP y cumple las formalidades del Art. 405°: se precisan las partes impugnadas, los fundamentos de hecho y de derecho y la pretensión concreta.",
+  "Los agravios desarrollados evidencian que la sentencia incurre en errores en la valoración probatoria y/o en la aplicación del derecho que la Sala debe corregir en ejercicio de las facultades del Art. 419° NCPP.",
+  "La presunción de inocencia (Art. 2.24.e de la Constitución) y el derecho al recurso como garantía de la pluralidad de instancia (Art. 139.6) sustentan la revisión integral solicitada."
+ ],
+ pruebas:["Copia de la sentencia apelada y del acta de su lectura","Piezas procesales pertinentes a los agravios","Medios probatorios nuevos, de corresponder (Art. 422 NCPP)"]
+},
+{
+ id:"terminacion-anticipada", area:"penal", icon:"🤝",
+ name:"Solicitud de Terminación Anticipada",
+ desc:"Acuerdo con el fiscal + reducción de pena – Art. 468 NCPP",
+ complexity:"medium", sumilla:"SOLICITUD DE INICIO DEL PROCESO ESPECIAL DE TERMINACIÓN ANTICIPADA",
+ hdr:"SEÑOR JUEZ DEL JUZGADO DE INVESTIGACIÓN PREPARATORIA DE {ciudad}\n(DS 957-2004 – Nuevo Código Procesal Penal)",
+ base_legal:[
+  "Art. 468° NCPP – Proceso especial de terminación anticipada",
+  "Art. 471° NCPP – Beneficio: reducción de la pena en una sexta parte, acumulable a la confesión sincera",
+  "Art. 160°-161° NCPP – Confesión sincera",
+  "Acuerdo Plenario N° 5-2009/CJ-116 – Naturaleza y control judicial de la terminación anticipada"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del imputado solicitante",type:"text",required:true,help:"Procesado que desea acogerse al beneficio (con asesoría de su defensor)."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"expediente",label:"N° de expediente / carpeta fiscal",type:"text",required:true,help:"Proceso en etapa de investigación preparatoria (antes de la acusación)."},
+  {key:"delito",label:"Delito imputado",type:"text",required:true,help:"Delito materia de la formalización."},
+  {key:"fiscalia",label:"Fiscalía a cargo del caso",type:"text",required:true,help:"Despacho fiscal con el que se celebraría el acuerdo."},
+  {key:"reparacion",label:"Propuesta de reparación civil (S/.)",type:"text",required:true,help:"Monto y forma de pago que propone para reparar a la víctima; facilita el acuerdo."},
+  {key:"hechos",label:"Aceptación de cargos y circunstancias personales",type:"textarea",required:true,help:"Manifestación de voluntad de aceptar los cargos, condiciones personales (primario, trabajo, familia) y disposición de pago de la reparación."},
+  {key:"ciudad",label:"Ciudad / sede judicial",type:"text",required:true,help:"Juzgado de Investigación Preparatoria de la causa."}
+ ],
+ petitorio:"Solicito se dé inicio al PROCESO ESPECIAL DE TERMINACIÓN ANTICIPADA en el expediente {expediente}, citándose a la audiencia privada correspondiente con participación del Ministerio Público, a fin de arribar a un acuerdo sobre la pena, la reparación civil y las consecuencias accesorias, con aplicación del beneficio de reducción de pena previsto en el Art. 471° del NCPP.",
+ fundamentos:[
+  "El Art. 468° del NCPP permite al imputado y al fiscal, una vez expedida la disposición de formalización y hasta antes de la acusación, solicitar la celebración de la audiencia de terminación anticipada.",
+  "El solicitante expresa su voluntad libre e informada de aceptar los cargos, lo que sumado a la reparación ofrecida configura los presupuestos del acuerdo, correspondiendo el beneficio de reducción de la pena en una sexta parte (Art. 471° NCPP), acumulable al de confesión sincera de ser el caso.",
+  "El Acuerdo Plenario N° 5-2009/CJ-116 reconoce en este proceso especial una fórmula de justicia penal negociada que descongestiona el sistema, sujeta al control de legalidad del juez de la investigación preparatoria."
+ ],
+ pruebas:["Constancias de las condiciones personales del imputado (trabajo, domicilio, carga familiar)","Certificado de antecedentes penales","Depósito o garantía de la reparación civil propuesta"]
+},
+{
+ id:"tutela-derechos", area:"penal", icon:"🛡️",
+ name:"Tutela de Derechos del Imputado",
+ desc:"Control judicial de la investigación – Art. 71.4 NCPP",
+ complexity:"medium", sumilla:"SOLICITUD DE TUTELA DE DERECHOS",
+ hdr:"SEÑOR JUEZ DEL JUZGADO DE INVESTIGACIÓN PREPARATORIA DE {ciudad}\n(DS 957-2004 – Nuevo Código Procesal Penal)",
+ base_legal:[
+  "Art. 71° NCPP – Derechos del imputado",
+  "Art. 71.4° NCPP – Vía de tutela ante el juez de la investigación preparatoria",
+  "Acuerdo Plenario N° 4-2010/CJ-116 – Alcances de la audiencia de tutela",
+  "Art. IX Título Preliminar NCPP – Derecho de defensa"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del imputado",type:"text",required:true,help:"Persona investigada cuyos derechos han sido vulnerados."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"expediente",label:"N° de expediente / carpeta fiscal",type:"text",required:true,help:"Investigación en la que se produce la afectación."},
+  {key:"fiscalia",label:"Fiscalía o autoridad que vulnera el derecho",type:"text",required:true,help:"Despacho fiscal o dependencia policial cuya actuación se cuestiona."},
+  {key:"derecho_vulnerado",label:"Derecho vulnerado",type:"select",required:true,options:["No se me informó de los cargos ni de los motivos de la detención","Se me impidió contar con abogado defensor / comunicarme con él","Se me tomó declaración sin presencia de mi defensor","No se me permite acceder a la carpeta fiscal","Se me coaccionó o se emplearon medios indebidos","Otro derecho del Art. 71 NCPP (detallar en los hechos)"],help:"La tutela protege los derechos del Art. 71 NCPP frente a la Policía o el Ministerio Público."},
+  {key:"hechos",label:"Relato de la vulneración",type:"textarea",required:true,help:"Cuándo, dónde y cómo se produjo la afectación; qué gestiones previas hizo su defensa ante el propio fiscal."},
+  {key:"medida",label:"Medida de corrección que solicita",type:"text",required:true,help:"Ej.: «se ordene al fiscal permitir la lectura completa de la carpeta», «se excluya la declaración tomada sin defensor»."},
+  {key:"ciudad",label:"Ciudad / sede judicial",type:"text",required:true,help:"Juzgado de Investigación Preparatoria competente."}
+ ],
+ petitorio:"Solicito TUTELA DE DERECHOS conforme al Art. 71.4° del NCPP, a fin de que, previa audiencia, se constate la vulneración del derecho consistente en «{derecho_vulnerado}» y se dicte la siguiente medida de corrección y protección: {medida}.",
+ fundamentos:[
+  "El Art. 71.4° del NCPP habilita al imputado a recurrir en vía de tutela al juez de la investigación preparatoria cuando considere que no se ha dado cumplimiento a sus derechos o que estos son objeto de medidas limitativas indebidas, para que se subsane la omisión o se dicten las medidas de corrección correspondientes.",
+  "Conforme al Acuerdo Plenario N° 4-2010/CJ-116, la audiencia de tutela es la vía idónea frente a la vulneración de los derechos reconocidos en el Art. 71° NCPP, incluyendo la posibilidad de excluir el material probatorio obtenido con inobservancia del contenido esencial de los derechos fundamentales.",
+  "Los hechos descritos evidencian una afectación concreta y actual del derecho de defensa (Art. IX TP NCPP y Art. 139.14 de la Constitución), que exige la intervención correctora inmediata del órgano jurisdiccional."
+ ],
+ pruebas:["Actas y disposiciones fiscales pertinentes","Escritos presentados ante la Fiscalía sin respuesta","Constancias o testigos de la afectación"]
+},
+{
+ id:"elevacion-actuados", area:"penal", icon:"📤",
+ name:"Requerimiento de Elevación de Actuados (Queja Fiscal)",
+ desc:"Contra el archivo de la denuncia – Art. 334.5 NCPP",
+ complexity:"medium", sumilla:"REQUERIMIENTO DE ELEVACIÓN DE ACTUADOS AL FISCAL SUPERIOR",
+ hdr:"SEÑOR FISCAL PROVINCIAL PENAL DE {ciudad}\n(Para su elevación al Fiscal Superior – Art. 334.5 NCPP)",
+ base_legal:[
+  "Art. 334.5° NCPP – El denunciante puede requerir la elevación de las actuaciones al Fiscal Superior (plazo: 5 días)",
+  "Art. 334.6° NCPP – El Fiscal Superior ordena formalizar, archivar o ampliar la investigación",
+  "Art. 159° Constitución – Atribuciones del Ministerio Público",
+  "Art. IV TP NCPP – Titularidad de la acción penal y control jerárquico"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del denunciante agraviado",type:"text",required:true,help:"Quien presentó la denuncia archivada."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"expediente",label:"N° de carpeta fiscal",type:"text",required:true,help:"Investigación archivada."},
+  {key:"disposicion",label:"Disposición de archivo (número y fecha de notificación)",type:"text",required:true,help:"Ej.: «Disposición N° 03-2026 del 25/06/2026, notificada el 28/06/2026». El plazo para requerir la elevación es de 5 días."},
+  {key:"denunciado",label:"Nombre del denunciado",type:"text",required:true,help:"Persona investigada favorecida con el archivo."},
+  {key:"delito",label:"Delito denunciado",type:"text",required:true,help:"Delito materia de la denuncia archivada."},
+  {key:"agravios",label:"Errores de la disposición de archivo",type:"textarea",required:true,help:"Diligencias que el fiscal omitió actuar, pruebas no valoradas, motivación aparente, calificación jurídica errónea."},
+  {key:"ciudad",label:"Ciudad / sede fiscal",type:"text",required:true,help:"Fiscalía que dispuso el archivo."}
+ ],
+ petitorio:"Al amparo del Art. 334.5° del NCPP, REQUIERO LA ELEVACIÓN DE LOS ACTUADOS al Fiscal Superior Penal, a fin de que, revisando la disposición de archivo {disposicion}, la REVOQUE y ordene formalizar y continuar la investigación preparatoria contra {denunciado} por el delito de {delito}, o en su defecto disponga la ampliación de las diligencias preliminares omitidas.",
+ fundamentos:[
+  "El presente requerimiento se interpone dentro del plazo de cinco (5) días previsto en el Art. 334.5° del NCPP, contado desde la notificación de la disposición de archivo.",
+  "La disposición cuestionada adolece de los defectos detallados como agravios: omisión de diligencias esenciales para el esclarecimiento de los hechos y valoración incompleta de los elementos de convicción aportados, lo que vulnera la debida motivación de las decisiones fiscales.",
+  "El derecho de la víctima a la tutela procesal efectiva y a la verdad exige que el archivo de una denuncia solo proceda tras una investigación razonablemente completa, correspondiendo al Fiscal Superior el control jerárquico previsto en el Art. 334.6° NCPP."
+ ],
+ pruebas:["Copia de la disposición de archivo y su notificación (acredita el plazo)","Elementos de convicción no valorados u omitidos","Relación de diligencias cuya actuación se omitió"]
+},
+
+/* ==================== AMPLIACIÓN v2.3 — ADMINISTRATIVO (2) ==================== */
+{
+ id:"queja-tramitacion", area:"administrativo", icon:"⏱️",
+ name:"Queja por Defectos de Tramitación",
+ desc:"Contra demoras y paralizaciones – Art. 169 TUO LPAG",
+ complexity:"low", sumilla:"QUEJA POR DEFECTOS DE TRAMITACIÓN",
+ hdr:"SEÑOR(A) SUPERIOR JERÁRQUICO DE {entidad}",
+ base_legal:[
+  "Art. 169° TUO LPAG (DS 004-2019-JUS) – Queja por defectos de tramitación ante el superior jerárquico",
+  "Art. 169.2° TUO LPAG – Debe resolverse en 3 días hábiles, previo traslado al quejado",
+  "Art. 66° TUO LPAG – Derecho al cumplimiento de los plazos",
+  "Arts. 261° TUO LPAG – Responsabilidad administrativa del funcionario"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del administrado quejoso",type:"text",required:true,help:"Titular del procedimiento afectado por la demora o defecto."},
+  {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física para notificaciones."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Para notificación electrónica de la resolución de la queja."},
+  {key:"entidad",label:"Entidad y unidad donde se tramita su expediente",type:"text",required:true,help:"La queja se presenta ante el SUPERIOR del funcionario que tramita su procedimiento."},
+  {key:"expediente",label:"N° de expediente administrativo",type:"text",required:true,help:"Procedimiento afectado por el defecto de tramitación."},
+  {key:"defecto",label:"Defecto de tramitación",type:"select",required:true,options:["Incumplimiento de los plazos establecidos","Paralización injustificada del procedimiento","Omisión de trámites que deben subsanarse antes de resolver","Exigencia de requisitos no previstos en el TUPA","Negativa a recibir escritos o solicitudes"],help:"El Art. 169 LPAG permite quejarse de los defectos de tramitación que supongan paralización o infracción de plazos."},
+  {key:"hechos",label:"Detalle del defecto y tiempo transcurrido",type:"textarea",required:true,help:"Fechas de presentación, plazo legal aplicable, tiempo de demora, gestiones realizadas."},
+  {key:"ciudad",label:"Ciudad",type:"text",required:true,help:"Lugar de presentación."}
+ ],
+ petitorio:"Formulo QUEJA POR DEFECTOS DE TRAMITACIÓN contra el órgano a cargo del expediente {expediente}, por incurrir en «{defecto}», solicitando se resuelva en el plazo de tres (3) días previsto en el Art. 169.2° del TUO de la LPAG, se disponga la inmediata reanudación y conclusión del trámite, y se determinen las responsabilidades a que hubiere lugar.",
+ fundamentos:[
+  "El Art. 169° del TUO de la LPAG faculta al administrado a quejarse ante el superior jerárquico en cualquier momento contra los defectos de tramitación, en especial los que supongan paralización o infracción de los plazos establecidos.",
+  "Los administrados tienen derecho al cumplimiento de los plazos del procedimiento (Art. 66° TUO LPAG), cuya infracción injustificada acarrea responsabilidad administrativa del funcionario (Art. 261°).",
+  "La queja no suspende la tramitación del expediente principal y debe resolverse en tres (3) días hábiles previo traslado al quejado, conforme al Art. 169.2° del TUO de la LPAG."
+ ],
+ pruebas:["Cargo de la solicitud o escrito inicial del procedimiento","Constancias de las gestiones de impulso realizadas","Norma o TUPA que establece el plazo incumplido"]
+},
+{
+ id:"silencio-positivo", area:"administrativo", icon:"✅",
+ name:"Declaración Jurada de Silencio Administrativo Positivo",
+ desc:"Aprobación automática por vencimiento de plazo – Arts. 37-38 TUO LPAG",
+ complexity:"low", sumilla:"DECLARACIÓN JURADA DE APLICACIÓN DEL SILENCIO ADMINISTRATIVO POSITIVO",
+ hdr:"SEÑOR(A) {entidad}",
+ base_legal:[
+  "Arts. 37°-38° TUO LPAG (DS 004-2019-JUS) – Procedimientos sujetos a silencio administrativo positivo",
+  "Art. 199° TUO LPAG – Efectos del silencio: la solicitud se considera aprobada de pleno derecho",
+  "Art. 38.2° TUO LPAG – La declaración jurada permite hacer valer el derecho ante la propia entidad o terceros",
+  "Ley 29060 – Ley del Silencio Administrativo (antecedente incorporado al TUO)"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del administrado",type:"text",required:true,help:"Titular de la solicitud aprobada por silencio."},
+  {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física para notificaciones."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Para notificaciones electrónicas."},
+  {key:"entidad",label:"Entidad ante la que presentó la solicitud",type:"text",required:true,help:"Entidad que no resolvió dentro del plazo."},
+  {key:"expediente",label:"N° de expediente y fecha de presentación",type:"text",required:true,help:"Ej.: «Exp. 4567-2026, presentado el 02/05/2026». Desde esa fecha corre el plazo de evaluación."},
+  {key:"solicitud",label:"Solicitud o trámite presentado",type:"text",required:true,help:"Ej.: «licencia de funcionamiento para local comercial», «autorización de anuncio publicitario». Verifique en el TUPA que esté sujeto a SAP."},
+  {key:"plazo_legal",label:"Plazo legal de evaluación (días hábiles)",type:"text",required:true,help:"Plazo que el TUPA fija para resolver (usualmente 30 días hábiles o menos), ya vencido."},
+  {key:"ciudad",label:"Ciudad",type:"text",required:true,help:"Lugar de presentación."}
+ ],
+ petitorio:"Comunico a su despacho que, habiendo vencido el plazo legal de {plazo_legal} días hábiles sin que la entidad emita pronunciamiento sobre mi solicitud de {solicitud} (expediente {expediente}), esta ha quedado APROBADA DE PLENO DERECHO por aplicación del SILENCIO ADMINISTRATIVO POSITIVO; en consecuencia, formulo la presente DECLARACIÓN JURADA conforme al Art. 38.2° del TUO de la LPAG, para hacer valer el derecho obtenido ante la propia entidad y frente a terceros.",
+ fundamentos:[
+  "La solicitud presentada corresponde a un procedimiento de evaluación previa sujeto a silencio administrativo positivo conforme a los Arts. 37°-38° del TUO de la LPAG y al TUPA de la entidad.",
+  "Vencido el plazo máximo de evaluación sin pronunciamiento, la solicitud se considera aprobada de pleno derecho (Art. 199° TUO LPAG), sin que sea exigible pronunciamiento posterior alguno de la entidad.",
+  "DECLARO BAJO JURAMENTO que a la fecha de la presente no me ha sido notificado pronunciamiento alguno de la entidad respecto del expediente indicado, asumiendo la responsabilidad de ley en caso de falsedad."
+ ],
+ pruebas:["Cargo de la solicitud original con fecha de presentación","Extracto del TUPA que califica el procedimiento y su plazo","Constancia de no notificación (la propia declaración jurada surte ese efecto)"]
+},
+
+/* ==================== AMPLIACIÓN v2.3 — CONSTITUCIONAL (1) ==================== */
+{
+ id:"habeas-data", area:"constitucional", icon:"💾",
+ name:"Demanda de Hábeas Data",
+ desc:"Acceso a información y autodeterminación informativa – Art. 200.3 Constitución + Ley 31307",
+ complexity:"medium", sumilla:"DEMANDA DE HÁBEAS DATA",
+ hdr:"SEÑOR JUEZ CONSTITUCIONAL DE {ciudad}\n(Ley N° 31307 – Nuevo Código Procesal Constitucional)",
+ base_legal:[
+  "Art. 200° inc. 3 Constitución – El hábeas data protege los derechos de los incisos 5 y 6 del Art. 2°",
+  "Ley 31307 – Nuevo Código Procesal Constitucional: proceso de hábeas data",
+  "Requisito especial: requerimiento previo por documento de fecha cierta y silencio o negativa (10 días entidades públicas / 2 días particulares)",
+  "Ley 27806 y Ley 29733 – Marco legal del acceso a la información y protección de datos"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del demandante",type:"text",required:true,help:"Titular del derecho de acceso a información pública o de la autodeterminación informativa."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
+  {key:"domicilio",label:"Domicilio real y procesal",type:"text",required:true,help:"Dirección para notificaciones."},
+  {key:"demandado",label:"Entidad o persona demandada",type:"text",required:true,help:"Entidad pública que niega información, o entidad/empresa que administra el banco de datos."},
+  {key:"dir_demandado",label:"Domicilio del demandado",type:"text",required:true,help:"Para el emplazamiento."},
+  {key:"modalidad",label:"Derecho invocado",type:"select",required:true,options:["Acceso a información pública denegada (Art. 2.5 Constitución)","Conocer los datos que sobre mí se almacenan (Art. 2.6)","Rectificar o actualizar datos inexactos","Suprimir datos sensibles o indebidamente registrados","Impedir el suministro de datos a terceros"],help:"El hábeas data protege tanto el acceso a información pública como el control sobre sus datos personales."},
+  {key:"fecha_requerimiento",label:"Fecha del requerimiento previo de fecha cierta",type:"text",required:true,help:"REQUISITO OBLIGATORIO: debe haber reclamado antes por documento de fecha cierta (carta notarial o cargo) y esperado el plazo legal sin respuesta satisfactoria."},
+  {key:"hechos",label:"Relato de la negativa o del tratamiento indebido",type:"textarea",required:true,help:"Qué información pidió o qué datos suyos se tratan indebidamente, qué respondió (o calló) el demandado y qué perjuicio le causa."},
+  {key:"ciudad",label:"Ciudad / sede judicial",type:"text",required:true,help:"Juez constitucional del domicilio del demandante o del demandado."}
+ ],
+ petitorio:"Interpongo demanda de HÁBEAS DATA contra {demandado}, en la modalidad de «{modalidad}», solicitando se declare FUNDADA la demanda y se ordene al demandado cumplir con entregar la información solicitada y/o efectuar la rectificación, supresión o bloqueo de los datos conforme a los hechos expuestos, bajo apercibimiento de aplicarse las medidas coercitivas de ley.",
+ fundamentos:[
+  "El Art. 200° inc. 3 de la Constitución consagra el hábeas data como la garantía que procede contra el hecho u omisión que vulnera los derechos de acceso a la información pública (Art. 2.5) y de autodeterminación informativa (Art. 2.6).",
+  "Se ha cumplido el requisito especial de procedencia previsto en la Ley 31307: el requerimiento previo por documento de fecha cierta cursado el {fecha_requerimiento}, sin que el demandado haya satisfecho la pretensión dentro del plazo legal.",
+  "La negativa del demandado carece de sustento en las excepciones taxativas de ley, configurando una vulneración actual y concreta que exige tutela constitucional, sin necesidad de agotar ninguna otra vía previa."
+ ],
+ pruebas:["Requerimiento de fecha cierta y su cargo de recepción","Respuesta denegatoria del demandado, de existir","Documentos que acreditan el tratamiento indebido de los datos, de ser el caso"]
+},
+
+/* ==================== AMPLIACIÓN v2.3 — TRIBUTARIO / MUNICIPAL (5) ==================== */
+{
+ id:"reclamacion-tributaria", area:"tributario", icon:"🧾",
+ name:"Recurso de Reclamación Tributaria (SUNAT)",
+ desc:"Contra órdenes de pago, multas y determinaciones – Art. 137 Código Tributario",
+ complexity:"high", sumilla:"RECURSO DE RECLAMACIÓN",
+ hdr:"SEÑOR INTENDENTE DE LA INTENDENCIA REGIONAL / OFICINA ZONAL DE {ciudad} – SUNAT",
+ base_legal:[
+  "Arts. 132°-142° TUO Código Tributario (DS 133-2013-EF) – Recurso de reclamación",
+  "Art. 137° CT – Plazo: 20 días hábiles de notificado el acto (5 días en comiso, internamiento y cierre)",
+  "Art. 136° CT – Regla general: no se exige pago previo de la deuda reclamada oportunamente",
+  "Art. 142° CT – Plazo para resolver: 9 meses"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre / razón social del contribuyente",type:"text",required:true,help:"Deudor tributario que impugna el acto de SUNAT."},
+  {key:"dni",label:"RUC",type:"text",required:true,help:"Número de RUC del contribuyente."},
+  {key:"domicilio",label:"Domicilio fiscal",type:"text",required:true,help:"El que figura en su ficha RUC."},
+  {key:"correo",label:"Correo electrónico / buzón SOL",type:"text",required:true,help:"Las notificaciones de SUNAT llegan principalmente al buzón SOL."},
+  {key:"resolucion",label:"Acto reclamado (tipo, número y fecha de notificación)",type:"text",required:true,help:"Ej.: «Resolución de Multa N° 024-002-0123456, notificada el 15/06/2026». Plazo: 20 días hábiles desde la notificación."},
+  {key:"tributo",label:"Tributo y período vinculado",type:"text",required:true,help:"Ej.: «IGV del período 03-2026», «Impuesto a la Renta 2025»."},
+  {key:"monto",label:"Monto impugnado (S/.)",type:"text",required:true,help:"Importe de la deuda que se reclama."},
+  {key:"hechos",label:"Fundamentos del reclamo",type:"textarea",required:true,help:"Errores del acto: el tributo ya fue pagado, cálculo incorrecto, notificación inválida, la infracción no se configuró, gradualidad no aplicada, prescripción."},
+  {key:"ciudad",label:"Ciudad / dependencia SUNAT",type:"text",required:true,help:"Intendencia u oficina zonal que emitió el acto."}
+ ],
+ petitorio:"Interpongo RECURSO DE RECLAMACIÓN contra {resolucion}, vinculada al tributo {tributo} por el monto de S/ {monto}, solicitando se declare FUNDADO el presente recurso y, en consecuencia, se deje sin efecto el acto reclamado, con la consiguiente quiebra de los valores emitidos.",
+ fundamentos:[
+  "El presente recurso se interpone dentro del plazo de veinte (20) días hábiles previsto en el Art. 137° del TUO del Código Tributario, computado desde la notificación del acto reclamado, por lo que no resulta exigible el pago previo de la deuda (Art. 136° CT).",
+  "El acto reclamado adolece de los vicios expuestos en los fundamentos de hecho, lo que determina su revocación conforme a los principios de legalidad y verdad material que rigen el procedimiento tributario.",
+  "De conformidad con el Art. 142° del Código Tributario, la Administración deberá resolver dentro del plazo de nueve (9) meses; vencido este sin pronunciamiento, el recurrente podrá considerar desestimado el recurso e interponer apelación ante el Tribunal Fiscal."
+ ],
+ pruebas:["Copia del acto reclamado y de su constancia de notificación","Comprobantes de pago, declaraciones juradas y libros vinculados","Hoja de reliquidación practicada por el recurrente (anexo)"]
+},
+{
+ id:"apelacion-tf", area:"tributario", icon:"🏛️",
+ name:"Apelación ante el Tribunal Fiscal",
+ desc:"Segunda instancia tributaria – Art. 146 Código Tributario",
+ complexity:"high", sumilla:"RECURSO DE APELACIÓN",
+ hdr:"SEÑOR INTENDENTE DE LA INTENDENCIA REGIONAL / OFICINA ZONAL DE {ciudad} – SUNAT\n(Para su elevación al TRIBUNAL FISCAL)",
+ base_legal:[
+  "Arts. 143°-150° TUO Código Tributario (DS 133-2013-EF) – Recurso de apelación",
+  "Art. 146° CT – Plazo: 15 días hábiles de notificada la resolución que resuelve la reclamación",
+  "Art. 145° CT – Se presenta ante el órgano que dictó la resolución, que la eleva al Tribunal Fiscal",
+  "Art. 150° CT – Plazo del Tribunal Fiscal para resolver: 12 meses"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre / razón social del contribuyente",type:"text",required:true,help:"Apelante."},
+  {key:"dni",label:"RUC",type:"text",required:true,help:"Número de RUC."},
+  {key:"domicilio",label:"Domicilio fiscal",type:"text",required:true,help:"Según ficha RUC."},
+  {key:"correo",label:"Correo electrónico / buzón SOL",type:"text",required:true,help:"Para notificaciones electrónicas."},
+  {key:"resolucion",label:"Resolución de Intendencia apelada (número y fecha de notificación)",type:"text",required:true,help:"Resolución que declaró infundada/improcedente su reclamación. Plazo: 15 días hábiles."},
+  {key:"expediente",label:"N° de expediente de reclamación",type:"text",required:true,help:"Procedimiento de primera instancia."},
+  {key:"tributo",label:"Tributo, período y monto controvertido",type:"text",required:true,help:"Materia de la controversia que conocerá el Tribunal Fiscal."},
+  {key:"agravios",label:"Agravios contra la resolución apelada",type:"textarea",required:true,help:"Errores de la resolución: no valoró pruebas, interpretación contraria a resoluciones del propio Tribunal Fiscal, motivación insuficiente, cálculo errado."},
+  {key:"ciudad",label:"Ciudad / dependencia SUNAT",type:"text",required:true,help:"Dependencia que emitió la resolución apelada (allí se presenta el recurso)."}
+ ],
+ petitorio:"Interpongo RECURSO DE APELACIÓN contra la {resolucion}, recaída en el expediente {expediente}, solicitando su elevación al TRIBUNAL FISCAL a fin de que la REVOQUE y deje sin efecto los valores impugnados vinculados a {tributo}, conforme a los agravios desarrollados en el presente recurso.",
+ fundamentos:[
+  "El presente recurso se interpone dentro del plazo de quince (15) días hábiles previsto en el Art. 146° del TUO del Código Tributario, ante el órgano que dictó la resolución apelada para su elevación al Tribunal Fiscal (Art. 145° CT).",
+  "La resolución apelada incurre en los errores de hecho y de derecho detallados como agravios, apartándose incluso del criterio establecido por el Tribunal Fiscal en casos análogos, lo que vulnera los principios de uniformidad y predictibilidad.",
+  "El Tribunal Fiscal, como última instancia administrativa en materia tributaria, deberá resolver en el plazo del Art. 150° CT; su decisión agota la vía administrativa, quedando a salvo la demanda contencioso administrativa."
+ ],
+ pruebas:["Copia de la resolución apelada y su constancia de notificación","Expediente de la reclamación y pruebas ya ofrecidas","Resoluciones del Tribunal Fiscal que sustentan el criterio invocado"]
+},
+{
+ id:"prescripcion-tributaria", area:"tributario", icon:"⌛",
+ name:"Solicitud de Prescripción de Deuda Tributaria",
+ desc:"Extinción de la cobranza – Arts. 43-49 Código Tributario",
+ complexity:"medium", sumilla:"SOLICITUD DE DECLARACIÓN DE PRESCRIPCIÓN DE DEUDA TRIBUTARIA",
+ hdr:"SEÑOR INTENDENTE / GERENTE DE ADMINISTRACIÓN TRIBUTARIA DE {entidad}",
+ base_legal:[
+  "Art. 43° TUO Código Tributario – Plazos de prescripción: 4 años (6 si no se presentó declaración; 10 para tributos retenidos no pagados)",
+  "Art. 44° CT – Cómputo del término prescriptorio",
+  "Arts. 45°-46° CT – Causales de interrupción y suspensión",
+  "Art. 47°-48° CT – La prescripción solo se declara a pedido del deudor y puede oponerse en cualquier estado del procedimiento"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del contribuyente",type:"text",required:true,help:"Titular de la deuda cuya prescripción solicita."},
+  {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
+  {key:"domicilio",label:"Domicilio fiscal o real",type:"text",required:true,help:"Para notificaciones."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Para notificación electrónica."},
+  {key:"entidad",label:"Entidad acreedora (SUNAT / Municipalidad / SAT)",type:"text",required:true,help:"Ej.: «SAT de Lima», «Municipalidad Distrital de X», «SUNAT». Cada entidad resuelve la prescripción de sus propios tributos."},
+  {key:"tributo",label:"Tributo(s) y período(s) prescritos",type:"textarea",required:true,help:"Ej.: «Impuesto Predial y arbitrios de los ejercicios 2015 a 2019», «multa tributaria del período 01-2018». Detalle todos los períodos."},
+  {key:"hechos",label:"Sustento del cómputo de la prescripción",type:"textarea",required:true,help:"Desde cuándo corre el plazo y por qué no se interrumpió: no le notificaron valores ni resoluciones de cobranza coactiva válidamente en esos años."},
+  {key:"ciudad",label:"Ciudad",type:"text",required:true,help:"Lugar de presentación."}
+ ],
+ petitorio:"Solicito se DECLARE LA PRESCRIPCIÓN de la acción de la Administración para determinar y exigir el pago de las siguientes deudas tributarias: {tributo}; por haber transcurrido en exceso el plazo previsto en el Art. 43° del TUO del Código Tributario, disponiéndose la quiebra de los valores y la exclusión de la deuda de toda cuenta corriente y procedimiento de cobranza coactiva.",
+ fundamentos:[
+  "El Art. 43° del TUO del Código Tributario establece que la acción para determinar la obligación tributaria y exigir su pago prescribe a los cuatro (4) años —seis (6) si no se presentó la declaración respectiva—, computados conforme al Art. 44°.",
+  "Durante el período transcurrido no ha operado ninguna causal de interrupción o suspensión válida (Arts. 45° y 46° CT): la Administración no notificó válidamente órdenes de pago, resoluciones de determinación ni actos de cobranza coactiva respecto de los períodos invocados.",
+  "La prescripción puede oponerse en cualquier estado del procedimiento administrativo o judicial (Art. 48° CT), y lo pagado en cumplimiento de una deuda prescrita no da derecho a devolución, por lo que se formula la presente antes de cualquier pago."
+ ],
+ pruebas:["Estado de cuenta o reporte de deuda emitido por la entidad","Reporte de valores y notificaciones (solicitar al expediente coactivo, de existir)","Cargos de notificación cuestionados, de ser el caso"]
+},
+{
+ id:"fraccionamiento", area:"tributario", icon:"📆",
+ name:"Solicitud de Fraccionamiento Tributario",
+ desc:"Pago en cuotas de la deuda – Art. 36 Código Tributario",
+ complexity:"low", sumilla:"SOLICITUD DE APLAZAMIENTO Y/O FRACCIONAMIENTO DE DEUDA TRIBUTARIA",
+ hdr:"SEÑOR INTENDENTE / GERENTE DE ADMINISTRACIÓN TRIBUTARIA DE {entidad}",
+ base_legal:[
+  "Art. 36° TUO Código Tributario – Aplazamiento y/o fraccionamiento de deudas tributarias",
+  "Resolución de Superintendencia N° 161-2015/SUNAT y modificatorias – Reglamento de fraccionamiento (SUNAT)",
+  "Ordenanzas municipales de la entidad, para tributos municipales",
+  "Art. 36° in fine CT – El incumplimiento de cuotas habilita la cobranza coactiva del saldo"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del contribuyente",type:"text",required:true,help:"Deudor que solicita pagar en cuotas."},
+  {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
+  {key:"domicilio",label:"Domicilio fiscal o real",type:"text",required:true,help:"Para notificaciones."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Para notificación electrónica y cronograma."},
+  {key:"entidad",label:"Entidad acreedora",type:"text",required:true,help:"SUNAT (vía SOL con el Formulario Virtual 687) o la municipalidad/SAT correspondiente."},
+  {key:"tributo",label:"Deuda a fraccionar (tributos, períodos y monto)",type:"textarea",required:true,help:"Ej.: «IGV 01-2026 a 04-2026 por S/ 12,500», «Impuesto Predial 2024-2025 por S/ 3,800»."},
+  {key:"cuotas",label:"Número de cuotas propuesto",type:"text",required:true,help:"Ej.: «24 cuotas mensuales». SUNAT permite hasta 72 meses según el caso; las municipalidades según su ordenanza."},
+  {key:"hechos",label:"Sustento económico de la solicitud",type:"textarea",required:true,help:"Situación que le impide el pago al contado y capacidad de pago mensual que garantiza el cumplimiento de las cuotas."},
+  {key:"ciudad",label:"Ciudad",type:"text",required:true,help:"Lugar de presentación."}
+ ],
+ petitorio:"Solicito el FRACCIONAMIENTO de la deuda tributaria detallada ({tributo}) en {cuotas}, al amparo del Art. 36° del TUO del Código Tributario y de las normas reglamentarias de la entidad, comprometiéndome al pago puntual de las cuotas conforme al cronograma que se apruebe.",
+ fundamentos:[
+  "El Art. 36° del TUO del Código Tributario permite conceder aplazamiento y/o fraccionamiento para el pago de la deuda tributaria al deudor que lo solicite, con carácter general o particular, conforme a los requisitos reglamentarios.",
+  "El solicitante cumple los requisitos exigidos: la deuda es susceptible de acogimiento, no registra causales de exclusión y la propuesta de cuotas guarda relación con su capacidad de pago conforme al sustento expuesto.",
+  "El acogimiento suspende la cobranza coactiva de la deuda fraccionada mientras se cumpla el cronograma, siendo de conocimiento del solicitante que el incumplimiento habilita la cobranza del saldo total (Art. 36° in fine CT)."
+ ],
+ pruebas:["Estado de cuenta o reporte de la deuda a fraccionar","Documentos que sustentan la capacidad de pago (ingresos, flujo de caja)","Garantías ofrecidas, cuando el monto lo exija según reglamento"]
+},
+{
+ id:"descargo-papeleta", area:"tributario", icon:"🚗",
+ name:"Descargo / Apelación de Papeleta de Tránsito",
+ desc:"Impugnación de multas de tránsito – DS 016-2009-MTC",
+ complexity:"low", sumilla:"DESCARGO CONTRA PAPELETA DE INFRACCIÓN AL REGLAMENTO NACIONAL DE TRÁNSITO",
+ hdr:"SEÑOR JEFE DEL SERVICIO DE ADMINISTRACIÓN TRIBUTARIA (SAT) / GERENCIA DE TRANSPORTE DE LA MUNICIPALIDAD DE {ciudad}",
+ base_legal:[
+  "DS 016-2009-MTC – TUO del Reglamento Nacional de Tránsito",
+  "Plazo de descargo: 5 días hábiles desde la imposición o notificación de la papeleta",
+  "Arts. 218°-220° TUO LPAG – Recursos de reconsideración y apelación contra la resolución de sanción (15 días hábiles)",
+  "Art. 336° DS 016-2009-MTC – Presunción de veracidad relativa del acta policial (admite prueba en contrario)"
+ ],
+ fields:[
+  {key:"demandante",label:"Nombre del conductor / propietario",type:"text",required:true,help:"Persona a quien se impuso la papeleta o propietario del vehículo."},
+  {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad; agregue N° de licencia si es el conductor."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física para notificaciones."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Para notificación electrónica de la resolución."},
+  {key:"papeleta",label:"N° de papeleta, fecha y lugar de la intervención",type:"text",required:true,help:"Datos exactos de la papeleta. El descargo se presenta dentro de los 5 días hábiles siguientes."},
+  {key:"infraccion",label:"Código de infracción imputada",type:"text",required:true,help:"Ej.: «M20», «G40». Figura en la papeleta; determina la multa y si hay reducción por pronto pago."},
+  {key:"placa",label:"Placa del vehículo",type:"text",required:true,help:"Placa única nacional de rodaje."},
+  {key:"hechos",label:"Fundamentos del descargo",type:"textarea",required:true,help:"Por qué la papeleta es indebida: no cometió la conducta, el vehículo no estuvo en el lugar, señalización inexistente o defectuosa, error en placa o datos, ausencia de fotografía o evidencia, vehículo vendido antes de la fecha."},
+  {key:"ciudad",label:"Ciudad / SAT o municipalidad competente",type:"text",required:true,help:"Entidad que administra las papeletas del lugar de la intervención."}
+ ],
+ petitorio:"Formulo DESCARGO contra la papeleta de infracción {papeleta}, impuesta por la presunta comisión de la infracción {infraccion} respecto del vehículo de placa {placa}, solicitando se declare FUNDADO el presente descargo, se deje SIN EFECTO la papeleta y se disponga el archivo del procedimiento sancionador, sin anotación en el registro de conductores.",
+ fundamentos:[
+  "El presente descargo se presenta dentro del plazo de cinco (5) días hábiles contados desde la imposición o notificación de la papeleta, conforme al procedimiento sancionador del TUO del Reglamento Nacional de Tránsito (DS 016-2009-MTC).",
+  "La presunción de veracidad del acta policial es relativa y admite prueba en contrario; los hechos y medios probatorios expuestos desvirtúan la comisión de la infracción imputada.",
+  "En caso de emitirse resolución de sanción desestimando el presente, me reservo el derecho de interponer los recursos de reconsideración y/o apelación previstos en el TUO de la LPAG dentro del plazo de quince (15) días hábiles."
+ ],
+ pruebas:["Copia de la papeleta impugnada","Fotografías, videos o GPS que desvirtúan la infracción","Tarjeta de identificación vehicular y licencia de conducir","Contrato de transferencia del vehículo, si ya no era el propietario"]
 }
 ];
 /* ============================================================
@@ -2065,9 +2804,10 @@ const NORM_ALIASES = {
  lpag:["lpag","ley 27444","27444","procedimiento administrativo general","tuo lpag","ds 004-2019-jus"],
  cpconst:["cpconst","ley 31307","31307","codigo procesal constitucional","código procesal constitucional","ncpconst"],
  cts:["ley de cts","ds 001-97-tr","001-97-tr"],
- constitucion:["constitucion","constitución","carta magna"]
+ constitucion:["constitucion","constitución","carta magna"],
+ ct:["ct","codigo tributario","código tributario","ds 133-2013-ef","tuo del codigo tributario"]
 };
-const NORM_NAMES = {lpcl:"DS 003-97-TR (LPCL)",nlpt:"Ley 29497 (NLPT)",cc:"Código Civil",cp:"Código Penal",ncpp:"NCPP (DS 957-2004)",cpc:"Código Procesal Civil",lpag:"TUO LPAG (DS 004-2019-JUS)",cpconst:"Ley 31307 (NCPConst.)",cts:"DS 001-97-TR (Ley de CTS)",constitucion:"Constitución Política del Perú"};
+const NORM_NAMES = {lpcl:"DS 003-97-TR (LPCL)",nlpt:"Ley 29497 (NLPT)",cc:"Código Civil",cp:"Código Penal",ncpp:"NCPP (DS 957-2004)",cpc:"Código Procesal Civil",lpag:"TUO LPAG (DS 004-2019-JUS)",cpconst:"Ley 31307 (NCPConst.)",cts:"DS 001-97-TR (Ley de CTS)",constitucion:"Constitución Política del Perú",ct:"TUO Código Tributario (DS 133-2013-EF)"};
 
 const ARTICULOS = {
  "lpcl:4":"**Art. 4° LPCL – Presunción de laboralidad.** En toda prestación personal de servicios remunerados y subordinados se presume la existencia de un contrato de trabajo a plazo indeterminado. El contrato puede celebrarse libremente por tiempo indeterminado, sujeto a modalidad o a tiempo parcial.",
@@ -2077,7 +2817,7 @@ const ARTICULOS = {
  "lpcl:29":"**Art. 29° LPCL – Despido nulo.** Es nulo el despido que tenga por motivo: (a) afiliación sindical o participación en actividades sindicales; (b) ser candidato o representante de los trabajadores; (c) presentar queja o participar en proceso contra el empleador; (d) discriminación por sexo, raza, religión, opinión o idioma; (e) embarazo, nacimiento o lactancia. La consecuencia es la **reposición** con pago de remuneraciones devengadas.",
  "lpcl:30":"**Art. 30° LPCL – Actos de hostilidad.** Son equiparables al despido: falta de pago de la remuneración, reducción inmotivada de remuneración o categoría, traslado malicioso, actos contra la moral y hostigamiento sexual, entre otros. Antes de accionar debe **emplazarse por escrito al empleador** con un plazo mínimo de 6 días naturales.",
  "lpcl:34":"**Art. 34° LPCL – Despido arbitrario.** Si el despido es arbitrario por no haberse expresado causa o no poderse demostrar esta en juicio, el trabajador tiene derecho al pago de la **indemnización del Art. 38°** como única reparación por el daño sufrido. En el despido nulo, en cambio, procede la reposición.",
- "lpcl:36":"**Art. 36° LPCL – Plazo de caducidad.** El plazo para accionar judicialmente contra el despido arbitrario, nulo u hostilidad **caduca a los 30 días naturales** de producido el hecho (la jurisprudencia lo computa en días hábiles conforme al Pleno Jurisdiccional 1999). ¡Es uno de los plazos más cortos del sistema!",
+ "lpcl:36":"**Art. 36° LPCL – Plazo de caducidad.** El plazo para accionar judicialmente contra el despido arbitrario, nulo u hostilidad **caduca a los 30 días hábiles** de producido el hecho, conforme al criterio jurisprudencial consolidado (el texto del Art. 36° señala días naturales, pero el Pleno Jurisdiccional Laboral 1999 fijó su cómputo en días hábiles). ¡Es uno de los plazos más cortos del sistema!",
  "lpcl:38":"**Art. 38° LPCL – Indemnización por despido arbitrario.** Equivale a **una remuneración y media ordinaria mensual por cada año completo de servicios**, con un máximo de 12 remuneraciones. Las fracciones de año se abonan por dozavos y treintavos. Ejemplo: 4 años con sueldo S/ 2,000 → S/ 12,000.",
  "nlpt:1":"**Art. 1° Ley 29497 – Competencia de los Juzgados de Paz Letrados Laborales.** Conocen en proceso abreviado laboral las pretensiones de obligación de dar sumas de dinero cuya cuantía no supere las **50 URP**, y los procesos con título ejecutivo hasta ese mismo límite.",
  "nlpt:2":"**Art. 2° Ley 29497 – Competencia de los Juzgados Especializados de Trabajo.** Conocen en proceso ordinario laboral todas las pretensiones relativas a la protección de derechos individuales, plurales o colectivas, incluyendo despidos, pago de beneficios superiores a 50 URP y daños derivados de la relación laboral; y en proceso abreviado, la **reposición cuando se plantea como pretensión principal única**.",
@@ -2117,7 +2857,10 @@ const ARTICULOS = {
  "cpconst:33":"**Art. 33° Ley 31307 – Derechos protegidos por el hábeas corpus.** Protege la libertad individual y derechos conexos: no ser detenido sino por mandato judicial o flagrancia, no ser incomunicado, el debido proceso en conexidad con la libertad, no ser objeto de desaparición forzada, entre otros.",
  "cpconst:44":"**Art. 44° Ley 31307 – Derechos protegidos por el amparo.** Protege los derechos constitucionales no tutelados por el hábeas corpus ni el hábeas data: igualdad, trabajo, salud, educación, debido proceso, propiedad, pensión (contenido esencial), entre otros.",
  "cpconst:45":"**Art. 45° Ley 31307 – Plazo del amparo.** La demanda de amparo se interpone dentro de los **60 días hábiles de producida la afectación**; tratándose de amparo contra resolución judicial, el plazo es de 30 días hábiles desde que la resolución queda firme.",
- "constitucion:200":"**Art. 200° Constitución – Garantías constitucionales.** (1) **Hábeas corpus**: libertad individual; (2) **Amparo**: demás derechos constitucionales; (3) **Hábeas data**: acceso a información pública y autodeterminación informativa; (4) Inconstitucionalidad; (5) Acción popular; (6) **Acción de cumplimiento**: contra la autoridad renuente a acatar norma legal o acto administrativo."
+ "constitucion:200":"**Art. 200° Constitución – Garantías constitucionales.** (1) **Hábeas corpus**: libertad individual; (2) **Amparo**: demás derechos constitucionales; (3) **Hábeas data**: acceso a información pública y autodeterminación informativa; (4) Inconstitucionalidad; (5) Acción popular; (6) **Acción de cumplimiento**: contra la autoridad renuente a acatar norma legal o acto administrativo.",
+ "ct:43":"**Art. 43° Código Tributario – Prescripción.** La acción para determinar la deuda tributaria y exigir su pago prescribe a los **4 años** (6 si no presentó la declaración respectiva; 10 para tributos retenidos o percibidos no pagados). La prescripción **solo se declara a pedido del deudor** (Art. 47) y puede oponerse en cualquier estado del procedimiento (Art. 48). JurisIA tiene el modelo de solicitud.",
+ "ct:137":"**Art. 137° Código Tributario – Reclamación.** El recurso de reclamación contra resoluciones de determinación, multa y órdenes de pago se interpone dentro de **20 días hábiles** de notificado el acto (interpuesto en plazo, no se exige el pago previo de la deuda). En comiso, internamiento de vehículos y cierre: solo **5 días hábiles**. Vencido el plazo, deberá pagar o afianzar la deuda para reclamar.",
+ "ct:146":"**Art. 146° Código Tributario – Apelación.** La apelación ante el **Tribunal Fiscal** se presenta dentro de **15 días hábiles** de notificada la resolución que resuelve la reclamación, ante el mismo órgano que la emitió para su elevación. El Tribunal Fiscal es la última instancia administrativa; su fallo deja expedita la demanda contencioso administrativa."
 };
 
 const CHAT_KB = [
@@ -2181,8 +2924,13 @@ const CHAT_KB = [
 {kw:["accion de cumplimiento","la autoridad no cumple la ley","no ejecutan mi resolucion"],title:"Acción de cumplimiento – Art. 200.6° Constitución",resp:"Procede contra la **autoridad renuente a acatar una norma legal o un acto administrativo firme** (típico: la entidad reconoce su derecho por resolución… y nunca paga).\nRequisitos:\n- Mandato **vigente, cierto, claro e incondicional** (precedente Villanueva, STC 0168-2005-PC).\n- **Requerimiento previo por documento de fecha cierta** (carta notarial) y esperar **10 días hábiles**.\nSi la autoridad persiste, el juez constitucional le **ordena cumplir** bajo responsabilidad. JurisIA genera la demanda con el modelo respectivo.",sugg:["Generar demanda de cumplimiento","¿Qué es un documento de fecha cierta?"]},
 {kw:["habeas data","informacion sobre mi","rectificar datos en entidad publica"],title:"Hábeas data – Art. 200.3° Constitución",resp:"El **hábeas data** protege dos derechos:\n1. **Acceso a la información pública** (Art. 2.5 Constitución): cuando una entidad le niega información que no está en las excepciones legales.\n2. **Autodeterminación informativa** (Art. 2.6): conocer, rectificar, suprimir o impedir el uso de sus datos en registros públicos o privados.\nRequisito especial (Ley 31307): **requerimiento previo por documento de fecha cierta** y silencio o negativa de la entidad (10 días).\nAntes del hábeas data, agote la solicitud directa (JurisIA tiene los modelos de acceso a la información y derechos ARCO).",sugg:["Generar solicitud de acceso a la información","Generar solicitud ARCO"]},
 {kw:["tribunal constitucional","precedente vinculante","que es el tc"],title:"Tribunal Constitucional y precedentes vinculantes",resp:"El **Tribunal Constitucional** es el órgano de control de la Constitución (Art. 201). Conoce en última instancia los procesos de amparo, hábeas corpus, hábeas data y cumplimiento (recurso de agravio constitucional), y en instancia única la inconstitucionalidad y los conflictos de competencia.\nSus **precedentes vinculantes** obligan a todos los poderes públicos. En JurisIA encontrará los más citados: **Anicama** (pensión), **Baylón** (vías laborales), **Villanueva** (cumplimiento), **Elgo Ríos** (vía satisfactoria), **Huatuco** (reposición pública) — véalos en la sección Jurisprudencia.",sugg:["Ver jurisprudencia constitucional","¿Qué es el amparo?"]},
+/* ---- TRIBUTARIO / MUNICIPAL ---- */
+{kw:["sunat me multo","multa de sunat","reclamacion tributaria","orden de pago","reclamar a sunat"],title:"Reclamación tributaria – Art. 137° CT",resp:"Contra las resoluciones de multa, de determinación y órdenes de pago de SUNAT (o de una municipalidad) procede el **recurso de reclamación**:\n- Plazo: **20 días hábiles** desde la notificación (5 días en comiso, internamiento y cierre).\n- Presentada en plazo, **no se exige pagar** la deuda reclamada.\n- SUNAT resuelve en 9 meses; si se lo deniegan, puede **apelar al Tribunal Fiscal** (15 días hábiles).\nJurisIA tiene los modelos de reclamación y apelación.",sugg:["Generar reclamación tributaria","¿Cómo apelo al Tribunal Fiscal?","¿Mi deuda tributaria ya prescribió?"]},
+{kw:["prescripcion tributaria","deuda tributaria antigua","deuda del predial","me cobran deudas viejas","prescripcion de impuestos"],title:"Prescripción de deudas tributarias – Art. 43° CT",resp:"Las deudas tributarias **prescriben a los 4 años** (6 si no presentó declaración): vencido el plazo sin notificaciones válidas, la SUNAT o la municipalidad **ya no pueden cobrarlas**. Claves:\n- La prescripción **no opera de oficio**: debe solicitarla por escrito (Art. 47 CT).\n- Las notificaciones válidas de valores o cobranza coactiva **interrumpen** el plazo (Art. 45).\n- Muy frecuente en **predial y arbitrios** municipales antiguos.\n⚠️ No pague antes de verificar: lo pagado por deuda prescrita no se devuelve. JurisIA genera la solicitud.",sugg:["Generar solicitud de prescripción","¿Puedo fraccionar mi deuda?"]},
+{kw:["fraccionamiento","pagar en cuotas sunat","no puedo pagar mis impuestos","facilidades de pago"],title:"Fraccionamiento tributario – Art. 36° CT",resp:"Si no puede pagar su deuda tributaria al contado, el **Art. 36° del Código Tributario** permite solicitar su **aplazamiento y/o fraccionamiento**:\n- En **SUNAT**: por SOL con el Formulario Virtual 687, hasta 72 cuotas según el caso.\n- En **municipalidades/SAT**: conforme a su ordenanza de fraccionamiento.\n- El acogimiento **suspende la cobranza coactiva** de la deuda fraccionada.\n⚠️ El incumplimiento de cuotas habilita el cobro coactivo de todo el saldo. JurisIA tiene el modelo de solicitud.",sugg:["Generar solicitud de fraccionamiento","¿Qué es la cobranza coactiva?"]},
+{kw:["papeleta","multa de transito","me pusieron una papeleta","impugnar papeleta","sat papeleta"],title:"Impugnación de papeletas – DS 016-2009-MTC",resp:"Si considera injusta una papeleta de tránsito:\n1. **Descargo:** preséntelo ante el SAT o la municipalidad dentro de los **5 días hábiles** de impuesta o notificada.\n2. Si emiten resolución de sanción en su contra: **reconsideración o apelación** en 15 días hábiles (TUO LPAG).\n3. Pruebas útiles: fotos del lugar, ausencia de señalización, GPS, error en la placa, venta previa del vehículo.\nSi la papeleta es legítima, evalúe el **pronto pago** (descuentos de hasta 83% en los primeros días). Las papeletas también **prescriben** según el reglamento. JurisIA genera el descargo.",sugg:["Generar descargo de papeleta","¿Mi papeleta ya prescribió?"]},
 /* ---- GENERAL ---- */
-{kw:["urp","uit","unidad de referencia procesal","cuanto es la urp"],title:"URP y UIT – Valores de referencia",resp:"- **UIT (Unidad Impositiva Tributaria):** se fija cada año por decreto supremo (2025: **S/ 5,350**). ⚠️ Verifique el valor del año en curso.\n- **URP (Unidad de Referencia Procesal) = 10% de la UIT** (2025: S/ 535). Se usa para competencias y tasas judiciales: p. ej., los Juzgados de Paz Letrados laborales conocen pretensiones hasta **50 URP**; el embargo de remuneraciones procede sobre el exceso de **5 URP**.\nLas tasas judiciales se calculan en función de la URP según los cuadros anuales del Poder Judicial (los procesos de alimentos y laborales hasta 70 URP están exonerados).",sugg:["¿Cuánto cuesta demandar?","¿Qué juzgado es competente para mi caso?"]},
+{kw:["urp","uit","unidad de referencia procesal","cuanto es la urp"],title:"URP y UIT – Valores de referencia",resp:"- **UIT (Unidad Impositiva Tributaria):** se fija cada año por decreto supremo (2026: **S/ 5,500**). ⚠️ Verifique el valor del año en curso.\n- **URP (Unidad de Referencia Procesal) = 10% de la UIT** (2026: S/ 550). Se usa para competencias y tasas judiciales: p. ej., los Juzgados de Paz Letrados laborales conocen pretensiones hasta **50 URP**; el embargo de remuneraciones procede sobre el exceso de **5 URP**.\nLas tasas judiciales se calculan en función de la URP según los cuadros anuales del Poder Judicial (los procesos de alimentos y laborales hasta 70 URP están exonerados).",sugg:["¿Cuánto cuesta demandar?","¿Qué juzgado es competente para mi caso?"]},
 {kw:["conciliacion extrajudicial","antes de demandar","centro de conciliacion"],title:"Conciliación extrajudicial – Ley 26872",resp:"En varias materias civiles la conciliación extrajudicial es **requisito de procedencia** antes de demandar (Ley 26872): pagos de deudas, desalojos por vencimiento, indemnizaciones, otorgamiento de escritura, división de bienes.\n- Se solicita en un **centro de conciliación** autorizado por el MINJUSDH.\n- Si la otra parte no asiste o no hay acuerdo, se emite el **acta** que habilita la demanda.\n- El **acta con acuerdo** vale como **título ejecutivo**.\nNo es exigible en alimentos, violencia familiar ni contra ausentes; en materia laboral rige la conciliación administrativa del MTPE, siempre voluntaria.",sugg:["¿Cómo cobro una deuda?","¿Cuánto cuesta demandar?"]},
 {kw:["abogado gratis","defensa publica","no puedo pagar abogado","auxilio judicial"],title:"Defensa gratuita y auxilio judicial",resp:"Si no puede pagar un abogado, el Estado ofrece ayuda:\n- **Defensa Pública del MINJUSDH** (Ley 29360): defensores gratuitos en materia penal (obligatoria), de víctimas, y de familia/civil/laboral para personas de escasos recursos. Búsquelos en las sedes del MINJUSDH y módulos judiciales — línea gratuita **1884**.\n- **Auxilio judicial** (Arts. 179-187 CPC): exoneración de tasas judiciales para quienes no pueden solventarlas.\n- **Consultorios jurídicos gratuitos** de universidades y colegios de abogados.\nRecuerde: la demanda de **alimentos** no requiere abogado (Ley 28439), y el **hábeas corpus** tampoco.",sugg:["¿Qué procesos no necesitan abogado?","Ver guía de plazos"]},
 {kw:["cuanto cuesta demandar","tasas judiciales","aranceles judiciales"],title:"Costos de un proceso judicial",resp:"Los costos principales son:\n- **Tasas judiciales (aranceles):** se calculan por URP según la cuantía; se pagan en el Banco de la Nación. **Exonerados:** procesos de alimentos, laborales (hasta 70 URP), penales, de violencia familiar y constitucionales.\n- **Honorarios de abogado:** libres, pactados con el profesional (existen defensores públicos gratuitos según la materia y recursos).\n- **Cédulas de notificación** y, según el caso, gastos periciales.\nSi carece de recursos, solicite **auxilio judicial** (Art. 179 CPC). En la condena, la parte vencida suele asumir **costas y costos**.",sugg:["¿Dónde consigo abogado gratuito?","¿Cuánto es la URP?"]}
@@ -2235,7 +2983,9 @@ const CHAT_TOPICS = [
  {label:"🛒 Reclamo ante INDECOPI",send:"indecopi"},
  {label:"👴 Pensión ONP / AFP",send:"pension jubilacion"},
  {label:"📜 Acción de amparo",send:"amparo"},
- {label:"🏢 Recursos administrativos (LPAG)",send:"LPAG"}
+ {label:"🏢 Recursos administrativos (LPAG)",send:"LPAG"},
+ {label:"🧾 Multas y reclamos SUNAT",send:"reclamacion tributaria"},
+ {label:"🚗 Impugnar una papeleta",send:"papeleta"}
 ];
 
 const CHAT_DEFAULT_SUGGS = ["¿Qué es el despido arbitrario?","¿Cómo demando alimentos?","Art. 34 del LPCL","¿Cuánto me toca de CTS?","¿Cuándo procede el amparo?"];
@@ -2312,7 +3062,7 @@ function buildForm(){
   $("pv-area-tag2").textContent=AREAS[wizDoc.area].name.toUpperCase();
   $("form-fields").innerHTML=wizDoc.fields.map((f,i)=>{
     const req=f.required?'<span class="req-star">*</span>':"";
-    const helpBtn=f.help?'<button type="button" class="help-btn" onclick="toggleHelp(event,this)" title="¿Qué significa este campo?">?<span class="help-pop">'+esc(f.help)+'</span></button>':"";
+    const helpBtn=f.help?'<button type="button" class="help-btn" aria-label="¿Qué significa este campo?" onclick="toggleHelp(event,this)" title="¿Qué significa este campo?">?<span class="help-pop">'+esc(f.help)+'</span></button>':"";
     let input="";
     if(f.type==="textarea"){
       input='<textarea id="fld-'+f.key+'" data-key="'+f.key+'" oninput="onFieldInput(this)" placeholder="Escriba aquí…"></textarea><div class="char-count" id="cc-'+f.key+'"><b>0</b> caracteres</div>';
@@ -2542,7 +3292,7 @@ function renderDocs(){
     '<div class="dr-actions"><button class="btn btn-ghost btn-sm" onclick="viewSaved('+d.id+')">👁 Ver</button>'+
     '<button class="btn btn-primary btn-sm" onclick="dlSavedWord('+d.id+')">📄 Word</button>'+
     '<button class="btn btn-primary btn-sm" onclick="dlSaved('+d.id+')">⬇️ .txt</button>'+
-    '<button class="btn btn-ghost btn-sm" onclick="delSaved('+d.id+')">🗑</button></div></div>'
+    '<button class="btn btn-ghost btn-sm" aria-label="Eliminar documento" onclick="delSaved('+d.id+')">🗑</button></div></div>'
   ).join("");
 }
 function viewSaved(id){const d=savedDocs.find(x=>x.id===id);if(d)openModal(d.name,'<div class="doc-paper doc-paper-full" style="max-height:60vh">'+esc(d.text)+"</div>");}
@@ -2823,7 +3573,10 @@ const PLAZOS=[
  {label:"Indemnización extracontractual (2 años – Art. 2001.4 CC)",kind:"anio",n:2,nota:"Desde la fecha del hecho dañoso."},
  {label:"Denuncia de consumo ante INDECOPI (2 años – Art. 121 Ley 29571)",kind:"anio",n:2,nota:"Desde la infracción o desde que cesó, si fue continuada."},
  {label:"Beneficios sociales laborales (4 años – Ley 27321)",kind:"anio",n:4,nota:"Desde el día siguiente del cese del vínculo laboral."},
- {label:"Cobro de deuda / acción personal (10 años – Art. 2001.1 CC)",kind:"anio",n:10,nota:"Desde que la obligación resultó exigible."}
+ {label:"Cobro de deuda / acción personal (10 años – Art. 2001.1 CC)",kind:"anio",n:10,nota:"Desde que la obligación resultó exigible."},
+ {label:"Reclamación tributaria SUNAT (20 días hábiles – Art. 137 CT)",kind:"hab",n:20,nota:"En comiso, internamiento y cierre el plazo es de solo 5 días hábiles."},
+ {label:"Apelación al Tribunal Fiscal (15 días hábiles – Art. 146 CT)",kind:"hab",n:15,nota:"Desde la notificación de la resolución que resolvió la reclamación."},
+ {label:"Descargo de papeleta de tránsito (5 días hábiles – DS 016-2009-MTC)",kind:"hab",n:5,nota:"Desde la imposición o notificación de la papeleta."}
 ];
 function calcPlazo(){
   const i=+$("pz-tipo").value,f=dParse($("pz-fecha").value);
