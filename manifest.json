@@ -1,0 +1,17 @@
+{
+  "name": "JurisIA — Asistente Legal Peruano",
+  "short_name": "JurisIA",
+  "description": "61 modelos de escritos legales, chat legal, jurisprudencia, calculadoras y guías. Gratis y privado.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F5F5F0",
+  "theme_color": "#2C4C3B",
+  "lang": "es-PE",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -13,6 +13,9 @@
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%232C4C3B"/><text x="32" y="44" font-size="34" text-anchor="middle">⚖️</text></svg>'>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2C4C3B">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -290,6 +293,18 @@ a{color:var(--navy);text-decoration:none}
 .guia-full .g-tip{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;padding:13px 16px;font-size:13.5px;margin:14px 0}
 .guia-full .g-norm{background:#ECEFE7;border-radius:9px;padding:13px 16px;font-size:13px;margin:14px 0;color:var(--navy)}
 
+/* ---------- Buscador global ---------- */
+.gs-wrap{margin-bottom:22px;position:relative}
+.gs-results{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-top:10px;overflow:hidden;display:none}
+.gs-results.show{display:block}
+.gs-group{padding:10px 16px 4px;font-size:11px;font-weight:800;letter-spacing:.8px;color:var(--gold-text);text-transform:uppercase;border-top:1px solid var(--line)}
+.gs-group:first-child{border-top:none}
+.gs-item{display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid #F0EEE6;padding:10px 16px;font-size:13.5px;color:var(--ink);cursor:pointer}
+.gs-item:hover{background:var(--gold-pale)}
+.gs-item b{color:var(--navy)}
+.gs-item span{display:block;font-size:12px;color:var(--ink-soft)}
+.gs-empty{padding:14px 16px;font-size:13px;color:var(--ink-soft)}
+
 /* ---------- Herramientas ---------- */
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start}
 .tool-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
@@ -473,7 +488,7 @@ a{color:var(--navy);text-decoration:none}
 
   <footer class="land-footer">
     <b>JurisIA</b> · Asistente legal peruano · Normativa referencial: Ley 29497 (NLPT), DS 003-97-TR (LPCL), Código Civil (DS 295-1984-JUS), NCPP (DS 957-2004), TUO LPAG (DS 004-2019-JUS), Ley 31307 (NCPConst.), TUO Código Tributario (DS 133-2013-EF)<br>
-    Herramienta orientativa — no sustituye la asesoría de un abogado colegiado. Perú, 2026.
+    Herramienta orientativa — no sustituye la asesoría de un abogado colegiado. Perú, 2026.<br><a href="#" onclick="openTerms();return false" style="color:#C7BD9E">Términos y Condiciones</a> · <a href="#" onclick="openPrivacy();return false" style="color:#C7BD9E">Política de Privacidad</a>
   </footer>
 </div>
 <!-- ==================== APLICACIÓN ==================== -->
@@ -491,7 +506,7 @@ a{color:var(--navy);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">JurisIA v2.3.1 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.</div>
+      <div class="sidebar-foot">JurisIA v2.4 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:#C7BD9E">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:#C7BD9E">Privacidad</a></div>
     </aside>
 
     <main class="main">
@@ -500,6 +515,10 @@ a{color:var(--navy);text-decoration:none}
         <div class="view-head">
           <h1>Bienvenido a JurisIA</h1>
           <p>Su asistente legal peruano. ¿Qué desea hacer hoy?</p>
+        </div>
+        <div class="gs-wrap">
+          <input type="text" class="juris-search" style="width:100%" id="global-search" placeholder="🔎 Buscar en toda la app: modelos de escritos, jurisprudencia, guías, temas del chat…" autocomplete="off">
+          <div class="gs-results" id="gs-results"></div>
         </div>
         <div class="stats-row">
           <div class="stat-card"><b id="st-docs">38</b><span>Modelos de escritos</span></div>
@@ -580,6 +599,8 @@ a{color:var(--navy);text-decoration:none}
               <button class="btn btn-primary" onclick="downloadDoc()">⬇️ Descargar .txt</button>
               <button class="btn btn-outline" onclick="printPDF()">🖨️ Guardar como PDF</button>
               <button class="btn btn-gold" onclick="copyDoc()">📋 Copiar texto</button>
+              <button class="btn btn-outline" onclick="shareWA()">🟢 Compartir por WhatsApp</button>
+              <button class="btn btn-outline" onclick="shareMail()">✉️ Enviar por correo</button>
               <button class="btn btn-outline" onclick="saveDoc()">💾 Guardar en Mis Documentos</button>
             </div>
             <div style="margin-top:22px"><button class="btn btn-ghost btn-sm" onclick="wizReset()">＋ Redactar otro escrito</button></div>
@@ -697,7 +718,12 @@ a{color:var(--navy);text-decoration:none}
       <section id="view-docs" class="hidden">
         <div class="view-head">
           <h1>Mis documentos</h1>
-          <p>Escritos guardados durante esta sesión. Se perderán al cerrar la página: descárguelos para conservarlos.</p>
+          <p>Escritos guardados durante esta sesión. Se perderán al cerrar la página: descárguelos, o use «Exportar sesión» para guardarlos y restaurarlos después.</p>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+          <button class="btn btn-ghost btn-sm" onclick="exportSession()">💾 Exportar sesión (.json)</button>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp-file').click()">📂 Importar sesión</button>
+          <input type="file" id="imp-file" accept="application/json,.json" class="hidden" onchange="importSession(this)">
         </div>
         <div id="docs-list" class="docs-list"></div>
       </section>
@@ -3593,6 +3619,103 @@ function calcPlazo(){
 }
 
 /* ============================================================
+   BUSCADOR GLOBAL
+   ============================================================ */
+function renderGlobalSearch(){
+  const box=$("gs-results");
+  const q=norm($("global-search").value.trim());
+  if(q.length<2){box.classList.remove("show");box.innerHTML="";return;}
+  const H=[];
+  const docs=DOC_TYPES.filter(d=>norm(d.name+" "+d.desc+" "+d.base_legal.join(" ")).includes(q)).slice(0,6);
+  if(docs.length){H.push('<div class="gs-group">📝 Modelos de escritos ('+docs.length+')</div>');
+    docs.forEach(d=>H.push('<button class="gs-item" onclick="gsDoc(\''+d.id+'\')"><b>'+d.icon+" "+esc(d.name)+'</b><span>'+esc(d.desc)+" · "+AREAS[d.area].name+'</span></button>'));}
+  const jur=JURISPRUDENCIA.filter(j=>norm(j.ref+" "+j.title+" "+j.tags.join(" ")+" "+j.excerpt).includes(q)).slice(0,4);
+  if(jur.length){H.push('<div class="gs-group">🏛️ Jurisprudencia ('+jur.length+')</div>');
+    jur.forEach(j=>H.push('<button class="gs-item" onclick="gsJuris(\''+j.ref.replace(/'/g,"\\'")+'\')"><b>'+esc(j.ref)+'</b><span>'+esc(j.title)+'</span></button>'));}
+  const gus=GUIAS.filter(g=>norm(g.title+" "+g.desc).includes(q)).slice(0,4);
+  if(gus.length){H.push('<div class="gs-group">📚 Guías legales ('+gus.length+')</div>');
+    gus.forEach(g=>H.push('<button class="gs-item" onclick="gsGuia(\''+g.id+'\')"><b>'+g.icon+" "+esc(g.title)+'</b></button>'));}
+  const kbs=CHAT_KB.filter(e=>norm(e.title+" "+e.kw.join(" ")).includes(q)).slice(0,4);
+  if(kbs.length){H.push('<div class="gs-group">💬 Temas del chat ('+kbs.length+')</div>');
+    kbs.forEach(e=>H.push('<button class="gs-item" onclick="gsChat(\''+e.kw[0].replace(/'/g,"\\'")+'\')"><b>'+esc(e.title)+'</b></button>'));}
+  box.innerHTML=H.length?H.join(""):'<div class="gs-empty">Sin resultados para «'+esc($("global-search").value)+'». Pruebe con otra palabra o consulte al Chat Legal.</div>';
+  box.classList.add("show");
+}
+function gsDoc(id){selectDoc(id);showView("redactar");}
+function gsJuris(q){showView("juris");$("juris-search").value=q;renderJuris();}
+function gsGuia(id){showView("guias");openGuia(id);}
+function gsChat(q){showView("chat");setTimeout(()=>askChat(q),150);}
+
+/* ============================================================
+   COMPARTIR (WhatsApp / correo)
+   ============================================================ */
+const APP_URL="https://angelvc-23.github.io/jurisia/";
+function shareWA(){
+  if(!wizDocText)return;
+  const cuerpo=wizDocText.length>3200?wizDocText.slice(0,3200)+"\n\n(…) El documento continúa: descárguelo completo en Word desde JurisIA.":wizDocText;
+  const txt="⚖️ *"+wizDoc.name+"* — generado con JurisIA\n\n"+cuerpo+"\n\n📲 Genere el suyo gratis: "+APP_URL;
+  window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank");
+}
+function shareMail(){
+  if(!wizDocText)return;
+  const cuerpo=wizDocText.length>1700?wizDocText.slice(0,1700)+"\n\n(…) El documento continúa: descárguelo completo en Word desde JurisIA.":wizDocText;
+  location.href="mailto:?subject="+encodeURIComponent(wizDoc.name+" — JurisIA")+"&body="+encodeURIComponent(cuerpo+"\n\nGenerado con JurisIA: "+APP_URL);
+}
+
+/* ============================================================
+   EXPORTAR / IMPORTAR SESIÓN (sin almacenamiento del navegador)
+   ============================================================ */
+function exportSession(){
+  const data={app:"JurisIA",version:"2.4",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
+  saveBlob(JSON.stringify(data,null,1),"jurisia_sesion.json","application/json");
+  showToast("💾 Sesión exportada. Guarde el archivo para restaurarla luego.");
+}
+function importSession(inp){
+  const f=inp.files&&inp.files[0];if(!f)return;
+  const rd=new FileReader();
+  rd.onload=()=>{
+    try{
+      const d=JSON.parse(rd.result);
+      if(d.app!=="JurisIA"||!Array.isArray(d.docs))throw new Error("formato");
+      d.docs.forEach(x=>{if(x&&x.name&&x.text&&x.area)savedDocs.push(x);});
+      $("st-saved").textContent=savedDocs.length;
+      if(d.borrador&&d.borrador.id){
+        const doc=DOC_TYPES.find(t=>t.id===d.borrador.id);
+        if(doc){selectDoc(doc.id);wizValues=d.borrador.valores||{};
+          doc.fields.forEach(fl=>{const el=$("fld-"+fl.key);if(el&&wizValues[fl.key])el.value=wizValues[fl.key];});
+          updateLivePreview();}
+      }
+      renderDocs();
+      showToast("📂 Sesión restaurada correctamente");
+    }catch(e){showToast("⚠️ El archivo no es una sesión válida de JurisIA");}
+    inp.value="";
+  };
+  rd.readAsText(f);
+}
+
+/* ============================================================
+   TÉRMINOS Y CONDICIONES / POLÍTICA DE PRIVACIDAD
+   ============================================================ */
+const TERMS_HTML='<div class="guia-full" style="border:none;padding:0;max-width:none">'+
+'<p><em>Vigente desde julio de 2026.</em></p>'+
+'<h2>1. Naturaleza del servicio</h2><p>JurisIA es una herramienta informativa y educativa que genera documentos modelo y brinda orientación general sobre la normativa peruana. <b>No es un estudio de abogados, no presta asesoría legal profesional y su uso no crea relación abogado–cliente.</b></p>'+
+'<h2>2. Uso bajo su responsabilidad</h2><p>Los modelos, cálculos, plazos y respuestas del chat son referenciales y pueden contener errores u omisiones, o quedar desactualizados por cambios normativos. Antes de presentar cualquier documento ante una autoridad, debe revisarlo con un abogado colegiado y habilitado. Usted es el único responsable del uso que dé a los contenidos generados.</p>'+
+'<h2>3. Sin garantías</h2><p>El servicio se ofrece «tal cual», de forma gratuita y sin garantía de disponibilidad, exactitud o idoneidad para un fin específico. JurisIA no se responsabiliza por decisiones tomadas con base en la información de la plataforma ni por la pérdida de plazos procesales.</p>'+
+'<h2>4. Uso permitido</h2><p>Puede usar la plataforma para fines personales, educativos o profesionales lícitos. No está permitido usarla para fines ilegales, para generar documentos con información falsa destinada a engañar a una autoridad, ni para revender sus contenidos como propios.</p>'+
+'<h2>5. Propiedad intelectual</h2><p>El nombre JurisIA, su identidad visual y el software son de titularidad de su autor. Los documentos que usted genera con sus propios datos le pertenecen.</p>'+
+'<h2>6. Cambios</h2><p>Estos términos pueden actualizarse; la versión vigente será siempre la publicada en esta página.</p></div>';
+const PRIV_HTML='<div class="guia-full" style="border:none;padding:0;max-width:none">'+
+'<p><em>Vigente desde julio de 2026 · Conforme a la Ley 29733, Ley de Protección de Datos Personales.</em></p>'+
+'<h2>1. No recolectamos sus datos</h2><p>JurisIA funciona íntegramente en su navegador. Los nombres, hechos y datos que usted escribe <b>no se envían, almacenan ni procesan en ningún servidor</b>: existen solo en la memoria de su dispositivo y se borran al cerrar la página.</p>'+
+'<h2>2. Sin cookies ni rastreadores</h2><p>No usamos cookies, ni análisis de tráfico, ni identificadores publicitarios de ningún tipo.</p>'+
+'<h2>3. Única conexión externa</h2><p>Al cargar la página se descarga la tipografía desde Google Fonts (o desde el caché local si instaló la app). Esa conexión revela a Google su dirección IP, como cualquier visita web, pero <b>no transmite nada de lo que usted escribe</b>. Si instala JurisIA como aplicación, la tipografía queda guardada y la app funciona sin internet.</p>'+
+'<h2>4. Archivos que usted genera</h2><p>Los documentos descargados y las sesiones exportadas se guardan únicamente donde usted decida. Trátelos con cuidado: contienen sus datos personales.</p>'+
+'<h2>5. Enlaces a terceros</h2><p>Los enlaces a servicios del Estado (SPIJ, CEJ, SUNAFIL, etc.) lo llevan a sitios con sus propias políticas de privacidad.</p>'+
+'<h2>6. Sus derechos</h2><p>Dado que no recolectamos datos personales, no existen bancos de datos sobre los cuales ejercer derechos ARCO ante JurisIA. Cualquier consulta sobre esta política puede canalizarse a través del repositorio público del proyecto.</p></div>';
+function openTerms(){openModal("Términos y Condiciones de JurisIA",TERMS_HTML);}
+function openPrivacy(){openModal("Política de Privacidad de JurisIA",PRIV_HTML);}
+
+/* ============================================================
    INICIALIZACIÓN
    ============================================================ */
 document.addEventListener("DOMContentLoaded",()=>{
@@ -3602,6 +3725,10 @@ document.addEventListener("DOMContentLoaded",()=>{
   renderAreaChips();renderDocGrid();renderGuias();
   $("juris-search").addEventListener("input",renderJuris);
   $("pz-tipo").innerHTML=PLAZOS.map((p,i)=>'<option value="'+i+'">'+p.label+"</option>").join("");
+  $("global-search").addEventListener("input",renderGlobalSearch);
+  if("serviceWorker" in navigator && location.protocol.indexOf("http")===0){
+    navigator.serviceWorker.register("sw.js").catch(function(){});
+  }
 });
 </script>
 </body>
