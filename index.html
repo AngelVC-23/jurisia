@@ -7,39 +7,40 @@
 <meta name="description" content="JurisIA: redacción de escritos legales, chat legal con IA, jurisprudencia y guías legales para el Perú. Democratizando el acceso a la justicia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    JurisIA v2 — Sistema de diseño (NO MODIFICAR paleta/tipografía)
    ============================================================ */
 :root{
-  --navy:#0f2d5e;
-  --navy-dark:#0a1f42;
-  --navy-light:#1a3d7a;
-  --gold:#c9922a;
-  --gold-light:#e0b25c;
-  --gold-pale:#faf3e3;
-  --civil:#1d4ed8;
-  --laboral:#059669;
-  --penal:#dc2626;
-  --admin:#7c3aed;
-  --consti:#b45309;
-  --bg:#f4f6fb;
+  --navy:#2C4C3B;
+  --navy-dark:#22392C;
+  --navy-light:#3A614C;
+  --gold:#D5CDB3;
+  --gold-light:#C7BD9E;
+  --gold-pale:#EDEAD9;
+  --gold-text:#7A7050;
+  --civil:#33568F;
+  --laboral:#1B7A63;
+  --penal:#B0483A;
+  --admin:#6B5CA5;
+  --consti:#A0752F;
+  --bg:#F5F5F0;
   --surface:#ffffff;
-  --ink:#1e293b;
-  --ink-soft:#64748b;
-  --line:#e2e8f0;
+  --ink:#1F2421;
+  --ink-soft:#5A605B;
+  --line:#E4E2D8;
   --danger:#b91c1c;
   --danger-bg:#fef2f2;
   --ok:#059669;
   --radius:14px;
-  --shadow:0 4px 18px rgba(15,45,94,.08);
-  --shadow-lg:0 12px 40px rgba(15,45,94,.14);
+  --shadow:0 4px 18px rgba(44,76,59,.08);
+  --shadow-lg:0 12px 40px rgba(44,76,59,.14);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px}
-h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
+h1,h2,h3,.serif{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-.3px}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit;font-size:14px}
 a{color:var(--navy);text-decoration:none}
@@ -49,7 +50,7 @@ a{color:var(--navy);text-decoration:none}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;border:none;font-weight:600;font-size:14px;transition:all .18s ease;text-decoration:none}
 .btn-primary{background:var(--navy);color:#fff}
 .btn-primary:hover{background:var(--navy-light);transform:translateY(-1px);box-shadow:var(--shadow)}
-.btn-gold{background:var(--gold);color:#fff}
+.btn-gold{background:var(--gold);color:#1F2421}
 .btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
 .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
 .btn-outline:hover{background:var(--navy);color:#fff}
@@ -67,27 +68,27 @@ a{color:var(--navy);text-decoration:none}
 /* ---------- Landing ---------- */
 #landing{min-height:100vh}
 .land-topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 6%;background:var(--navy);position:sticky;top:0;z-index:50}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Inter',sans-serif;font-size:22px;font-weight:700}
 .logo .logo-badge{background:var(--gold);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
 .logo em{color:var(--gold);font-style:normal}
 .land-nav{display:flex;gap:22px;align-items:center}
 .land-nav a{color:#cbd5e1;font-size:14px;font-weight:500}
 .land-nav a:hover{color:var(--gold-light)}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 60%,#132a52 100%);color:#fff;padding:72px 6% 84px;position:relative;overflow:hidden}
-.hero::after{content:"§";position:absolute;right:4%;top:8%;font-family:'Playfair Display',serif;font-size:340px;color:rgba(201,146,42,.09);line-height:1}
+.hero{background:var(--bg);color:var(--ink);padding:72px 6% 84px;position:relative;overflow:hidden}
+.hero::after{content:"§";position:absolute;right:4%;top:8%;font-family:'Inter',sans-serif;font-size:340px;color:rgba(44,76,59,.07);line-height:1}
 .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
-.hero-kicker{display:inline-block;background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.5);color:var(--gold-light);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.4px;margin-bottom:20px}
+.hero-kicker{display:inline-block;background:#E7EAE2;border:1px solid #C9D2C5;color:#2C4C3B;padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.4px;margin-bottom:20px}
 .hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.15;max-width:760px;margin-bottom:18px}
-.hero h1 em{color:var(--gold);font-style:normal}
-.hero p.lead{font-size:17px;color:#cbd5e1;max-width:640px;margin-bottom:30px}
+.hero h1 em{color:#3A614C;font-style:normal}
+.hero p.lead{font-size:17px;color:var(--ink-soft);max-width:640px;margin-bottom:30px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
 .hero-stats{display:flex;gap:38px;flex-wrap:wrap}
-.hstat b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--gold)}
-.hstat span{font-size:13px;color:#94a3b8}
+.hstat b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:#2C4C3B}
+.hstat span{font-size:13px;color:var(--ink-soft)}
 .land-section{padding:64px 6%;max-width:1180px;margin:0 auto}
 .land-section.alt{max-width:none;background:var(--surface)}
 .land-section.alt>div{max-width:1180px;margin:0 auto}
-.sec-kicker{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
+.sec-kicker{color:var(--gold-text);font-weight:700;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
 .sec-title{font-size:clamp(24px,3vw,34px);color:var(--navy);margin-bottom:12px}
 .sec-sub{color:var(--ink-soft);max-width:640px;margin-bottom:36px}
 .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
@@ -104,7 +105,7 @@ a{color:var(--navy);text-decoration:none}
 .area-card .ac-count{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.2);padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700}
 .steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:paso}
 .step-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
-.step-card::before{counter-increment:paso;content:counter(paso,decimal-leading-zero);font-family:'Playfair Display',serif;font-size:38px;font-weight:800;color:var(--gold);opacity:.5;display:block;margin-bottom:8px}
+.step-card::before{counter-increment:paso;content:counter(paso,decimal-leading-zero);font-family:'Inter',sans-serif;font-size:38px;font-weight:800;color:var(--gold);opacity:.5;display:block;margin-bottom:8px}
 .step-card h3{font-size:16px;color:var(--navy);margin-bottom:6px}
 .step-card p{font-size:13.5px;color:var(--ink-soft)}
 .cta-band{background:linear-gradient(135deg,var(--navy),var(--navy-dark));border-radius:20px;color:#fff;padding:52px 6%;text-align:center;margin:0 6% 64px}
@@ -123,9 +124,9 @@ a{color:var(--navy);text-decoration:none}
 .snav{display:flex;flex-direction:column;gap:4px}
 .snav button{display:flex;align-items:center;gap:11px;background:none;border:none;color:#cbd5e1;padding:11px 13px;border-radius:9px;font-size:14px;font-weight:500;text-align:left;transition:all .15s;width:100%}
 .snav button:hover{background:rgba(255,255,255,.08);color:#fff}
-.snav button.active{background:var(--gold);color:#fff;font-weight:600}
+.snav button.active{background:var(--gold);color:#1F2421;font-weight:600}
 .snav .sicon{font-size:17px;width:22px;text-align:center}
-.sidebar-foot{margin-top:auto;font-size:11px;color:#7c93b8;padding:12px 10px;border-top:1px solid rgba(255,255,255,.12);line-height:1.5}
+.sidebar-foot{margin-top:auto;font-size:11px;color:#A9B8AD;padding:12px 10px;border-top:1px solid rgba(255,255,255,.12);line-height:1.5}
 .main{flex:1;padding:26px 34px;overflow-x:hidden;min-width:0}
 .view-head{margin-bottom:22px}
 .view-head h1{font-size:26px;color:var(--navy)}
@@ -134,7 +135,7 @@ a{color:var(--navy);text-decoration:none}
 /* ---------- Home ---------- */
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-bottom:26px}
 .stat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-.stat-card b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--navy)}
+.stat-card b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:var(--navy)}
 .stat-card span{font-size:13px;color:var(--ink-soft)}
 .stat-card .accent{color:var(--gold)}
 .quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
@@ -150,11 +151,11 @@ a{color:var(--navy);text-decoration:none}
 .chip:hover{border-color:var(--navy);color:var(--navy)}
 .chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
 .tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px}
-.tag-civil{background:#dbeafe;color:var(--civil)}
-.tag-laboral{background:#d1fae5;color:var(--laboral)}
-.tag-penal{background:#fee2e2;color:var(--penal)}
-.tag-administrativo{background:#ede9fe;color:var(--admin)}
-.tag-constitucional{background:#fef3c7;color:var(--consti)}
+.tag-civil{background:#E3E9F2;color:var(--civil)}
+.tag-laboral{background:#DFEDE8;color:var(--laboral)}
+.tag-penal{background:#F2E2DF;color:var(--penal)}
+.tag-administrativo{background:#E9E6F2;color:var(--admin)}
+.tag-constitucional{background:#F0E9D8;color:var(--consti)}
 .bl-civil{border-left:4px solid var(--civil)}
 .bl-laboral{border-left:4px solid var(--laboral)}
 .bl-penal{border-left:4px solid var(--penal)}
@@ -167,11 +168,11 @@ a{color:var(--navy);text-decoration:none}
 .wiz-steps .ws{display:flex;align-items:center;gap:7px}
 .wiz-steps .ws .wnum{width:24px;height:24px;border-radius:50%;background:var(--line);color:var(--ink-soft);display:inline-flex;align-items:center;justify-content:center;font-size:11.5px}
 .wiz-steps .ws.done .wnum{background:var(--ok);color:#fff}
-.wiz-steps .ws.now .wnum{background:var(--gold);color:#fff}
+.wiz-steps .ws.now .wnum{background:var(--gold);color:#1F2421}
 .wiz-steps .ws.now{color:var(--navy)}
 .progress-track{height:9px;background:var(--line);border-radius:999px;overflow:hidden;position:relative}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--gold));border-radius:999px;transition:width .35s ease;width:0}
-.progress-pct{text-align:right;font-size:12px;font-weight:700;color:var(--gold);margin-top:5px}
+.progress-pct{text-align:right;font-size:12px;font-weight:700;color:var(--gold-text);margin-top:5px}
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
 .doc-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;cursor:pointer;transition:all .18s}
 .doc-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--gold)}
@@ -191,8 +192,8 @@ a{color:var(--navy);text-decoration:none}
 .field{margin-bottom:16px}
 .field-label{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .req-star{color:var(--danger);font-weight:800}
-.help-btn{width:19px;height:19px;border-radius:50%;border:1.5px solid var(--gold);background:var(--gold-pale);color:var(--gold);font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
-.help-btn:hover{background:var(--gold);color:#fff}
+.help-btn{width:19px;height:19px;border-radius:50%;border:1.5px solid var(--gold);background:var(--gold-pale);color:var(--gold-text);font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
+.help-btn:hover{background:var(--gold);color:#1F2421}
 .help-pop{position:absolute;bottom:calc(100% + 9px);left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:12px;font-weight:400;line-height:1.5;padding:10px 13px;border-radius:9px;width:250px;z-index:40;box-shadow:var(--shadow-lg);text-align:left;display:none}
 .help-pop::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:var(--navy)}
 .help-btn.open .help-pop{display:block}
@@ -201,7 +202,7 @@ a{color:var(--navy);text-decoration:none}
 .field textarea{min-height:96px;resize:vertical;line-height:1.55}
 .field.invalid input,.field.invalid textarea{border-color:var(--danger);background:var(--danger-bg)}
 .char-count{font-size:11.5px;color:var(--ink-soft);text-align:right;margin-top:4px}
-.char-count b{color:var(--gold)}
+.char-count b{color:var(--gold-text)}
 .field-err{font-size:12px;color:var(--danger);margin-top:4px;display:none}
 .field.invalid .field-err{display:block}
 .preview-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;position:sticky;top:20px}
@@ -224,7 +225,7 @@ a{color:var(--navy);text-decoration:none}
 .topics-panel h3{font-size:13px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
 .topic-item{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--line);padding:9px 4px;font-size:13px;color:var(--ink);transition:all .12s}
 .topic-item:last-child{border-bottom:none}
-.topic-item:hover{color:var(--gold);padding-left:8px}
+.topic-item:hover{color:var(--gold-text);padding-left:8px}
 .chat-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;height:calc(100vh - 210px);min-height:480px}
 .chat-msgs{flex:1;overflow-y:auto;padding:22px;display:flex;flex-direction:column;gap:14px}
 .msg{max-width:82%;padding:13px 17px;border-radius:14px;font-size:14px;line-height:1.6}
@@ -232,7 +233,7 @@ a{color:var(--navy);text-decoration:none}
 .msg-bot{align-self:flex-start;background:#f1f5f9;border:1px solid var(--line);border-bottom-left-radius:4px}
 .msg-bot .msg-title{font-weight:700;color:var(--navy);display:block;margin-bottom:5px;font-size:13.5px}
 .msg-bot strong{color:var(--navy)}
-.msg-bot em{color:var(--gold);font-style:normal;font-weight:600}
+.msg-bot em{color:var(--gold-text);font-style:normal;font-weight:600}
 .msg-bot ul{margin:7px 0 3px 19px}
 .msg-bot li{margin-bottom:3px}
 .msg-bot .msg-src{display:block;margin-top:8px;font-size:11.5px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:6px}
@@ -242,7 +243,7 @@ a{color:var(--navy);text-decoration:none}
 .typing i:nth-child(3){animation-delay:.36s}
 @keyframes tp{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
 .sugg-row{padding:10px 18px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;background:#fbfcfe}
-.sugg{padding:7px 13px;border-radius:999px;border:1.5px solid var(--gold);background:var(--gold-pale);color:#96690f;font-size:12.5px;font-weight:600;transition:all .14s}
+.sugg{padding:7px 13px;border-radius:999px;border:1.5px solid var(--gold);background:var(--gold-pale);color:#5B5330;font-size:12.5px;font-weight:600;transition:all .14s}
 .sugg:hover{background:var(--gold);color:#fff}
 .chat-input-row{display:flex;gap:10px;padding:14px 18px;border-top:1px solid var(--line)}
 .chat-input-row input{flex:1;padding:12px 16px;border:1.5px solid var(--line);border-radius:10px}
@@ -255,7 +256,7 @@ a{color:var(--navy);text-decoration:none}
 .juris-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(305px,1fr));gap:16px}
 .juris-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:all .18s}
 .juris-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-.juris-card .jc-ref{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.3px;margin-bottom:7px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.juris-card .jc-ref{font-size:12px;font-weight:800;color:var(--gold-text);letter-spacing:.3px;margin-bottom:7px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .juris-card .jc-org{color:var(--ink-soft);font-weight:600}
 .juris-card h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.4}
 .juris-card .jc-excerpt{font-size:13px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--gold);padding-left:11px;margin-bottom:11px;line-height:1.55}
@@ -276,7 +277,7 @@ a{color:var(--navy);text-decoration:none}
 .guia-full ol,.guia-full ul{margin:0 0 14px 22px;font-size:14.5px}
 .guia-full li{margin-bottom:7px}
 .guia-full .g-tip{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;padding:13px 16px;font-size:13.5px;margin:14px 0}
-.guia-full .g-norm{background:#eef2f9;border-radius:9px;padding:13px 16px;font-size:13px;margin:14px 0;color:var(--navy)}
+.guia-full .g-norm{background:#ECEFE7;border-radius:9px;padding:13px 16px;font-size:13px;margin:14px 0;color:var(--navy)}
 
 /* ---------- Herramientas ---------- */
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start}
@@ -351,7 +352,7 @@ a{color:var(--navy);text-decoration:none}
       <p class="lead">Redacte escritos legales con estructura procesal real, consulte jurisprudencia del Tribunal Constitucional y la Corte Suprema, y resuelva sus dudas con un asistente legal inteligente. Gratis, en español y sin complicaciones.</p>
       <div class="hero-ctas">
         <button class="btn btn-gold" onclick="enterApp('redactar')">📝 Redactar un escrito</button>
-        <button class="btn btn-outline" style="border-color:#94a3b8;color:#e2e8f0" onclick="enterApp('chat')">💬 Consultar al Chat Legal</button>
+        <button class="btn btn-outline" onclick="enterApp('chat')">💬 Consultar al Chat Legal</button>
       </div>
       <div class="hero-stats">
         <div class="hstat"><b>38</b><span>Modelos de escritos</span></div>
@@ -407,27 +408,27 @@ a{color:var(--navy);text-decoration:none}
       <h2 class="sec-title">Cinco áreas, una sola plataforma</h2>
       <p class="sec-sub">Cada área incluye modelos de escritos con su base legal específica y jurisprudencia relevante.</p>
       <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
-        <div class="area-card" style="background:linear-gradient(140deg,var(--laboral),#036c4c)" onclick="enterApp('redactar','laboral')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--laboral),#155D4B)" onclick="enterApp('redactar','laboral')">
           <span style="font-size:26px">👷</span><span class="ac-count">11 modelos</span>
           <h3>Laboral</h3>
           <p>Despidos, CTS, beneficios sociales, SUNAFIL. Ley 29497 NLPT y DS 003-97-TR.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--civil),#16389d)" onclick="enterApp('redactar','civil')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--civil),#27436F)" onclick="enterApp('redactar','civil')">
           <span style="font-size:26px">🏠</span><span class="ac-count">11 modelos</span>
           <h3>Civil / Familia</h3>
           <p>Alimentos, desalojo, filiación, prescripción adquisitiva. Código Civil y CPC.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--penal),#a31212)" onclick="enterApp('redactar','penal')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--penal),#8F3A2F)" onclick="enterApp('redactar','penal')">
           <span style="font-size:26px">🚨</span><span class="ac-count">4 modelos</span>
           <h3>Penal</h3>
           <p>Denuncias, actor civil, prisión preventiva, hábeas corpus. NCPP y Código Penal.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--admin),#5e21c9)" onclick="enterApp('redactar','administrativo')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--admin),#544883)" onclick="enterApp('redactar','administrativo')">
           <span style="font-size:26px">🏢</span><span class="ac-count">10 modelos</span>
           <h3>Administrativo</h3>
           <p>Recursos, INDECOPI, ONP, acceso a la información. TUO de la LPAG.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--consti),#8f3e06)" onclick="enterApp('redactar','constitucional')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--consti),#7E5B24)" onclick="enterApp('redactar','constitucional')">
           <span style="font-size:26px">📜</span><span class="ac-count">2 modelos</span>
           <h3>Constitucional</h3>
           <p>Acción de amparo y acción de cumplimiento. Ley 31307, Nuevo CPConst.</p>
@@ -474,7 +475,7 @@ a{color:var(--navy);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">JurisIA v2.1 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.</div>
+      <div class="sidebar-foot">JurisIA v2.2 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.</div>
     </aside>
 
     <main class="main">
@@ -991,7 +992,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del denunciante",type:"text",required:true,help:"Puede pedir reserva de identidad ante SUNAFIL para evitar represalias."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento Nacional de Identidad."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para recibir las notificaciones del procedimiento inspectivo."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"empleador",label:"Razón social del empleador denunciado",type:"text",required:true,help:"Nombre o razón social; agregue el RUC si lo conoce."},
   {key:"dir_empleador",label:"Dirección del centro de trabajo",type:"text",required:true,help:"Lugar exacto que deberá visitar el inspector."},
   {key:"materias",label:"Materias denunciadas",type:"textarea",required:true,help:"Ej.: trabajadores sin registro en planilla, impago de gratificaciones, jornada excesiva, falta de EPP, no depósito de CTS."},
@@ -1554,7 +1556,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del administrado recurrente",type:"text",required:true,help:"Persona natural o jurídica afectada por la resolución."},
   {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones; puede autorizar notificación electrónica."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"entidad",label:"Entidad y órgano que emitió el acto",type:"text",required:true,help:"Ej.: «Gerencia de Fiscalización de la Municipalidad Provincial de Trujillo». El recurso se presenta ante el MISMO órgano."},
   {key:"resolucion",label:"Resolución impugnada (número y fecha)",type:"text",required:true,help:"Ej.: «Resolución Gerencial N° 245-2026-MPT/GF del 02/06/2026». Recuerde: 15 días hábiles desde la notificación."},
   {key:"expediente",label:"N° de expediente administrativo",type:"text",required:true,help:"Número del procedimiento en el que se emitió el acto."},
@@ -1585,7 +1588,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del administrado recurrente",type:"text",required:true,help:"Afectado por la resolución de primera instancia administrativa."},
   {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"entidad",label:"Órgano que emitió el acto (ante quien se presenta)",type:"text",required:true,help:"El recurso se PRESENTA ante el órgano que dictó el acto, quien lo eleva al superior jerárquico."},
   {key:"resolucion",label:"Resolución apelada (número y fecha)",type:"text",required:true,help:"Acto administrativo impugnado. Plazo: 15 días hábiles desde la notificación."},
   {key:"expediente",label:"N° de expediente administrativo",type:"text",required:true,help:"Procedimiento de origen."},
@@ -1615,7 +1619,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del solicitante",type:"text",required:true,help:"Cualquier persona puede solicitar información pública SIN expresar el motivo de su pedido."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
-  {key:"domicilio",label:"Domicilio / correo electrónico para la entrega",type:"text",required:true,help:"Puede pedir la entrega en formato digital al correo, que suele ser gratuita."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física, por si solicita la entrega en papel."},
+  {key:"correo",label:"Correo electrónico para la entrega",type:"text",required:true,help:"La entrega digital al correo suele ser gratuita y más rápida."},
   {key:"entidad",label:"Entidad pública a la que solicita",type:"text",required:true,help:"Ministerio, municipalidad, gobierno regional, universidad pública, etc."},
   {key:"informacion",label:"Información solicitada (detallada)",type:"textarea",required:true,help:"Describa con precisión: documento, período, área. Ej.: «copia del contrato N° 045-2025 y sus adendas, suscrito por la Gerencia de Obras»."},
   {key:"formato",label:"Forma de entrega preferida",type:"select",required:true,options:["Copia digital al correo electrónico (gratuita)","Copia simple en papel (previo pago del costo de reproducción)","Lectura en la propia entidad"],help:"La entidad solo puede cobrar el costo real de reproducción."},
@@ -1644,7 +1649,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del consumidor denunciante",type:"text",required:true,help:"Quien adquirió el producto o servicio afectado."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones del procedimiento."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"proveedor",label:"Nombre / razón social del proveedor denunciado",type:"text",required:true,help:"Empresa o comercio que vendió el producto o prestó el servicio. Agregue el RUC si lo conoce."},
   {key:"dir_proveedor",label:"Dirección del proveedor",type:"text",required:true,help:"Local comercial o domicilio fiscal."},
   {key:"producto",label:"Producto o servicio contratado y fecha",type:"text",required:true,help:"Ej.: «lavadora marca X adquirida el 15/03/2026 por S/ 1,899»."},
@@ -1675,7 +1681,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del asegurado solicitante",type:"text",required:true,help:"Titular del derecho pensionario."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones de la ONP."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"fecha_nacimiento",label:"Fecha de nacimiento",type:"text",required:true,help:"Para verificar la edad de jubilación (65 años en el régimen general)."},
   {key:"anos_aporte",label:"Años de aportación al SNP",type:"text",required:true,help:"Mínimo 20 años para la pensión plena del régimen general. Detalle los períodos y empleadores."},
   {key:"tramite",label:"Tipo de gestión",type:"select",required:true,options:["Solicitud de otorgamiento de pensión de jubilación","Recurso de apelación contra resolución denegatoria","Solicitud de reconocimiento de aportaciones no acreditadas","Solicitud de pensión de invalidez (DL 19990)"],help:"Elija el trámite que corresponde a su situación."},
@@ -1706,7 +1713,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del afiliado",type:"text",required:true,help:"Titular de la cuenta individual de capitalización en la AFP."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"afp",label:"AFP en la que se encuentra afiliado",type:"text",required:true,help:"Ej.: «AFP Integra», «Prima AFP», «Profuturo AFP», «AFP Habitat»."},
   {key:"fecha_afiliacion",label:"Fecha de afiliación al SPP",type:"text",required:true,help:"Cuándo se incorporó a la AFP."},
   {key:"causal",label:"Causal de desafiliación",type:"select",required:true,options:["Afiliado antes del 02/01/2002 que al momento de afiliarse ya pertenecía al SNP con derecho a pensión","Falta de información o información distorsionada al momento de la afiliación","Realización de labores de riesgo (minería, construcción) cubiertas por el régimen especial del SNP"],help:"La Ley 28991 y la jurisprudencia del TC reconocen supuestos específicos de retorno al SNP."},
@@ -1767,7 +1775,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del titular de los datos",type:"text",required:true,help:"Persona natural cuyos datos personales son tratados."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad (adjunte copia simple)."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para la respuesta de la entidad."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"entidad",label:"Empresa o entidad que trata sus datos",type:"text",required:true,help:"Banco, empresa de telecomunicaciones, central de riesgo, comercio, entidad pública, etc."},
   {key:"derecho",label:"Derecho que ejerce",type:"select",required:true,options:["ACCESO – conocer qué datos míos tratan y con qué finalidad","RECTIFICACIÓN – corregir datos inexactos o desactualizados","CANCELACIÓN – suprimir mis datos del banco de datos","OPOSICIÓN – que dejen de usar mis datos (ej. publicidad)"],help:"Elija el derecho ARCO que desea ejercer. Cada uno tiene plazos de respuesta distintos (acceso: 20 días; los demás: 10 días)."},
   {key:"datos",label:"Datos personales concernidos",type:"text",required:true,help:"Ej.: «número de celular y correo usados para publicidad no consentida», «reporte negativo desactualizado en la central de riesgos»."},
@@ -1797,7 +1806,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del quejoso",type:"text",required:true,help:"Cualquier persona, sin restricción alguna, puede presentar queja; también a favor de terceros."},
   {key:"dni",label:"DNI",type:"text",required:true,help:"Documento de identidad."},
-  {key:"domicilio",label:"Domicilio, teléfono y correo electrónico",type:"text",required:true,help:"Para que la Defensoría le informe el resultado de sus gestiones."},
+  {key:"domicilio",label:"Domicilio y teléfono",type:"text",required:true,help:"Dirección y un teléfono de contacto para el seguimiento de su queja."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"La Defensoría le informará por esta vía el resultado de sus gestiones."},
   {key:"entidad",label:"Entidad o funcionario quejado",type:"text",required:true,help:"Entidad pública o funcionario cuya actuación (u omisión) vulnera sus derechos: municipalidad, hospital, UGEL, comisaría, programa social, etc."},
   {key:"derecho_afectado",label:"Derecho afectado",type:"text",required:true,help:"Ej.: «derecho de petición (no responden mi solicitud hace 6 meses)», «derecho a la salud (negativa de atención)», «derecho a la educación»."},
   {key:"hechos",label:"Relato de los hechos y gestiones realizadas",type:"textarea",required:true,help:"Qué ocurrió, qué trámites hizo, qué respuestas (o silencios) obtuvo. Adjunte copias de los documentos."},
@@ -1826,7 +1836,8 @@ const DOC_TYPES = [
  fields:[
   {key:"demandante",label:"Nombre del apelante",type:"text",required:true,help:"Consumidor denunciante o proveedor denunciado que impugna la resolución."},
   {key:"dni",label:"DNI / RUC",type:"text",required:true,help:"Documento de identidad o RUC."},
-  {key:"domicilio",label:"Domicilio y correo electrónico",type:"text",required:true,help:"Para notificaciones del Tribunal."},
+  {key:"domicilio",label:"Domicilio",type:"text",required:true,help:"Dirección física donde recibirá las notificaciones del procedimiento."},
+  {key:"correo",label:"Correo electrónico",type:"text",required:true,help:"Correo para notificaciones electrónicas; agiliza la comunicación con la entidad."},
   {key:"expediente",label:"N° de expediente INDECOPI",type:"text",required:true,help:"Número del procedimiento de primera instancia. Ej.: «Exp. 0456-2025/CC2»."},
   {key:"resolucion",label:"Resolución apelada (número y fecha)",type:"text",required:true,help:"Resolución final de la Comisión u Órgano Resolutivo. Plazo de apelación: 15 días hábiles (5 días en procedimientos sumarísimos)."},
   {key:"contraparte",label:"Nombre de la contraparte",type:"text",required:true,help:"La otra parte del procedimiento (proveedor o consumidor)."},
@@ -2407,6 +2418,7 @@ function generateDoc(doc,vals){
   }else{
     let pres=v("demandante").toUpperCase()+", identificado(a) con DNI N° "+v("dni");
     if(vals.domicilio) pres+=", con domicilio real en "+v("domicilio")+", y señalando domicilio procesal en el mismo lugar";
+    if(vals.correo) pres+=", con correo electrónico "+v("correo");
     pres+="; ante usted, con el debido respeto, me presento y digo:";
     L.push(pres);
   }
