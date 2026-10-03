@@ -403,7 +403,7 @@ a{color:var(--primary);text-decoration:none}
       </div>
       <div class="hero-stats">
         <div class="hstat"><b>61</b><span>Modelos de escritos</span></div>
-        <div class="hstat"><b>29</b><span>Precedentes clave</span></div>
+        <div class="hstat"><b>47</b><span>Precedentes clave</span></div>
         <div class="hstat"><b>6</b><span>Áreas del derecho</span></div>
         <div class="hstat"><b>60+</b><span>Temas en el chat</span></div>
       </div>
@@ -527,7 +527,7 @@ a{color:var(--primary);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">DuraLex v2.7 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
+      <div class="sidebar-foot">DuraLex v2.8 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
     </aside>
 
     <main class="main">
@@ -2703,7 +2703,7 @@ const DOC_TYPES = [
 }
 ];
 /* ============================================================
-   DATOS — JURISPRUDENCIA (29 precedentes)
+   DATOS — JURISPRUDENCIA (47 precedentes)
    ============================================================ */
 const JURISPRUDENCIA = [
 {ref:"STC N° 976-2001-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2003",title:"Caso Llanos Huasco – Tipología del despido: incausado, fraudulento y nulo",excerpt:"Se produce el denominado despido incausado, cuando: Se despide al trabajador, ya sea de manera verbal o mediante comunicación escrita, sin expresarle causa alguna derivada de la conducta o la labor que la justifique. […] Se produce el denominado despido fraudulento, cuando: Se despide al trabajador con ánimo perverso y auspiciado por el engaño […] como sucede cuando se imputa al trabajador hechos notoriamente inexistentes, falsos o imaginarios.",tags:["Laboral","Despido incausado","Despido fraudulento","Reposición"]},
@@ -2734,7 +2734,25 @@ const JURISPRUDENCIA = [
 {ref: "STC N° 04082-2012-PA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2016", "title": "Caso Medina de Baca – Intereses moratorios mientras SUNAT demora en resolver", "excerpt": "DISPONER que la Sunat efectúe el cálculo de los intereses moratorios […] sin aplicar la regla de la capitalización de intereses contenida en el artículo 7 de la Ley 27038, y sin aplicar la regla del cobro de intereses durante la etapa de impugnación administrativa de las resoluciones de determinación y de multa, contenida, en el extremo de la apelación ante el Tribunal Fiscal, en el artículo 6 del Decreto Legislativo 981.", "tags": ["Tributario", "Intereses moratorios", "Plazo razonable", "SUNAT"]},
 {ref: "STC N° 06089-2006-PA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2007", "title": "Caso Express Cars – Reserva de ley en materia tributaria", "excerpt": "La Reserva de Ley en materia tributaria es una reserva relativa, ya que puede admitir excepcionalmente derivaciones al Reglamento, siempre y cuando, los parámetros estén claramente establecidos en la propia Ley.", "tags": ["Tributario", "Reserva de ley", "Principio de legalidad"]},
 {ref: "STC N° 02302-2003-AA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2005", "title": "Caso Inversiones Dream – Cómo probar que un tributo es confiscatorio", "excerpt": "Hemos venido señalando que para acreditar la confiscatoriedad en cada caso, es necesario acreditar la afectación real al patrimonio empresarial de la persona jurídica, como en el caso de autos.", "tags": ["Tributario", "No confiscatoriedad", "Carga de la prueba"]},
-{ref: "STC N° 06681-2013-PA/TC", "area": "laboral", "org": "Tribunal Constitucional", "year": "2016", "title": "Caso Cruz Llamos – Alcances del precedente Huatuco", "excerpt": "No toda persona que se vincula a la función pública necesariamente está realizando carrera administrativa, y que solo a esta último grupo de personas, los que vienen efectuando carrera administrativa, les corresponde aplicar las reglas del «precedente Huatuco», referidas al pedido de reposición.", "tags": ["Laboral", "Sector público", "Precedente Huatuco", "Reposición"]}
+{ref: "STC N° 06681-2013-PA/TC", "area": "laboral", "org": "Tribunal Constitucional", "year": "2016", "title": "Caso Cruz Llamos – Alcances del precedente Huatuco", "excerpt": "No toda persona que se vincula a la función pública necesariamente está realizando carrera administrativa, y que solo a esta último grupo de personas, los que vienen efectuando carrera administrativa, les corresponde aplicar las reglas del «precedente Huatuco», referidas al pedido de reposición.", "tags": ["Laboral", "Sector público", "Precedente Huatuco", "Reposición"]},
+{ref:"STC N° 09332-2006-PA/TC",area:"civil",org:"Tribunal Constitucional",year:"2007",title:"Caso Shols Pérez – Familias reconstituidas: los hijastros no pueden ser discriminados",excerpt:"[…] la diferenciación de trato entre los hijastros y los hijos deviene en arbitraria. […] esta regla colisiona con el derecho a fundar una familia y a su protección.",tags:["Familia", "Familias reconstituidas", "Igualdad"]},
+{ref:"STC N° 06572-2006-PA/TC",area:"civil",org:"Tribunal Constitucional",year:"2007",title:"Caso Rosas Domínguez – Pensión de viudez para la pareja de una unión de hecho",excerpt:"Al haberse acreditado la unión de hecho, en virtud del artículo 5 de la Constitución, del artículo 326 del Código Civil, así como del artículo 53 del Decreto Ley 19990, cuya interpretación es efectuada a la luz de la Constitución, le corresponde a la demandante la pensión de viudez.",tags:["Familia", "Unión de hecho", "Pensión de viudez", "ONP"]},
+{ref:"STC N° 01817-2009-PHC/TC",area:"civil",org:"Tribunal Constitucional",year:"2009",title:"Caso Hoefken – Prohibición del castigo físico y psicológico a los hijos",excerpt:"Este Tribunal reitera que contraviene rotundamente la Constitución y los tratados internacionales sobre derechos humanos agredir física y/o psicológicamente a los niños so pretexto de educarlos o corregirlos.",tags:["Familia", "Interés superior del niño", "Integridad", "Tenencia"]},
+{ref:"STC N° 02132-2008-PA/TC",area:"civil",org:"Tribunal Constitucional",year:"2011",title:"Caso Martínez García – Alimentos: el juez debe informar sobre pago y prescripción",excerpt:"Debe resaltarse la obligación ineludible del juez que fija la pensión de alimentos, de que al momento de realizar tal acto informe, bajo responsabilidad, tanto al obligado u obligada, como al representante o representantes del menor de edad, las obligaciones, derechos y consecuencias que se van a producir a partir de tal sentencia, los modos de acreditar el pago de la pensión de alimentos […], los plazos de prescripción, los supuestos en los que se pueda interrumpir o suspender la prescripción, entre otros asuntos que se estime pertinente según el caso concreto.",tags:["Familia", "Alimentos", "Prescripción", "Interés superior del niño"]},
+{ref:"STC N° 02868-2004-AA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2004",title:"Caso Álvarez Rojas – Nadie necesita autorización para casarse",excerpt:"Toda persona, en forma autónoma e independiente, puede determinar cuándo y con quién contraer matrimonio. Particularmente, en la decisión de contraer matrimonio no se puede aceptar la voluntad -para autorizar o negar- de nadie que no sea la pareja de interesados en su celebración.",tags:["Constitucional", "Libre desarrollo de la personalidad", "Matrimonio"]},
+{ref:"STC N° 00858-2003-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2004",title:"Caso Torres del Águila – Deber del regulador de proteger al consumidor",excerpt:"Al Tribunal Constitucional no le cabe la menor duda de que detrás de la forma como ha resuelto OSIPTEL la controversia entre la recurrente y Telefónica Móviles S.A.C., existe una manifiesta violación del «deber especial de protección» de los derechos fundamentales que, como se verá más adelante, repercute directamente en el derecho constitucional a la protección de los usuarios y consumidores, reconocido en el artículo 65° de la Constitución Política del Perú.",tags:["Consumidor", "Servicios públicos", "OSIPTEL", "Art. 65 Constitución"]},
+{ref:"STC N° 00008-2003-AI/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2003",title:"Caso Nesta Brero – Derechos del consumidor: información veraz y seguridad",excerpt:"El Estado mantiene con los consumidores o usuarios dos obligaciones genéricas; a saber: a) Garantiza el derecho a la información sobre los bienes y servicios que estén a su disposición en el mercado. Ello implica la consignación de datos veraces, suficientes, apropiados y fácilmente accesibles. b) Vela por la salud y la seguridad de las personas en su condición de consumidoras o usuarias.",tags:["Consumidor", "Derecho a la información", "Economía social de mercado"]},
+{ref:"STC N° 01058-2004-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2004",title:"Caso García Mendoza – El empleador no puede revisar el correo del trabajador sin orden judicial",excerpt:"Si se trataba de determinar que el trabajador utilizó su correo electrónico para fines opuestos a los que le imponían sus obligaciones laborales, la única forma de acreditarlo era iniciar una investigación de tipo judicial, habida cuenta de que tal configuración procedimental la imponía, para estos casos, la propia Constitución.",tags:["Laboral", "Secreto de las comunicaciones", "Correo electrónico", "Despido"]},
+{ref:"STC N° 04635-2004-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2006",title:"Caso Sindicato de Toquepala – Jornada máxima de ocho horas",excerpt:"Ordena que la demandada restituya la jornada laboral de ocho horas diarias considerando una jornada semanal razonable en el asentamiento minero de Toquepala, conforme a los fundamentos 28 a 44 expuestos en esta sentencia.",tags:["Laboral", "Jornada de trabajo", "Horas extras", "Precedente vinculante"]},
+{ref:"STC N° 05652-2007-PA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2008",title:"Caso Gambini Vidal – Despido por embarazo es discriminación",excerpt:"Las decisiones extintivas basadas en el embarazo, al afectar exclusivamente a la mujer, constituye, indudablemente, una discriminación por razón de sexo proscrita por el inciso 2) del Art. 2 de la Constitución Política.",tags:["Laboral", "Embarazo", "Discriminación", "Despido nulo"]},
+{ref:"STC N° 03818-2009-PA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2010",title:"Caso Leal Maytahuari – CAS: indemnización por despido injustificado",excerpt:"Si el despido se produce por terminación injustificada, el empleador tiene la obligación de pagar automáticamente al trabajador la indemnización equivalente a las remuneraciones dejadas de percibir, hasta un importe máximo equivalente a dos meses. En caso de que el empleador no abone en forma automática la indemnización, el trabajador podrá interponer la demanda correspondiente.",tags:["Laboral", "CAS", "Indemnización", "Sector público"]},
+{ref:"STC N° 02915-2004-PHC/TC",area:"penal",org:"Tribunal Constitucional",year:"2004",title:"Caso Berrocal Prudencio – Plazo razonable de la prisión preventiva",excerpt:"El derecho a que la prisión preventiva no exceda de un plazo razonable, no se encuentra expresamente contemplado en la Constitución. Sin embargo, se trata de un derecho que coadyuva el pleno respeto de los principios de proporcionalidad, razonabilidad, subsidiariedad, necesidad, provisionalidad y excepcionalidad que debe guardar la aplicación de la prisión provisional para ser reconocida como constitucional.",tags:["Penal", "Prisión preventiva", "Plazo razonable", "Hábeas corpus"]},
+{ref:"STC N° 00728-2008-PHC/TC",area:"penal",org:"Tribunal Constitucional",year:"2008",title:"Caso Llamoja – Derecho a una resolución debidamente motivada",excerpt:"Está fuera de toda duda que se viola el derecho a una decisión debidamente motivada cuando la motivación es inexistente o cuando la misma es solo aparente, en el sentido de que no da cuenta de las razones mínimas que sustentan la decisión o de que no responde a las alegaciones de las partes del proceso, o porque solo intenta dar un cumplimiento formal al mandato, amparándose en frases sin ningún sustento fáctico o jurídico.",tags:["Penal", "Debido proceso", "Motivación de resoluciones"]},
+{ref:"STC N° 01230-2002-HC/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2002",title:"Caso Tineo Cabrera – Qué exige (y qué no) la motivación de las resoluciones",excerpt:"La Constitución no garantiza una determinada extensión de la motivación, por lo que su contenido esencial se respeta siempre que exista fundamentación jurídica, congruencia entre lo pedido y lo resuelto y, por sí misma, exprese una suficiente justificación de la decisión adoptada, aun si esta es breve o concisa, o se presenta el supuesto de motivación por remisión.",tags:["Constitucional", "Debido proceso", "Motivación de resoluciones"]},
+{ref:"STC N° 02192-2004-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2004",title:"Caso Costa Gómez – Proporcionalidad de las sanciones administrativas",excerpt:"Resulta cuestionable que en un proceso administrativo que tenga como consecuencia la sanción máxima de destitución, se omita la valoración de toda prueba o elemento que coadyuve a la determinación certera de la responsabilidad de los procesados, cuando ésta representa la única garantía de justicia y proporcionalidad entre la supuesta falta cometida y la sanción a imponerse.",tags:["Administrativo", "Proporcionalidad", "Procedimiento sancionador", "Destitución"]},
+{ref:"STC N° 03741-2004-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2005",title:"Caso Salazar Yarlenque – No se puede cobrar por impugnar",excerpt:"Todo cobro que se haya establecido al interior de un procedimiento administrativo, como condición o requisito previo a la impugnación de un acto de la propia administración pública, es contrario a los derechos constitucionales al debido proceso, de petición y de acceso a la tutela jurisdiccional y, por tanto, las normas que lo autorizan son nulas y no pueden exigirse a partir de la publicación de la presente sentencia.",tags:["Administrativo", "Tasas", "Derecho de petición", "Precedente vinculante"]},
+{ref:"STC N° 01797-2002-HD/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2003",title:"Caso Rodríguez Gutiérrez – Derecho a la autodeterminación informativa",excerpt:"El derecho reconocido en el inciso 6) del artículo 2° de la Constitución es denominado por la doctrina derecho a la autodeterminación informativa y tiene por objeto proteger la intimidad, personal o familiar, la imagen y la identidad frente al peligro que representa el uso y la eventual manipulación de los datos a través de los ordenadores electrónicos.",tags:["Constitucional", "Hábeas data", "Datos personales"]},
+{ref:"STC N° 02273-2005-PHC/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2006",title:"Caso Quiroz Cabanillas – Derecho a la identidad y al DNI",excerpt:"La autoridad administrativa se encuentra facultada para requerir la mencionada partida de nacimiento, o cualquier otra documentación adicional que estime pertinente (p. ej. Título Profesional), siempre que ello no se convierta en un obstáculo irrazonable -en particular, por el transcurso del tiempo- que no permita llegar a una solución que esclarezca la situación en la que la parte demandante se encuentra.",tags:["Constitucional", "Identidad", "DNI", "RENIEC"]}
 ];
 
 /* Ficha ampliada de cada sentencia (se fusiona con JURISPRUDENCIA por "ref").
@@ -2967,6 +2985,199 @@ const JURIS_NUEVAS = {
 }
 };
 JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_NUEVAS[j.ref]||{}));
+/* Tanda 2 (oct. 2026): familia, consumo, laboral, penal y administrativo — verificadas contra el PDF oficial */
+const JURIS_TANDA2 = {
+"STC N° 09332-2006-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2008/09332-2006-AA.pdf",
+"practica": "La familia formada por una nueva pareja y los hijos de una relación anterior (familia reconstituida) también está protegida. Una institución no puede tratar a su hijastro o hijastra peor que a sus hijos cuando existe una convivencia estable y pública."
+},
+"STC N° 06572-2006-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"pension-onp"
+],
+"cita": true,
+"fj": "FJ 39",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2008/06572-2006-AA.pdf",
+"practica": "Si convivió con su pareja en una unión de hecho reconocida (judicialmente o por notario) y esta falleció, puede pedir la pensión de viudez en la ONP, igual que un cónyuge."
+},
+"STC N° 01817-2009-PHC/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"tenencia",
+"medidas-proteccion"
+],
+"cita": true,
+"fj": "FJ 40",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2009/01817-2009-HC.pdf",
+"practica": "Ningún padre o madre puede golpear ni maltratar psicológicamente a sus hijos con la excusa de educarlos. Si eso ocurre, puede pedir medidas de protección y hacerlo valer en el proceso de tenencia."
+},
+"STC N° 02132-2008-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"alimentos",
+"aumento-alimentos"
+],
+"cita": true,
+"fj": "FJ 43",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2011/02132-2008-AA.pdf",
+"practica": "Cuando se fija una pensión de alimentos, el juez debe explicarle cómo acreditar los pagos y en qué plazos prescriben las pensiones no cobradas. Guarde siempre los comprobantes de pago o depósito, y no deje pasar el tiempo para cobrar las pensiones atrasadas."
+},
+"STC N° 02868-2004-AA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"amparo"
+],
+"cita": true,
+"fj": "FJ 14",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/02868-2004-AA.pdf",
+"practica": "Su empleador o institución (incluso la Policía) no puede exigirle permiso para casarse ni sancionarlo por hacerlo. Si lo sancionan por ese motivo, puede defenderse con un amparo."
+},
+"STC N° 00858-2003-AA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reclamo-indecopi"
+],
+"cita": true,
+"fj": "FJ 5",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2004/00858-2003-AA.pdf",
+"practica": "Los organismos reguladores (OSIPTEL, OSINERGMIN, SUNASS) y el Estado tienen el deber de proteger activamente al usuario frente a las empresas. Si su reclamo se resuelve sin considerar sus derechos, puede impugnarlo."
+},
+"STC N° 00008-2003-AI/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reclamo-indecopi",
+"apelacion-indecopi"
+],
+"cita": true,
+"fj": "FJ 31",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2003/00008-2003-AI.pdf",
+"practica": "Como consumidor tiene derecho a recibir información veraz, suficiente y fácil de entender sobre lo que compra o contrata, y a que no se ponga en riesgo su salud o seguridad. Si no fue así, puede reclamar ante INDECOPI."
+},
+"STC N° 01058-2004-AA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reposicion-incausado"
+],
+"cita": true,
+"fj": "FJ 21",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2004/01058-2004-AA.pdf",
+"practica": "Su empleador no puede abrir su correo electrónico de trabajo para buscar faltas sin una orden judicial. Las pruebas obtenidas así no tienen valor y un despido basado en ellas puede ser anulado."
+},
+"STC N° 04635-2004-AA/TC": {
+"tipo": "Precedente vinculante",
+"doc": [
+"horas-extras",
+"denuncia-sunafil"
+],
+"cita": true,
+"fj": "Fallo, punto 2",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2006/04635-2004-AA.pdf",
+"practica": "La jornada de trabajo tiene un límite de 8 horas diarias o 48 semanales. Los sistemas de turnos acumulativos (por ejemplo, en minería) deben respetar ese promedio. Si trabaja más, tiene derecho al pago de horas extras."
+},
+"STC N° 05652-2007-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"despido-nulo"
+],
+"cita": true,
+"fj": "FJ 50",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2008/05652-2007-AA.pdf",
+"practica": "Si la despidieron por estar embarazada, el despido es discriminatorio y nulo: puede pedir su reposición en el puesto. Reúna pruebas de que el empleador conocía su embarazo (certificados, correos, testigos)."
+},
+"STC N° 03818-2009-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"beneficios-sociales"
+],
+"cita": true,
+"fj": "Fallo (interpretación del DS 075-2008-PCM)",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2010/03818-2009-AA.pdf",
+"practica": "Si trabaja bajo contrato CAS y lo cesan sin causa antes de que venza el contrato, le corresponde una indemnización (con el tope que fija la norma). Si no se la pagan, puede demandarla.",
+"nota": "El régimen CAS ha sido modificado desde entonces (entre otras, por la Ley 31131 de 2021). Verifique la norma vigente para su caso."
+},
+"STC N° 02915-2004-PHC/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"cese-prision",
+"habeas-corpus"
+],
+"cita": true,
+"fj": "FJ 5",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2004/02915-2004-HC.pdf",
+"practica": "La prisión preventiva no puede durar indefinidamente: debe limitarse al tiempo razonable que exija el caso. Si se prolonga sin justificación, puede pedir su cese o presentar un hábeas corpus."
+},
+"STC N° 00728-2008-PHC/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"apelacion-penal"
+],
+"cita": true,
+"fj": "FJ 7.a",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2008/00728-2008-HC.pdf",
+"practica": "Toda resolución judicial debe explicar sus razones y responder a lo que usted alegó. Si el juez se limita a frases genéricas sin sustento, puede apelar alegando falta de motivación."
+},
+"STC N° 01230-2002-HC/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"habeas-corpus",
+"apelacion-penal"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2002/01230-2002-HC.pdf",
+"practica": "Una resolución puede ser breve y aun así estar bien motivada. Lo que no puede faltar es la base jurídica, la coherencia entre lo que se pidió y lo que se decidió, y una justificación suficiente."
+},
+"STC N° 02192-2004-AA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"apelacion-adm",
+"reconsideracion"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/02192-2004-AA.pdf",
+"practica": "Antes de sancionarlo (sobre todo con la destitución), la entidad debe valorar todas las pruebas, incluidas las que lo favorecen, y la sanción debe ser proporcional a la falta. Si no lo hizo, puede impugnarla."
+},
+"STC N° 03741-2004-AA/TC": {
+"tipo": "Precedente vinculante",
+"doc": [
+"reconsideracion",
+"apelacion-adm",
+"queja-tramitacion"
+],
+"cita": true,
+"fj": "Regla sustancial",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2006/03741-2004-AA.pdf",
+"practica": "Ninguna entidad pública (incluidas las municipalidades) puede cobrarle una tasa como requisito para presentar un recurso contra sus propias decisiones. Si se lo exigen, puede presentar el recurso igualmente o una queja."
+},
+"STC N° 01797-2002-HD/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"habeas-data",
+"proteccion-datos"
+],
+"cita": true,
+"fj": "FJ 3",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2003/01797-2002-HD.pdf",
+"practica": "Usted tiene derecho a saber qué datos suyos guardan las entidades y empresas, y a pedir que se corrijan o eliminen si son falsos o se usan indebidamente. Primero solicítelo por escrito; si no le responden, procede el hábeas data."
+},
+"STC N° 02273-2005-PHC/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"habeas-corpus"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2006/02273-2005-HC.pdf",
+"practica": "RENIEC puede pedirle documentos para emitir o renovar su DNI, pero no puede convertir esos requisitos en un obstáculo irrazonable que lo deje sin documento de identidad."
+}
+};
+JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_TANDA2[j.ref]||{}));
 
 
 
@@ -3959,7 +4170,7 @@ function shareMail(){
    EXPORTAR / IMPORTAR SESIÓN (sin almacenamiento del navegador)
    ============================================================ */
 function exportSession(){
-  const data={app:"DuraLex",version:"2.7",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
+  const data={app:"DuraLex",version:"2.8",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
   saveBlob(JSON.stringify(data,null,1),"duralex_sesion.json","application/json");
   showToast("💾 Sesión exportada. Guarde el archivo para restaurarla luego.");
 }
