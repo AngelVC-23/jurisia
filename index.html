@@ -3,112 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JurisIA – Asistente Legal Peruano con Inteligencia Artificial</title>
-<meta name="description" content="JurisIA: redacción de escritos legales, chat legal con IA, jurisprudencia y guías legales para el Perú. Democratizando el acceso a la justicia.">
-<meta property="og:title" content="JurisIA – Asistente Legal Peruano con IA">
+<title>DuraLex – Asistente Legal Peruano</title>
+<meta name="description" content="DuraLex: la ley es dura, defenderse no tiene por qué serlo. 61 modelos de escritos legales, chat legal, jurisprudencia, calculadoras y guías para el Perú. Gratis y privado.">
+<meta property="og:title" content="DuraLex – La ley es dura. Defenderse no tiene por qué serlo.">
 <meta property="og:description" content="61 modelos de escritos legales, chat legal inteligente, jurisprudencia, calculadoras y guías paso a paso. Gratis, privado y hecho para el Perú.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://angelvc-23.github.io/jurisia/">
 <meta property="og:image" content="https://angelvc-23.github.io/jurisia/og.png">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%232C4C3B"/><text x="32" y="44" font-size="34" text-anchor="middle">⚖️</text></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%236B1E2E"/><text x="32" y="44" font-size="34" text-anchor="middle">⚖️</text></svg>'>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2C4C3B">
+<meta name="theme-color" content="#6B1E2E">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   JurisIA v2 — Sistema de diseño (NO MODIFICAR paleta/tipografía)
+   DuraLex v2.5 — Sistema de diseño · Paleta «Burdeos Tribunal»
+   Usar SIEMPRE estas variables; no escribir colores sueltos en el CSS
    ============================================================ */
 :root{
-  --navy:#2C4C3B;
-  --navy-dark:#22392C;
-  --navy-light:#3A614C;
-  --gold:#D5CDB3;
-  --gold-light:#C7BD9E;
-  --gold-pale:#EDEAD9;
-  --gold-text:#7A7050;
-  --civil:#33568F;
+  --primary:#6B1E2E;
+  --primary-dark:#4A1420;
+  --primary-light:#86283B;
+  --accent:#D4B062;
+  --accent-light:#C9A24E;
+  --accent-pale:#F6EEDD;
+  --accent-text:#8C6A1F;
+  --on-primary-soft:#EEDFD0;
+  --on-primary-muted:#D3B8AE;
+  --civil:#2F5185;
   --laboral:#1B7A63;
-  --penal:#B0483A;
-  --admin:#6B5CA5;
-  --consti:#A0752F;
-  --tribu:#7A6234;
-  --bg:#F5F5F0;
+  --penal:#A3412F;
+  --admin:#5E4F99;
+  --consti:#9A6B1F;
+  --tribu:#6E5A30;
+  --bg:#FBF8F3;
   --surface:#ffffff;
-  --ink:#1F2421;
-  --ink-soft:#5A605B;
-  --line:#E4E2D8;
-  --danger:#b91c1c;
-  --danger-bg:#fef2f2;
+  --surface-soft:#F5EFE6;
+  --ink:#1F1416;
+  --ink-soft:#6B5E58;
+  --line:#EADFD3;
+  --notice:#8A4B08;
+  --notice-bg:#FDF3E1;
+  --danger:#B42318;
+  --danger-bg:#FEF3F2;
   --ok:#059669;
   --radius:14px;
-  --shadow:0 4px 18px rgba(44,76,59,.08);
-  --shadow-lg:0 12px 40px rgba(44,76,59,.14);
+  --shadow:0 4px 18px rgba(107,30,46,.08);
+  --shadow-lg:0 12px 40px rgba(107,30,46,.14);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px}
-h1,h2,h3,.serif{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-.3px}
+h1,h2,.serif{font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:0}
+h3{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:-.2px}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit;font-size:14px}
-a{color:var(--navy);text-decoration:none}
+a{color:var(--primary);text-decoration:none}
 .hidden{display:none!important}
 
 /* ---------- Botones ---------- */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;border:none;font-weight:600;font-size:14px;transition:all .18s ease;text-decoration:none}
-.btn-primary{background:var(--navy);color:#fff}
-.btn-primary:hover{background:var(--navy-light);transform:translateY(-1px);box-shadow:var(--shadow)}
-.btn-gold{background:var(--gold);color:#1F2421}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
-.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-light);transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn-gold{background:var(--accent);color:#1F2421}
+.btn-gold:hover{background:var(--accent-light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
+.btn-outline:hover{background:var(--primary);color:#fff}
 .btn-ghost{background:transparent;color:var(--ink-soft);border:1px solid var(--line)}
-.btn-ghost:hover{border-color:var(--navy);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
 .btn-sm{padding:7px 14px;font-size:13px}
 .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 
 /* ---------- Aviso legal (banner rojo) ---------- */
-.legal-banner{background:var(--danger-bg);border:1.5px solid var(--danger);color:var(--danger);padding:12px 18px;border-radius:10px;font-size:13px;font-weight:500;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.legal-banner{background:var(--notice-bg);border:1.5px solid var(--notice);color:var(--notice);padding:12px 18px;border-radius:10px;font-size:13px;font-weight:500;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
 .legal-banner strong{font-weight:700}
 .legal-banner .lb-icon{font-size:17px;flex-shrink:0}
-.legal-strip{background:var(--danger);color:#fff;text-align:center;font-size:12.5px;font-weight:600;padding:8px 16px}
+.legal-strip{background:var(--notice);color:#fff;text-align:center;font-size:12.5px;font-weight:600;padding:8px 16px}
 
 /* ---------- Landing ---------- */
 #landing{min-height:100vh}
-.land-topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 6%;background:var(--navy);position:sticky;top:0;z-index:50}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Inter',sans-serif;font-size:22px;font-weight:700}
-.logo .logo-badge{background:var(--gold);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo em{color:var(--gold);font-style:normal}
+.land-topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 6%;background:var(--primary);position:sticky;top:0;z-index:50}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Libre Caslon Text',Georgia,serif;font-size:22px;font-weight:700}
+.logo .logo-badge{background:var(--accent);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo em{color:var(--accent);font-style:normal}
 .land-nav{display:flex;gap:22px;align-items:center}
-.land-nav a{color:#cbd5e1;font-size:14px;font-weight:500}
-.land-nav a:hover{color:var(--gold-light)}
+.land-nav a{color:var(--on-primary-soft);font-size:14px;font-weight:500}
+.land-nav a:hover{color:var(--accent-light)}
 .hero{background:var(--bg);color:var(--ink);padding:72px 6% 84px;position:relative;overflow:hidden}
-.hero::after{content:"§";position:absolute;right:4%;top:8%;font-family:'Inter',sans-serif;font-size:340px;color:rgba(44,76,59,.07);line-height:1}
+.hero::after{content:"§";position:absolute;right:4%;top:8%;font-family:'Libre Caslon Text',Georgia,serif;font-size:340px;color:rgba(107,30,46,.07);line-height:1}
 .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
-.hero-kicker{display:inline-block;background:#E7EAE2;border:1px solid #C9D2C5;color:#2C4C3B;padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.4px;margin-bottom:20px}
+.hero-kicker{display:inline-block;background:var(--accent-pale);border:1px solid var(--accent-light);color:var(--primary);padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.4px;margin-bottom:20px}
 .hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.15;max-width:760px;margin-bottom:18px}
-.hero h1 em{color:#3A614C;font-style:normal}
+.hero h1 em{color:var(--primary);font-style:normal}
 .hero p.lead{font-size:17px;color:var(--ink-soft);max-width:640px;margin-bottom:30px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
 .hero-stats{display:flex;gap:38px;flex-wrap:wrap}
-.hstat b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:#2C4C3B}
+.hstat b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:var(--primary)}
 .hstat span{font-size:13px;color:var(--ink-soft)}
 .land-section{padding:64px 6%;max-width:1180px;margin:0 auto}
 .land-section.alt{max-width:none;background:var(--surface)}
 .land-section.alt>div{max-width:1180px;margin:0 auto}
-.sec-kicker{color:var(--gold-text);font-weight:700;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
-.sec-title{font-size:clamp(24px,3vw,34px);color:var(--navy);margin-bottom:12px}
+.sec-kicker{color:var(--accent-text);font-weight:700;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-size:clamp(24px,3vw,34px);color:var(--primary);margin-bottom:12px}
 .sec-sub{color:var(--ink-soft);max-width:640px;margin-bottom:36px}
 .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .feature-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;transition:all .2s}
-.feature-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--gold)}
-.feature-card .fc-icon{width:48px;height:48px;border-radius:12px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:15px}
-.feature-card h3{font-size:17px;color:var(--navy);margin-bottom:8px}
+.feature-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--accent)}
+.feature-card .fc-icon{width:48px;height:48px;border-radius:12px;background:var(--accent-pale);display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:15px}
+.feature-card h3{font-size:17px;color:var(--primary);margin-bottom:8px}
 .feature-card p{font-size:13.5px;color:var(--ink-soft)}
 .area-card{border-radius:var(--radius);padding:24px;color:#fff;position:relative;overflow:hidden;transition:transform .2s;cursor:pointer}
 .area-card:hover{transform:translateY(-3px)}
@@ -117,51 +124,51 @@ a{color:var(--navy);text-decoration:none}
 .area-card .ac-count{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.2);padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700}
 .steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:paso}
 .step-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
-.step-card::before{counter-increment:paso;content:counter(paso,decimal-leading-zero);font-family:'Inter',sans-serif;font-size:38px;font-weight:800;color:var(--gold);opacity:.5;display:block;margin-bottom:8px}
-.step-card h3{font-size:16px;color:var(--navy);margin-bottom:6px}
+.step-card::before{counter-increment:paso;content:counter(paso,decimal-leading-zero);font-family:'Inter',sans-serif;font-size:38px;font-weight:800;color:var(--accent);opacity:.5;display:block;margin-bottom:8px}
+.step-card h3{font-size:16px;color:var(--primary);margin-bottom:6px}
 .step-card p{font-size:13.5px;color:var(--ink-soft)}
-.cta-band{background:linear-gradient(135deg,var(--navy),var(--navy-dark));border-radius:20px;color:#fff;padding:52px 6%;text-align:center;margin:0 6% 64px}
+.cta-band{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:20px;color:#fff;padding:52px 6%;text-align:center;margin:0 6% 64px}
 .cta-band h2{font-size:clamp(22px,3vw,32px);margin-bottom:12px}
-.cta-band h2 em{color:var(--gold);font-style:normal}
-.cta-band p{color:#cbd5e1;max-width:560px;margin:0 auto 26px}
-.land-footer{background:var(--navy-dark);color:#94a3b8;padding:34px 6%;font-size:13px;text-align:center}
-.land-footer b{color:#e2e8f0}
+.cta-band h2 em{color:var(--accent);font-style:normal}
+.cta-band p{color:var(--on-primary-soft);max-width:560px;margin:0 auto 26px}
+.land-footer{background:var(--primary-dark);color:var(--on-primary-muted);padding:34px 6%;font-size:13px;text-align:center}
+.land-footer b{color:#fff}
 
 /* ---------- App shell ---------- */
 #app{display:flex;min-height:100vh;flex-direction:column}
 .app-topstrip{flex-shrink:0}
 .app-body{display:flex;flex:1;min-height:0}
-.sidebar{width:232px;background:var(--navy);color:#fff;display:flex;flex-direction:column;padding:18px 12px;flex-shrink:0;position:sticky;top:0;height:100vh}
+.sidebar{width:232px;background:var(--primary);color:#fff;display:flex;flex-direction:column;padding:18px 12px;flex-shrink:0;position:sticky;top:0;height:100vh}
 .sidebar .logo{font-size:19px;padding:4px 10px 18px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:14px}
 .snav{display:flex;flex-direction:column;gap:4px}
-.snav button{display:flex;align-items:center;gap:11px;background:none;border:none;color:#cbd5e1;padding:11px 13px;border-radius:9px;font-size:14px;font-weight:500;text-align:left;transition:all .15s;width:100%}
+.snav button{display:flex;align-items:center;gap:11px;background:none;border:none;color:var(--on-primary-soft);padding:11px 13px;border-radius:9px;font-size:14px;font-weight:500;text-align:left;transition:all .15s;width:100%}
 .snav button:hover{background:rgba(255,255,255,.08);color:#fff}
-.snav button.active{background:var(--gold);color:#1F2421;font-weight:600}
+.snav button.active{background:var(--accent);color:#1F2421;font-weight:600}
 .snav .sicon{font-size:17px;width:22px;text-align:center}
-.sidebar-foot{margin-top:auto;font-size:11px;color:#A9B8AD;padding:12px 10px;border-top:1px solid rgba(255,255,255,.12);line-height:1.5}
+.sidebar-foot{margin-top:auto;font-size:11px;color:var(--on-primary-muted);padding:12px 10px;border-top:1px solid rgba(255,255,255,.12);line-height:1.5}
 .main{flex:1;padding:26px 34px;overflow-x:hidden;min-width:0}
 .view-head{margin-bottom:22px}
-.view-head h1{font-size:26px;color:var(--navy)}
+.view-head h1{font-size:26px;color:var(--primary)}
 .view-head p{color:var(--ink-soft);font-size:14px;margin-top:4px}
 
 /* ---------- Home ---------- */
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-bottom:26px}
 .stat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-.stat-card b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:var(--navy)}
+.stat-card b{display:block;font-family:'Inter',sans-serif;font-size:30px;color:var(--primary)}
 .stat-card span{font-size:13px;color:var(--ink-soft)}
-.stat-card .accent{color:var(--gold)}
+.stat-card .accent{color:var(--accent)}
 .quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 .quick-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;cursor:pointer;transition:all .2s}
-.quick-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--gold)}
+.quick-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--accent)}
 .quick-card .qc-icon{font-size:28px;margin-bottom:12px;display:block}
-.quick-card h3{font-size:16.5px;color:var(--navy);margin-bottom:6px}
+.quick-card h3{font-size:16.5px;color:var(--primary);margin-bottom:6px}
 .quick-card p{font-size:13px;color:var(--ink-soft)}
 
 /* ---------- Chips / etiquetas de área ---------- */
 .chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
 .chip{padding:7px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-size:13px;font-weight:600;color:var(--ink-soft);transition:all .15s}
-.chip:hover{border-color:var(--navy);color:var(--navy)}
-.chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip:hover{border-color:var(--primary);color:var(--primary)}
+.chip.active{background:var(--primary);border-color:var(--primary);color:#fff}
 .tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px}
 .tag-civil{background:#E3E9F2;color:var(--civil)}
 .tag-laboral{background:#DFEDE8;color:var(--laboral)}
@@ -182,17 +189,17 @@ a{color:var(--navy);text-decoration:none}
 .wiz-steps .ws{display:flex;align-items:center;gap:7px}
 .wiz-steps .ws .wnum{width:24px;height:24px;border-radius:50%;background:var(--line);color:var(--ink-soft);display:inline-flex;align-items:center;justify-content:center;font-size:11.5px}
 .wiz-steps .ws.done .wnum{background:var(--ok);color:#fff}
-.wiz-steps .ws.now .wnum{background:var(--gold);color:#1F2421}
-.wiz-steps .ws.now{color:var(--navy)}
+.wiz-steps .ws.now .wnum{background:var(--accent);color:#1F2421}
+.wiz-steps .ws.now{color:var(--primary)}
 .progress-track{height:9px;background:var(--line);border-radius:999px;overflow:hidden;position:relative}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--gold));border-radius:999px;transition:width .35s ease;width:0}
-.progress-pct{text-align:right;font-size:12px;font-weight:700;color:var(--gold-text);margin-top:5px}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:999px;transition:width .35s ease;width:0}
+.progress-pct{text-align:right;font-size:12px;font-weight:700;color:var(--accent-text);margin-top:5px}
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
 .doc-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;cursor:pointer;transition:all .18s}
-.doc-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--gold)}
+.doc-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--accent)}
 .doc-card .dc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px}
 .doc-card .dc-icon{font-size:24px}
-.doc-card h3{font-size:14.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.35}
+.doc-card h3{font-size:14.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);margin-bottom:5px;line-height:1.35}
 .doc-card p{font-size:12.5px;color:var(--ink-soft);line-height:1.45}
 .complexity{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.3px}
 .cx-low{background:#d1fae5;color:#047857}
@@ -201,26 +208,26 @@ a{color:var(--navy);text-decoration:none}
 .wiz-split{display:grid;grid-template-columns:minmax(340px,1fr) minmax(320px,1fr);gap:22px;align-items:start}
 @media(max-width:980px){.wiz-split{grid-template-columns:1fr}}
 .form-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.form-panel h2{font-size:18px;color:var(--navy);margin-bottom:4px}
+.form-panel h2{font-size:18px;color:var(--primary);margin-bottom:4px}
 .form-panel .fp-sub{font-size:13px;color:var(--ink-soft);margin-bottom:18px}
 .field{margin-bottom:16px}
 .field-label{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .req-star{color:var(--danger);font-weight:800}
-.help-btn{width:19px;height:19px;border-radius:50%;border:1.5px solid var(--gold);background:var(--gold-pale);color:var(--gold-text);font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
-.help-btn:hover{background:var(--gold);color:#1F2421}
-.help-pop{position:absolute;bottom:calc(100% + 9px);left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:12px;font-weight:400;line-height:1.5;padding:10px 13px;border-radius:9px;width:250px;z-index:40;box-shadow:var(--shadow-lg);text-align:left;display:none}
-.help-pop::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:var(--navy)}
+.help-btn{width:19px;height:19px;border-radius:50%;border:1.5px solid var(--accent);background:var(--accent-pale);color:var(--accent-text);font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
+.help-btn:hover{background:var(--accent);color:#1F2421}
+.help-pop{position:absolute;bottom:calc(100% + 9px);left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;font-size:12px;font-weight:400;line-height:1.5;padding:10px 13px;border-radius:9px;width:250px;z-index:40;box-shadow:var(--shadow-lg);text-align:left;display:none}
+.help-pop::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:var(--primary)}
 .help-btn.open .help-pop{display:block}
 .field input[type=text],.field textarea,.field select{width:100%;padding:10px 13px;border:1.5px solid var(--line);border-radius:9px;background:#fbfcfe;transition:border .15s;color:var(--ink)}
-.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold);background:#fff}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);background:#fff}
 .field textarea{min-height:96px;resize:vertical;line-height:1.55}
 .field.invalid input,.field.invalid textarea{border-color:var(--danger);background:var(--danger-bg)}
 .char-count{font-size:11.5px;color:var(--ink-soft);text-align:right;margin-top:4px}
-.char-count b{color:var(--gold-text)}
+.char-count b{color:var(--accent-text)}
 .field-err{font-size:12px;color:var(--danger);margin-top:4px;display:none}
 .field.invalid .field-err{display:block}
 .preview-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;position:sticky;top:20px}
-.preview-panel .pv-head{background:var(--navy);color:#fff;padding:11px 18px;font-size:12.5px;font-weight:700;letter-spacing:.6px;display:flex;justify-content:space-between;align-items:center}
+.preview-panel .pv-head{background:var(--primary);color:#fff;padding:11px 18px;font-size:12.5px;font-weight:700;letter-spacing:.6px;display:flex;justify-content:space-between;align-items:center}
 .pv-live-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block;margin-right:6px;animation:pulse 1.6s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .doc-paper{font-family:'Courier New',monospace;font-size:11.8px;line-height:1.62;white-space:pre-wrap;padding:26px 28px;max-height:560px;overflow-y:auto;background:#fffdf8;color:#1f2937}
@@ -228,7 +235,7 @@ a{color:var(--navy);text-decoration:none}
 .wiz-actions{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
 .final-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;text-align:center;max-width:620px;margin:0 auto}
 .final-card .fin-icon{font-size:44px;margin-bottom:14px;display:block}
-.final-card h2{color:var(--navy);font-size:22px;margin-bottom:8px}
+.final-card h2{color:var(--primary);font-size:22px;margin-bottom:8px}
 .final-card p{color:var(--ink-soft);font-size:14px;margin-bottom:22px}
 .final-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
@@ -236,108 +243,108 @@ a{color:var(--navy);text-decoration:none}
 .chat-layout{display:grid;grid-template-columns:250px 1fr;gap:20px;align-items:start}
 @media(max-width:900px){.chat-layout{grid-template-columns:1fr}}
 .topics-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:sticky;top:20px}
-.topics-panel h3{font-size:13px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
+.topics-panel h3{font-size:13px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
 .topic-item{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--line);padding:9px 4px;font-size:13px;color:var(--ink);transition:all .12s}
 .topic-item:last-child{border-bottom:none}
-.topic-item:hover{color:var(--gold-text);padding-left:8px}
+.topic-item:hover{color:var(--accent-text);padding-left:8px}
 .chat-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;height:calc(100vh - 210px);min-height:480px}
 .chat-msgs{flex:1;overflow-y:auto;padding:22px;display:flex;flex-direction:column;gap:14px}
 .msg{max-width:82%;padding:13px 17px;border-radius:14px;font-size:14px;line-height:1.6}
-.msg-user{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:4px}
-.msg-bot{align-self:flex-start;background:#f1f5f9;border:1px solid var(--line);border-bottom-left-radius:4px}
-.msg-bot .msg-title{font-weight:700;color:var(--navy);display:block;margin-bottom:5px;font-size:13.5px}
-.msg-bot strong{color:var(--navy)}
-.msg-bot em{color:var(--gold-text);font-style:normal;font-weight:600}
+.msg-user{align-self:flex-end;background:var(--primary);color:#fff;border-bottom-right-radius:4px}
+.msg-bot{align-self:flex-start;background:var(--surface-soft);border:1px solid var(--line);border-bottom-left-radius:4px}
+.msg-bot .msg-title{font-weight:700;color:var(--primary);display:block;margin-bottom:5px;font-size:13.5px}
+.msg-bot strong{color:var(--primary)}
+.msg-bot em{color:var(--accent-text);font-style:normal;font-weight:600}
 .msg-bot ul{margin:7px 0 3px 19px}
 .msg-bot li{margin-bottom:3px}
 .msg-bot .msg-src{display:block;margin-top:8px;font-size:11.5px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:6px}
-.typing{align-self:flex-start;padding:13px 18px;background:#f1f5f9;border-radius:14px;display:flex;gap:5px}
+.typing{align-self:flex-start;padding:13px 18px;background:var(--surface-soft);border-radius:14px;display:flex;gap:5px}
 .typing i{width:7px;height:7px;border-radius:50%;background:var(--ink-soft);animation:tp 1.1s infinite}
 .typing i:nth-child(2){animation-delay:.18s}
 .typing i:nth-child(3){animation-delay:.36s}
 @keyframes tp{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
 .sugg-row{padding:10px 18px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap;background:#fbfcfe}
-.sugg{padding:7px 13px;border-radius:999px;border:1.5px solid var(--gold);background:var(--gold-pale);color:#5B5330;font-size:12.5px;font-weight:600;transition:all .14s}
-.sugg:hover{background:var(--gold);color:#fff}
+.sugg{padding:7px 13px;border-radius:999px;border:1.5px solid var(--accent);background:var(--accent-pale);color:#5B5330;font-size:12.5px;font-weight:600;transition:all .14s}
+.sugg:hover{background:var(--accent);color:#fff}
 .chat-input-row{display:flex;gap:10px;padding:14px 18px;border-top:1px solid var(--line)}
 .chat-input-row input{flex:1;padding:12px 16px;border:1.5px solid var(--line);border-radius:10px}
-.chat-input-row input:focus{outline:none;border-color:var(--gold)}
+.chat-input-row input:focus{outline:none;border-color:var(--accent)}
 
 /* ---------- Jurisprudencia ---------- */
 .juris-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
 .juris-search{flex:1;min-width:230px;padding:11px 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface)}
-.juris-search:focus{outline:none;border-color:var(--gold)}
+.juris-search:focus{outline:none;border-color:var(--accent)}
 .juris-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(305px,1fr));gap:16px}
 .juris-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:all .18s}
 .juris-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-.juris-card .jc-ref{font-size:12px;font-weight:800;color:var(--gold-text);letter-spacing:.3px;margin-bottom:7px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.juris-card .jc-ref{font-size:12px;font-weight:800;color:var(--accent-text);letter-spacing:.3px;margin-bottom:7px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .juris-card .jc-org{color:var(--ink-soft);font-weight:600}
-.juris-card h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.4}
-.juris-card .jc-excerpt{font-size:13px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--gold);padding-left:11px;margin-bottom:11px;line-height:1.55}
+.juris-card h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);margin-bottom:8px;line-height:1.4}
+.juris-card .jc-excerpt{font-size:13px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--accent);padding-left:11px;margin-bottom:11px;line-height:1.55}
 .jc-tags{display:flex;gap:6px;flex-wrap:wrap}
 
 /* ---------- Guías ---------- */
 .guias-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .guia-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;cursor:pointer;transition:all .18s}
-.guia-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--gold)}
+.guia-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--accent)}
 .guia-card .gc-icon{font-size:26px;display:block;margin-bottom:10px}
-.guia-card h3{font-size:15.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.4}
+.guia-card h3{font-size:15.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);margin-bottom:7px;line-height:1.4}
 .guia-card p{font-size:13px;color:var(--ink-soft)}
 .guia-card .gc-meta{display:flex;justify-content:space-between;margin-top:13px;font-size:12px;color:var(--ink-soft);font-weight:600}
 .guia-full{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;max-width:820px}
-.guia-full h1{font-size:25px;color:var(--navy);margin:8px 0 16px}
-.guia-full h2{font-size:18px;color:var(--navy);margin:22px 0 9px}
+.guia-full h1{font-size:25px;color:var(--primary);margin:8px 0 16px}
+.guia-full h2{font-size:18px;color:var(--primary);margin:22px 0 9px}
 .guia-full p{margin-bottom:12px;font-size:14.5px}
 .guia-full ol,.guia-full ul{margin:0 0 14px 22px;font-size:14.5px}
 .guia-full li{margin-bottom:7px}
-.guia-full .g-tip{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;padding:13px 16px;font-size:13.5px;margin:14px 0}
-.guia-full .g-norm{background:#ECEFE7;border-radius:9px;padding:13px 16px;font-size:13px;margin:14px 0;color:var(--navy)}
+.guia-full .g-tip{background:var(--accent-pale);border-left:4px solid var(--accent);border-radius:0 9px 9px 0;padding:13px 16px;font-size:13.5px;margin:14px 0}
+.guia-full .g-norm{background:var(--accent-pale);border-radius:9px;padding:13px 16px;font-size:13px;margin:14px 0;color:var(--primary)}
 
 /* ---------- Buscador global ---------- */
 .gs-wrap{margin-bottom:22px;position:relative}
 .gs-results{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-top:10px;overflow:hidden;display:none}
 .gs-results.show{display:block}
-.gs-group{padding:10px 16px 4px;font-size:11px;font-weight:800;letter-spacing:.8px;color:var(--gold-text);text-transform:uppercase;border-top:1px solid var(--line)}
+.gs-group{padding:10px 16px 4px;font-size:11px;font-weight:800;letter-spacing:.8px;color:var(--accent-text);text-transform:uppercase;border-top:1px solid var(--line)}
 .gs-group:first-child{border-top:none}
-.gs-item{display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid #F0EEE6;padding:10px 16px;font-size:13.5px;color:var(--ink);cursor:pointer}
-.gs-item:hover{background:var(--gold-pale)}
-.gs-item b{color:var(--navy)}
+.gs-item{display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--line);padding:10px 16px;font-size:13.5px;color:var(--ink);cursor:pointer}
+.gs-item:hover{background:var(--accent-pale)}
+.gs-item b{color:var(--primary)}
 .gs-item span{display:block;font-size:12px;color:var(--ink-soft)}
 .gs-empty{padding:14px 16px;font-size:13px;color:var(--ink-soft)}
 
 /* ---------- Herramientas ---------- */
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start}
 .tool-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.tool-card h3{font-size:16px;color:var(--navy);margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:700}
+.tool-card h3{font-size:16px;color:var(--primary);margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:700}
 .tool-card .tc-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
-.tool-result{background:var(--gold-pale);border:1.5px solid var(--gold);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px;display:none;white-space:pre-wrap;line-height:1.6}
+.tool-result{background:var(--accent-pale);border:1.5px solid var(--accent);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px;display:none;white-space:pre-wrap;line-height:1.6}
 .tool-result.show{display:block}
-.tool-result b{color:var(--navy)}
+.tool-result b{color:var(--primary)}
 .links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
 .link-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:all .15s}
-.link-card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
-.link-card b{display:block;color:var(--navy);font-size:14px}
+.link-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.link-card b{display:block;color:var(--primary);font-size:14px}
 .link-card span{font-size:12px;color:var(--ink-soft)}
 .privacy-note{font-size:12px;color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:8px 12px;margin-bottom:16px}
 
 /* ---------- Mis documentos ---------- */
 .docs-list{display:flex;flex-direction:column;gap:12px}
 .docrow{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:17px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-.docrow .dr-info h3{font-size:14.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy)}
+.docrow .dr-info h3{font-size:14.5px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary)}
 .docrow .dr-info span{font-size:12.5px;color:var(--ink-soft)}
 .docrow .dr-actions{display:flex;gap:8px}
 .empty-state{text-align:center;padding:56px 20px;color:var(--ink-soft)}
 .empty-state .es-icon{font-size:44px;display:block;margin-bottom:12px}
 
 /* ---------- Modal / Toast ---------- */
-.modal-back{position:fixed;inset:0;background:rgba(10,31,66,.55);z-index:90;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal-back{position:fixed;inset:0;background:rgba(42,11,18,.55);z-index:90;display:flex;align-items:center;justify-content:center;padding:20px}
 .modal{background:var(--surface);border-radius:16px;max-width:760px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lg)}
 .modal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:2}
-.modal-head h2{font-size:17px;color:var(--navy)}
+.modal-head h2{font-size:17px;color:var(--primary)}
 .modal-close{background:none;border:none;font-size:22px;color:var(--ink-soft);line-height:1}
 .modal-close:hover{color:var(--danger)}
 .modal-body{padding:22px}
-#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:13px 24px;border-radius:11px;font-size:14px;font-weight:600;box-shadow:var(--shadow-lg);z-index:99;transition:transform .3s ease;display:flex;gap:9px;align-items:center}
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--primary);color:#fff;padding:13px 24px;border-radius:11px;font-size:14px;font-weight:600;box-shadow:var(--shadow-lg);z-index:99;transition:transform .3s ease;display:flex;gap:9px;align-items:center}
 #toast.show{transform:translateX(-50%) translateY(0)}
 
 /* ---------- Responsive ---------- */
@@ -353,16 +360,16 @@ a{color:var(--navy);text-decoration:none}
   .hero{padding:52px 6% 60px}
 }
 ::-webkit-scrollbar{width:9px;height:9px}
-::-webkit-scrollbar-thumb{background:#c3cede;border-radius:9px}
+::-webkit-scrollbar-thumb{background:#D9C7B8;border-radius:9px}
 ::-webkit-scrollbar-track{background:transparent}
 </style>
 </head>
 <body>
 <!-- ==================== LANDING PAGE ==================== -->
 <div id="landing">
-  <div class="legal-strip">⚠️ JurisIA es una herramienta orientativa y NO reemplaza la asesoría de un abogado colegiado. Verifique siempre sus escritos con un profesional.</div>
+  <div class="legal-strip">⚠️ DuraLex es una herramienta orientativa y NO reemplaza la asesoría de un abogado colegiado. Verifique siempre sus escritos con un profesional.</div>
   <header class="land-topbar">
-    <div class="logo"><span class="logo-badge">⚖️</span>Juris<em>IA</em></div>
+    <div class="logo"><span class="logo-badge">⚖️</span><span>Dura<em>Lex</em></span></div>
     <nav class="land-nav">
       <a href="#l-features">Funciones</a>
       <a href="#l-areas">Áreas</a>
@@ -374,8 +381,8 @@ a{color:var(--navy);text-decoration:none}
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-kicker">🇵🇪 HECHO PARA EL PERÚ · NORMATIVA VIGENTE</span>
-      <h1>La justicia peruana, <em>al alcance de todos</em></h1>
-      <p class="lead">Redacte escritos legales con estructura procesal real, consulte jurisprudencia del Tribunal Constitucional y la Corte Suprema, y resuelva sus dudas con un asistente legal inteligente. Gratis, en español y sin complicaciones.</p>
+      <h1>La ley es dura. <em>Defenderse no tiene por qué serlo.</em></h1>
+      <p class="lead">Redacte escritos legales con estructura procesal real, consulte jurisprudencia del Tribunal Constitucional y la Corte Suprema, y resuelva sus dudas con el asistente de consultas legales. Gratis, en español y sin complicaciones.</p>
       <div class="hero-ctas">
         <button class="btn btn-gold" onclick="enterApp('redactar')">📝 Redactar un escrito</button>
         <button class="btn btn-outline" onclick="enterApp('chat')">💬 Consultar al Chat Legal</button>
@@ -392,11 +399,11 @@ a{color:var(--navy);text-decoration:none}
   <section class="land-section" style="padding-top:34px;padding-bottom:0">
     <div class="legal-banner">
       <span class="lb-icon">⚠️</span>
-      <span><strong>Aviso legal importante:</strong> JurisIA genera documentos modelo y brinda información legal de carácter <strong>orientativo y educativo</strong>. No constituye asesoría legal profesional ni crea relación abogado–cliente. Antes de presentar cualquier escrito ante una autoridad judicial o administrativa, consulte con un <strong>abogado colegiado y habilitado</strong>. Los plazos procesales son perentorios: no espere hasta el último día.</span>
+      <span><strong>Aviso legal importante:</strong> DuraLex genera documentos modelo y brinda información legal de carácter <strong>orientativo y educativo</strong>. No constituye asesoría legal profesional ni crea relación abogado–cliente. Antes de presentar cualquier escrito ante una autoridad judicial o administrativa, consulte con un <strong>abogado colegiado y habilitado</strong>. Los plazos procesales son perentorios: no espere hasta el último día.</span>
     </div>
     <div class="legal-banner" style="border-color:#059669;color:#047857;background:#ecfdf5;margin-top:12px">
       <span class="lb-icon">🔒</span>
-      <span><strong>Privacidad garantizada:</strong> JurisIA funciona íntegramente en su navegador. Los datos personales y hechos que usted escribe <strong>no se envían a ningún servidor</strong>, no se usan cookies ni rastreadores, y todo se borra al cerrar la página (salvo los archivos que usted mismo descargue). Única conexión externa: la descarga de la tipografía desde Google Fonts, que no transmite ningún dato suyo.</span>
+      <span><strong>Privacidad garantizada:</strong> DuraLex funciona íntegramente en su navegador. Los datos personales y hechos que usted escribe <strong>no se envían a ningún servidor</strong>, no se usan cookies ni rastreadores, y todo se borra al cerrar la página (salvo los archivos que usted mismo descargue). Única conexión externa: la descarga de la tipografía desde Google Fonts, que no transmite ningún dato suyo.</span>
     </div>
   </section>
 
@@ -412,7 +419,7 @@ a{color:var(--navy);text-decoration:none}
       </div>
       <div class="feature-card">
         <div class="fc-icon">💬</div>
-        <h3>Chat Legal IA</h3>
+        <h3>Chat Legal</h3>
         <p>Consulte artículos específicos ("Art. 34 del LPCL"), reciba respuestas con base legal y siga flujos guiados según su caso concreto.</p>
       </div>
       <div class="feature-card">
@@ -434,32 +441,32 @@ a{color:var(--navy);text-decoration:none}
       <h2 class="sec-title">Seis áreas, una sola plataforma</h2>
       <p class="sec-sub">Cada área incluye modelos de escritos con su base legal específica y jurisprudencia relevante.</p>
       <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
-        <div class="area-card" style="background:linear-gradient(140deg,var(--laboral),#155D4B)" onclick="enterApp('redactar','laboral')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--laboral),#135A49)" onclick="enterApp('redactar','laboral')">
           <span style="font-size:26px">👷</span><span class="ac-count">14 modelos</span>
           <h3>Laboral</h3>
           <p>Despidos, CTS, beneficios sociales, SUNAFIL. Ley 29497 NLPT y DS 003-97-TR.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--civil),#27436F)" onclick="enterApp('redactar','civil')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--civil),#223D66)" onclick="enterApp('redactar','civil')">
           <span style="font-size:26px">🏠</span><span class="ac-count">19 modelos</span>
           <h3>Civil / Familia</h3>
           <p>Alimentos, desalojo, filiación, prescripción adquisitiva. Código Civil y CPC.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--penal),#8F3A2F)" onclick="enterApp('redactar','penal')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--penal),#7F3125)" onclick="enterApp('redactar','penal')">
           <span style="font-size:26px">🚨</span><span class="ac-count">8 modelos</span>
           <h3>Penal</h3>
           <p>Denuncias, actor civil, prisión preventiva, hábeas corpus. NCPP y Código Penal.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--admin),#544883)" onclick="enterApp('redactar','administrativo')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--admin),#483C7A)" onclick="enterApp('redactar','administrativo')">
           <span style="font-size:26px">🏢</span><span class="ac-count">12 modelos</span>
           <h3>Administrativo</h3>
           <p>Recursos, INDECOPI, ONP, acceso a la información. TUO de la LPAG.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--consti),#7E5B24)" onclick="enterApp('redactar','constitucional')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--consti),#7A5417)" onclick="enterApp('redactar','constitucional')">
           <span style="font-size:26px">📜</span><span class="ac-count">3 modelos</span>
           <h3>Constitucional</h3>
           <p>Acción de amparo y acción de cumplimiento. Ley 31307, Nuevo CPConst.</p>
         </div>
-        <div class="area-card" style="background:linear-gradient(140deg,var(--tribu),#5F4C26)" onclick="enterApp('redactar','tributario')">
+        <div class="area-card" style="background:linear-gradient(140deg,var(--tribu),#544423)" onclick="enterApp('redactar','tributario')">
           <span style="font-size:26px">🏦</span><span class="ac-count">5 modelos</span>
           <h3>Tributario / Municipal</h3>
           <p>Reclamaciones SUNAT, Tribunal Fiscal, prescripción, papeletas. Código Tributario.</p>
@@ -482,38 +489,38 @@ a{color:var(--navy);text-decoration:none}
 
   <div class="cta-band">
     <h2>Democratizar el acceso a la justicia <em>empieza hoy</em></h2>
-    <p>Miles de peruanos no reclaman sus derechos por no saber cómo empezar. JurisIA le da el primer paso: información clara y documentos bien estructurados.</p>
+    <p>Miles de peruanos no reclaman sus derechos por no saber cómo empezar. DuraLex le da el primer paso: información clara y documentos bien estructurados.</p>
     <button class="btn btn-gold" onclick="enterApp()">Comenzar gratis →</button>
   </div>
 
   <footer class="land-footer">
-    <b>JurisIA</b> · Asistente legal peruano · Normativa referencial: Ley 29497 (NLPT), DS 003-97-TR (LPCL), Código Civil (DS 295-1984-JUS), NCPP (DS 957-2004), TUO LPAG (DS 004-2019-JUS), Ley 31307 (NCPConst.), TUO Código Tributario (DS 133-2013-EF)<br>
-    Herramienta orientativa — no sustituye la asesoría de un abogado colegiado. Perú, 2026.<br><a href="#" onclick="openTerms();return false" style="color:#C7BD9E">Términos y Condiciones</a> · <a href="#" onclick="openPrivacy();return false" style="color:#C7BD9E">Política de Privacidad</a>
+    <b>DuraLex</b> · Asistente legal peruano · Normativa referencial: Ley 29497 (NLPT), DS 003-97-TR (LPCL), Código Civil (DS 295-1984-JUS), NCPP (DS 957-2004), TUO LPAG (DS 004-2019-JUS), Ley 31307 (NCPConst.), TUO Código Tributario (DS 133-2013-EF)<br>
+    Herramienta orientativa — no sustituye la asesoría de un abogado colegiado. Perú, 2026.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos y Condiciones</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Política de Privacidad</a>
   </footer>
 </div>
 <!-- ==================== APLICACIÓN ==================== -->
 <div id="app" class="hidden">
-  <div class="app-topstrip legal-strip">⚠️ Aviso legal: JurisIA brinda información orientativa. Verifique todo escrito con un abogado colegiado antes de presentarlo.</div>
+  <div class="app-topstrip legal-strip">⚠️ Aviso legal: DuraLex brinda información orientativa. Verifique todo escrito con un abogado colegiado antes de presentarlo.</div>
   <div class="app-body">
     <aside class="sidebar">
-      <div class="logo" style="cursor:pointer" onclick="goLanding()"><span class="logo-badge">⚖️</span>Juris<em>IA</em></div>
+      <div class="logo" style="cursor:pointer" onclick="goLanding()"><span class="logo-badge">⚖️</span><span>Dura<em>Lex</em></span></div>
       <nav class="snav">
         <button data-view="home" class="active" onclick="showView('home')"><span class="sicon">🏠</span>Inicio</button>
         <button data-view="redactar" onclick="showView('redactar')"><span class="sicon">📝</span>Redactar</button>
-        <button data-view="chat" onclick="showView('chat')"><span class="sicon">💬</span>Chat Legal IA</button>
+        <button data-view="chat" onclick="showView('chat')"><span class="sicon">💬</span>Chat Legal</button>
         <button data-view="juris" onclick="showView('juris')"><span class="sicon">🏛️</span>Jurisprudencia</button>
         <button data-view="guias" onclick="showView('guias')"><span class="sicon">📚</span>Guías Legales</button>
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">JurisIA v2.4 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:#C7BD9E">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:#C7BD9E">Privacidad</a></div>
+      <div class="sidebar-foot">DuraLex v2.5 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
     </aside>
 
     <main class="main">
       <!-- ========== INICIO ========== -->
       <section id="view-home">
         <div class="view-head">
-          <h1>Bienvenido a JurisIA</h1>
+          <h1>Bienvenido a DuraLex</h1>
           <p>Su asistente legal peruano. ¿Qué desea hacer hoy?</p>
         </div>
         <div class="gs-wrap">
@@ -608,10 +615,10 @@ a{color:var(--navy);text-decoration:none}
         </div>
       </section>
 
-      <!-- ========== CHAT LEGAL IA ========== -->
+      <!-- ========== CHAT LEGAL ========== -->
       <section id="view-chat" class="hidden">
         <div class="view-head">
-          <h1>Chat Legal IA</h1>
+          <h1>Chat Legal</h1>
           <p>Pregunte sobre normas, artículos y trámites. Ej.: «Art. 34 del LPCL», «¿cuánto me toca de CTS?», «hábeas corpus».</p>
         </div>
         <div class="chat-layout">
@@ -2733,7 +2740,7 @@ const GUIAS = [
 <h2>Paso 5: El proceso (Ley 29497 – NLPT)</h2>
 <ol><li><b>Demanda</b> ante el Juzgado Especializado de Trabajo.</li><li><b>Audiencia de conciliación:</b> posibilidad de acuerdo.</li><li><b>Audiencia de juzgamiento:</b> se actúan las pruebas; recuerde que acreditado el despido, es el <b>empleador</b> quien debe probar la causa (Art. 23.4 NLPT).</li><li><b>Sentencia</b> y eventual apelación (5 días hábiles).</li></ol>
 <div class="g-norm">📚 Base legal: Arts. 34°, 36° y 38° DS 003-97-TR; Arts. 2°, 23° y 32° Ley 29497; CAS. LAB. 5423-2014-LIMA.</div>
-<p><b>Siguiente paso:</b> use el modelo «Demanda por Despido Arbitrario» en la sección Redactar de JurisIA.</p>`
+<p><b>Siguiente paso:</b> use el modelo «Demanda por Despido Arbitrario» en la sección Redactar de DuraLex.</p>`
 },
 {
  id:"guia-plazos", icon:"⏳", area:"civil", mins:"5 min",
@@ -2796,7 +2803,7 @@ const GUIAS = [
 <h2>Vía 2: Reclamo ante INDECOPI (gratuito, conciliatorio)</h2>
 <p>El Servicio de Atención al Ciudadano (SAC) de INDECOPI cita al proveedor a una conciliación. No termina en multa, pero resuelve la mayoría de casos rápidamente.</p>
 <h2>Vía 3: Denuncia formal (procedimiento sancionador)</h2>
-<ol><li>Se presenta por escrito ante la Comisión de Protección al Consumidor u Órgano Resolutivo (OPS).</li><li>Puede terminar en <b>multa</b> para el proveedor y <b>medidas correctivas</b> a su favor: devolución del dinero, reposición del producto, cumplimiento de la oferta.</li><li>Plazo para denunciar: <b>2 años</b> desde la infracción (Art. 121° Ley 29571).</li><li>Si pierde la primera instancia, puede <b>apelar</b> ante la Sala del Tribunal de INDECOPI (use el modelo de JurisIA).</li></ol>
+<ol><li>Se presenta por escrito ante la Comisión de Protección al Consumidor u Órgano Resolutivo (OPS).</li><li>Puede terminar en <b>multa</b> para el proveedor y <b>medidas correctivas</b> a su favor: devolución del dinero, reposición del producto, cumplimiento de la oferta.</li><li>Plazo para denunciar: <b>2 años</b> desde la infracción (Art. 121° Ley 29571).</li><li>Si pierde la primera instancia, puede <b>apelar</b> ante la Sala del Tribunal de INDECOPI (use el modelo de DuraLex).</li></ol>
 <div class="g-tip">💡 El deber de idoneidad (Art. 19° Ley 29571) es su mejor argumento: lo que recibió debe corresponder a lo que se le ofreció. Guarde publicidad, cotizaciones y promesas del vendedor.</div>
 <div class="g-norm">📚 Base legal: Ley 29571; DL 807; DS 011-2011-PCM (Reglamento del Libro de Reclamaciones).</div>`
 },
@@ -2854,7 +2861,7 @@ const ARTICULOS = {
  "cc:472":"**Art. 472° CC – Noción de alimentos.** Se entiende por alimentos lo necesario para el **sustento, habitación, vestido, educación, instrucción y capacitación para el trabajo, asistencia médica y psicológica y recreación**, según la situación y posibilidades de la familia. Incluye los gastos del embarazo.",
  "cc:474":"**Art. 474° CC – Obligación recíproca de alimentos.** Se deben alimentos recíprocamente: **los cónyuges, los ascendientes y descendientes, y los hermanos**. La obligación no es solo de padres a hijos: los hijos también pueden deber alimentos a sus padres necesitados.",
  "cc:481":"**Art. 481° CC – Criterios para fijar la pensión.** Los alimentos se regulan por el juez **en proporción a las necesidades de quien los pide y a las posibilidades del que debe darlos**, atendiendo además a las circunstancias personales de ambos. No es necesario investigar rigurosamente el monto de los ingresos del obligado.",
- "cc:482":"**Art. 482° CC – Reajuste de la pensión.** La pensión de alimentos **se incrementa o reduce** según el aumento o disminución que experimenten las necesidades del alimentista y las posibilidades del que debe prestarla. Puede pedirse el aumento en cualquier momento (use el modelo de JurisIA).",
+ "cc:482":"**Art. 482° CC – Reajuste de la pensión.** La pensión de alimentos **se incrementa o reduce** según el aumento o disminución que experimenten las necesidades del alimentista y las posibilidades del que debe prestarla. Puede pedirse el aumento en cualquier momento (use el modelo de DuraLex).",
  "cc:911":"**Art. 911° CC – Posesión precaria.** La posesión precaria es la que se ejerce **sin título alguno o cuando el que se tenía ha fenecido**. Es la base de la demanda de desalojo por ocupación precaria (proceso sumarísimo, Art. 585 CPC; ver IV Pleno Casatorio).",
  "cc:950":"**Art. 950° CC – Prescripción adquisitiva.** La propiedad inmueble se adquiere por posesión **continua, pacífica y pública como propietario durante 10 años** (usucapión extraordinaria), o a los **5 años con justo título y buena fe** (ordinaria). La sentencia es título para inscribir en SUNARP.",
  "cc:1219":"**Art. 1219° CC – Derechos del acreedor.** Ante el incumplimiento, el acreedor puede: emplear las medidas legales para que el deudor le procure aquello a que está obligado, procurárselo por otro a costa del deudor, y obtener la **indemnización** correspondiente.",
@@ -2872,7 +2879,7 @@ const ARTICULOS = {
  "cp:188":"**Art. 188° CP – Robo.** Apoderarse de bien mueble ajeno **empleando violencia contra la persona o amenaza inminente** para su vida o integridad: pena de 3 a 8 años. Las agravantes del Art. 189 (a mano armada, en banda, etc.) elevan la pena considerablemente.",
  "cp:196":"**Art. 196° CP – Estafa.** Procurar un provecho ilícito **induciendo o manteniendo en error al agraviado mediante engaño, astucia, ardid u otra forma fraudulenta**, causando perjuicio patrimonial: pena de 1 a 6 años. Las formas agravadas (Art. 196-A) llegan a 8 años.",
  "ncpp:268":"**Art. 268° NCPP – Presupuestos de la prisión preventiva.** Requiere concurrencia de: (a) **graves y fundados elementos de convicción** del delito y la vinculación del imputado; (b) **prognosis de pena superior a 4 años**; y (c) **peligro de fuga u obstaculización** (peligro procesal). Ver Casación 626-2013-Moquegua.",
- "ncpp:283":"**Art. 283° NCPP – Cesación de la prisión preventiva.** Procede cuando **nuevos elementos de convicción** demuestren que no concurren los motivos que determinaron la medida y resulte necesario sustituirla por comparecencia. Se resuelve en audiencia (use el modelo de JurisIA).",
+ "ncpp:283":"**Art. 283° NCPP – Cesación de la prisión preventiva.** Procede cuando **nuevos elementos de convicción** demuestren que no concurren los motivos que determinaron la medida y resulte necesario sustituirla por comparecencia. Se resuelve en audiencia (use el modelo de DuraLex).",
  "ncpp:326":"**Art. 326° NCPP – Facultad de denunciar.** **Cualquier persona** tiene facultad de denunciar los hechos delictuosos ante la autoridad, y está obligada a hacerlo cuando la ley lo ordena o cuando por su profesión conoce del hecho. La denuncia puede ser verbal o escrita (Art. 328).",
  "lpag:10":"**Art. 10° TUO LPAG – Causales de nulidad del acto administrativo.** Son vicios de nulidad de pleno derecho: contravención a la Constitución y las leyes, **defecto u omisión de requisitos de validez**, actos que adquieren facultades sin los requisitos, y los constitutivos de infracción penal.",
  "lpag:66":"**Art. 66° TUO LPAG – Derechos de los administrados.** Incluyen: ser tratados con respeto, acceder al expediente, ser informados del estado del procedimiento, **no presentar documentos que la entidad ya posea**, exigir el cumplimiento de plazos y conocer la identidad de las autoridades a cargo.",
@@ -2884,50 +2891,50 @@ const ARTICULOS = {
  "cpconst:44":"**Art. 44° Ley 31307 – Derechos protegidos por el amparo.** Protege los derechos constitucionales no tutelados por el hábeas corpus ni el hábeas data: igualdad, trabajo, salud, educación, debido proceso, propiedad, pensión (contenido esencial), entre otros.",
  "cpconst:45":"**Art. 45° Ley 31307 – Plazo del amparo.** La demanda de amparo se interpone dentro de los **60 días hábiles de producida la afectación**; tratándose de amparo contra resolución judicial, el plazo es de 30 días hábiles desde que la resolución queda firme.",
  "constitucion:200":"**Art. 200° Constitución – Garantías constitucionales.** (1) **Hábeas corpus**: libertad individual; (2) **Amparo**: demás derechos constitucionales; (3) **Hábeas data**: acceso a información pública y autodeterminación informativa; (4) Inconstitucionalidad; (5) Acción popular; (6) **Acción de cumplimiento**: contra la autoridad renuente a acatar norma legal o acto administrativo.",
- "ct:43":"**Art. 43° Código Tributario – Prescripción.** La acción para determinar la deuda tributaria y exigir su pago prescribe a los **4 años** (6 si no presentó la declaración respectiva; 10 para tributos retenidos o percibidos no pagados). La prescripción **solo se declara a pedido del deudor** (Art. 47) y puede oponerse en cualquier estado del procedimiento (Art. 48). JurisIA tiene el modelo de solicitud.",
+ "ct:43":"**Art. 43° Código Tributario – Prescripción.** La acción para determinar la deuda tributaria y exigir su pago prescribe a los **4 años** (6 si no presentó la declaración respectiva; 10 para tributos retenidos o percibidos no pagados). La prescripción **solo se declara a pedido del deudor** (Art. 47) y puede oponerse en cualquier estado del procedimiento (Art. 48). DuraLex tiene el modelo de solicitud.",
  "ct:137":"**Art. 137° Código Tributario – Reclamación.** El recurso de reclamación contra resoluciones de determinación, multa y órdenes de pago se interpone dentro de **20 días hábiles** de notificado el acto (interpuesto en plazo, no se exige el pago previo de la deuda). En comiso, internamiento de vehículos y cierre: solo **5 días hábiles**. Vencido el plazo, deberá pagar o afianzar la deuda para reclamar.",
  "ct:146":"**Art. 146° Código Tributario – Apelación.** La apelación ante el **Tribunal Fiscal** se presenta dentro de **15 días hábiles** de notificada la resolución que resuelve la reclamación, ante el mismo órgano que la emitió para su elevación. El Tribunal Fiscal es la última instancia administrativa; su fallo deja expedita la demanda contencioso administrativa."
 };
 
 const CHAT_KB = [
 /* ---- LABORAL ---- */
-{kw:["despido arbitrario","despidieron sin causa","me despidieron sin motivo","botaron del trabajo","indemnizacion por despido"],title:"Despido arbitrario – Art. 34° LPCL",resp:"**Art. 34° DS 003-97-TR:** el despido es arbitrario cuando se produce **sin expresión de causa o cuando esta no puede demostrarse en juicio**. La reparación es la indemnización del **Art. 38°: 1.5 remuneraciones por año completo de servicios, tope de 12 remuneraciones**.\n- Plazo para demandar: **30 días** de producido el despido (Art. 36 LPCL).\n- Prueba clave: constatación policial si le impidieron ingresar.\n- Vía: proceso ordinario laboral (Ley 29497).\nEn JurisIA puede generar la demanda con el modelo «Despido Arbitrario».",sugg:["¿Cómo se calcula la indemnización?","¿Qué es el despido nulo?","¿Qué plazo tengo para demandar?"]},
+{kw:["despido arbitrario","despidieron sin causa","me despidieron sin motivo","botaron del trabajo","indemnizacion por despido"],title:"Despido arbitrario – Art. 34° LPCL",resp:"**Art. 34° DS 003-97-TR:** el despido es arbitrario cuando se produce **sin expresión de causa o cuando esta no puede demostrarse en juicio**. La reparación es la indemnización del **Art. 38°: 1.5 remuneraciones por año completo de servicios, tope de 12 remuneraciones**.\n- Plazo para demandar: **30 días** de producido el despido (Art. 36 LPCL).\n- Prueba clave: constatación policial si le impidieron ingresar.\n- Vía: proceso ordinario laboral (Ley 29497).\nEn DuraLex puede generar la demanda con el modelo «Despido Arbitrario».",sugg:["¿Cómo se calcula la indemnización?","¿Qué es el despido nulo?","¿Qué plazo tengo para demandar?"]},
 {kw:["calculo de la indemnizacion","como se calcula la indemnizacion","cuanto me corresponde por despido"],title:"Cálculo de la indemnización por despido",resp:"**Fórmula del Art. 38° LPCL:** 1.5 remuneraciones mensuales × cada año completo de servicios (tope: 12 remuneraciones). Fracciones de año: por dozavos y treintavos.\n**Ejemplo:** sueldo S/ 2,400, récord 3 años y 6 meses:\n- 3 años × S/ 3,600 = S/ 10,800\n- 6 meses = 6/12 × S/ 3,600 = S/ 1,800\n- **Total: S/ 12,600** + intereses legales.\nEn contratos a plazo fijo, la indemnización es 1.5 remuneraciones por mes dejado de laborar hasta el vencimiento, con el mismo tope.",sugg:["Generar demanda de despido arbitrario","¿Qué beneficios sociales me deben al cese?"]},
 {kw:["despido nulo","despidieron por embarazo","despido por sindicato","despido discriminatorio"],title:"Despido nulo – Art. 29° LPCL",resp:"**Art. 29° LPCL:** es nulo el despido motivado por: afiliación o actividad **sindical**, ser candidato o representante de los trabajadores, haber presentado **queja o proceso** contra el empleador, **discriminación** (sexo, raza, religión, opinión, idioma) o **embarazo, nacimiento y lactancia**.\n- Consecuencia: **reposición** en el puesto + pago de remuneraciones devengadas (Art. 40).\n- Plazo: 30 días (Art. 36 LPCL).\n- La causal debe probarse, admitiéndose indicios (Art. 23.5 NLPT).",sugg:["¿Qué es el despido incausado?","Generar demanda de nulidad de despido"]},
 {kw:["despido incausado","despido fraudulento","reposicion por despido","me pueden reponer"],title:"Despido incausado y fraudulento – Reposición",resp:"Según la **STC 976-2001-AA/TC (Llanos Huasco)**:\n- **Incausado:** lo despiden sin expresarle causa alguna, verbalmente o por escrito.\n- **Fraudulento:** le imputan hechos notoriamente **inexistentes, falsos o imaginarios**, o le atribuyen una falta no prevista legalmente.\nEn ambos casos procede la **reposición** vía proceso ordinario laboral (II Pleno Jurisdiccional Supremo Laboral 2014, Art. 2.2 NLPT). Ojo: en el sector público rige el precedente **Huatuco** (STC 05057-2013-PA/TC), que exige concurso público para la reposición.",sugg:["Generar demanda de reposición","¿Amparo o vía laboral para el despido?"]},
 {kw:["hostilidad","hostigamiento laboral","me bajaron el sueldo","me cambiaron de puesto","actos hostiles"],title:"Actos de hostilidad – Art. 30° LPCL",resp:"**Art. 30° LPCL:** son actos de hostilidad equiparables al despido: **falta de pago de remuneración**, **reducción inmotivada de sueldo o categoría**, traslado malicioso, actos contra la moral y **hostigamiento sexual**.\n**Procedimiento:** (1) emplace por escrito al empleador dándole **mínimo 6 días naturales** para corregir; (2) si persiste, puede demandar el **cese de la hostilidad** o dar por terminado el contrato exigiendo la **indemnización** del Art. 38 (despido indirecto).\nPlazo para accionar: 30 días desde vencido el emplazamiento.",sugg:["Generar demanda de cese de hostilidad","¿Qué es el despido indirecto?"]},
-{kw:["cts","compensacion por tiempo de servicios","no me depositan la cts","deposito de cts"],title:"CTS – DS 001-97-TR",resp:"La **CTS** es un depósito semestral obligatorio (primera quincena de **mayo y noviembre**) en la entidad financiera que usted elija. Equivale aproximadamente a **una remuneración anual** (medio sueldo + 1/6 de gratificación por semestre completo).\nSi el empleador **no deposita**:\n- Denuncia ante **SUNAFIL** (multa + requerimiento), y/o\n- **Demanda judicial** de pago de CTS + intereses financieros (Art. 56° DS 001-97-TR).\n- Plazo de prescripción: **4 años desde el cese** (Ley 27321).\nJurisIA tiene el modelo «Demanda de Pago de CTS» y una guía completa en Guías Legales.",sugg:["Generar demanda de CTS","¿Cómo denuncio ante SUNAFIL?","Ver guía de CTS"]},
+{kw:["cts","compensacion por tiempo de servicios","no me depositan la cts","deposito de cts"],title:"CTS – DS 001-97-TR",resp:"La **CTS** es un depósito semestral obligatorio (primera quincena de **mayo y noviembre**) en la entidad financiera que usted elija. Equivale aproximadamente a **una remuneración anual** (medio sueldo + 1/6 de gratificación por semestre completo).\nSi el empleador **no deposita**:\n- Denuncia ante **SUNAFIL** (multa + requerimiento), y/o\n- **Demanda judicial** de pago de CTS + intereses financieros (Art. 56° DS 001-97-TR).\n- Plazo de prescripción: **4 años desde el cese** (Ley 27321).\nDuraLex tiene el modelo «Demanda de Pago de CTS» y una guía completa en Guías Legales.",sugg:["Generar demanda de CTS","¿Cómo denuncio ante SUNAFIL?","Ver guía de CTS"]},
 {kw:["gratificacion","gratificaciones","no me pagaron la grati","grati de julio","grati de diciembre"],title:"Gratificaciones – Ley 27735",resp:"**Ley 27735:** todo trabajador del régimen privado tiene derecho a **dos gratificaciones al año** (Fiestas Patrias y Navidad), cada una equivalente a **una remuneración mensual íntegra** si laboró el semestre completo (proporcional en caso contrario), más la **bonificación extraordinaria del 9%** (Ley 30334).\n- Se pagan en la **primera quincena de julio y de diciembre**.\n- Su impago es infracción grave ante SUNAFIL y da lugar a demanda de beneficios sociales.\n- MYPE: en la pequeña empresa la gratificación es de medio sueldo; en la microempresa no corresponde (régimen especial).",sugg:["Generar demanda de beneficios sociales","¿Cuánto me toca de CTS?"]},
 {kw:["vacaciones","vacaciones truncas","no goce vacaciones","triple vacacional"],title:"Vacaciones – DL 713",resp:"**DL 713:** el trabajador tiene derecho a **30 días calendario de descanso vacacional** por cada año completo de servicios (récord vacacional cumplido).\n- **Vacaciones truncas:** al cese se pagan en proporción a los meses y días laborados.\n- **«Triple vacacional»** (Art. 23): si no gozó el descanso dentro del año siguiente de adquirido el derecho, recibe: (1) la remuneración del trabajo realizado, (2) la remuneración del descanso adquirido y (3) una **indemnización** equivalente a un sueldo (esta última no aplica a gerentes que deciden su propio descanso).",sugg:["Generar demanda de beneficios sociales","¿Cuál es el plazo de prescripción laboral?"]},
 {kw:["horas extras","sobretiempo","no me pagan las horas extras","trabajo mas de 8 horas"],title:"Horas extras – DS 007-2002-TR",resp:"La jornada máxima es de **8 horas diarias o 48 semanales**. Todo exceso es **sobretiempo voluntario** que se paga con sobretasa:\n- **+25%** por las 2 primeras horas.\n- **+35%** por las horas restantes.\nValor hora = remuneración mensual ÷ 30 ÷ 8. El sobretiempo también puede compensarse con descanso, por acuerdo escrito.\nEl empleador debe **registrar** el sobretiempo (Art. 10-A); si no hay registro, en juicio operan los indicios a favor del trabajador (Art. 23.5 NLPT). El personal de dirección y sin fiscalización inmediata está excluido de la jornada máxima.",sugg:["Generar demanda de horas extras","¿Qué prueba necesito para las horas extras?"]},
 {kw:["periodo de prueba","me pueden despedir en periodo de prueba"],title:"Período de prueba – Art. 10° LPCL",resp:"**Art. 10° LPCL:** el período de prueba es de **3 meses**; durante él, el empleador puede cesar al trabajador **sin derecho a indemnización** por despido.\n- Puede extenderse por escrito hasta **6 meses** (trabajadores calificados o de confianza) y **1 año** (personal de dirección).\n- Aun en período de prueba están protegidos: la trabajadora **embarazada** (despido nulo si el motivo es el embarazo), la libertad sindical y la no discriminación.\n- Superado el período, adquiere protección plena contra el despido arbitrario.",sugg:["¿Qué es el despido arbitrario?","¿Qué beneficios gano desde el primer día?"]},
 {kw:["renuncia","quiero renunciar","preaviso de renuncia","exoneracion de preaviso"],title:"Renuncia – Art. 18° LPCL",resp:"Para renunciar debe dar **aviso escrito con 30 días de anticipación** (Art. 18° LPCL). Puede pedir la **exoneración del plazo**; la solicitud se entiende **aceptada si el empleador no la rechaza por escrito dentro del tercer día**.\nAl cese por renuncia conserva TODOS sus beneficios pendientes: CTS, gratificación trunca, vacaciones truncas y no gozadas. La renuncia NO le hace perder derechos ya adquiridos.\n⚠️ Si le hacen firmar una «renuncia» bajo presión o engaño, podría configurar despido fraudulento (viciada la voluntad): guarde evidencias y consulte a un abogado.",sugg:["¿Qué es la liquidación de beneficios sociales?","¿Qué es el despido fraudulento?"]},
-{kw:["liquidacion","beneficios sociales","no me pagan mi liquidacion","cuanto me toca de liquidacion"],title:"Liquidación de beneficios sociales",resp:"Al cese, el empleador debe pagarle dentro de **48 horas** su liquidación, que comprende:\n- **CTS trunca** del semestre en curso.\n- **Gratificación trunca** proporcional.\n- **Vacaciones truncas** y vacaciones adquiridas no gozadas.\n- Remuneraciones pendientes y horas extras impagas.\nSi no le pagan: demanda de **pago de beneficios sociales** ante el juzgado laboral (JurisIA tiene el modelo). Plazo de prescripción: **4 años desde el cese** (Ley 27321). Hasta 50 URP es competente el Juzgado de Paz Letrado laboral, con proceso abreviado.",sugg:["Generar demanda de beneficios sociales","¿Cuánto me toca de CTS?"]},
-{kw:["sunafil","denuncia laboral","inspeccion de trabajo","no me pagan en planilla"],title:"Denuncia ante SUNAFIL – Ley 28806",resp:"**SUNAFIL** fiscaliza el cumplimiento de las normas laborales (Ley 28806). Puede denunciar: trabajo **sin planilla**, impago de CTS o gratificaciones, jornadas excesivas, incumplimientos de seguridad y salud, etc.\n- La denuncia es **gratuita** y puede pedir **reserva de identidad**.\n- Se presenta en la Intendencia Regional o por la web de SUNAFIL.\n- El inspector visita el centro de trabajo, requiere la subsanación y puede **multar** (las multas van a favor del Estado; para cobrar lo suyo necesita además la vía judicial).\nJurisIA incluye el modelo «Denuncia Laboral ante SUNAFIL».",sugg:["Generar denuncia SUNAFIL","¿La denuncia SUNAFIL interrumpe mis plazos judiciales?"]},
+{kw:["liquidacion","beneficios sociales","no me pagan mi liquidacion","cuanto me toca de liquidacion"],title:"Liquidación de beneficios sociales",resp:"Al cese, el empleador debe pagarle dentro de **48 horas** su liquidación, que comprende:\n- **CTS trunca** del semestre en curso.\n- **Gratificación trunca** proporcional.\n- **Vacaciones truncas** y vacaciones adquiridas no gozadas.\n- Remuneraciones pendientes y horas extras impagas.\nSi no le pagan: demanda de **pago de beneficios sociales** ante el juzgado laboral (DuraLex tiene el modelo). Plazo de prescripción: **4 años desde el cese** (Ley 27321). Hasta 50 URP es competente el Juzgado de Paz Letrado laboral, con proceso abreviado.",sugg:["Generar demanda de beneficios sociales","¿Cuánto me toca de CTS?"]},
+{kw:["sunafil","denuncia laboral","inspeccion de trabajo","no me pagan en planilla"],title:"Denuncia ante SUNAFIL – Ley 28806",resp:"**SUNAFIL** fiscaliza el cumplimiento de las normas laborales (Ley 28806). Puede denunciar: trabajo **sin planilla**, impago de CTS o gratificaciones, jornadas excesivas, incumplimientos de seguridad y salud, etc.\n- La denuncia es **gratuita** y puede pedir **reserva de identidad**.\n- Se presenta en la Intendencia Regional o por la web de SUNAFIL.\n- El inspector visita el centro de trabajo, requiere la subsanación y puede **multar** (las multas van a favor del Estado; para cobrar lo suyo necesita además la vía judicial).\nDuraLex incluye el modelo «Denuncia Laboral ante SUNAFIL».",sugg:["Generar denuncia SUNAFIL","¿La denuncia SUNAFIL interrumpe mis plazos judiciales?"]},
 {kw:["accidente de trabajo","me accidente trabajando","enfermedad profesional","seguridad y salud"],title:"Accidente de trabajo – Ley 29783",resp:"**Art. 53° Ley 29783:** el incumplimiento del **deber de prevención** del empleador genera la obligación de indemnizar a las víctimas de accidentes de trabajo y enfermedades profesionales.\nPasos recomendados:\n1. Exija el **aviso del accidente** y la investigación (obligatorios).\n2. Atiéndase y conserve certificados médicos e historia clínica.\n3. Denuncie ante **SUNAFIL** si faltaron medidas de seguridad.\n4. Demande **indemnización por daños y perjuicios** ante el juzgado laboral (daño emergente + lucro cesante + daño moral). El VI Pleno Supremo Laboral facilita la prueba: acreditado el daño, se presume el incumplimiento.",sugg:["Generar demanda por accidente de trabajo","¿Qué es el SCTR?"]},
 {kw:["remuneracion minima","sueldo minimo","rmv","cuanto es el sueldo minimo"],title:"Remuneración Mínima Vital",resp:"La **Remuneración Mínima Vital (RMV)** es el piso salarial para la jornada completa del régimen privado. Fue elevada a **S/ 1,130 desde enero de 2025** (DS 006-2024-TR). ⚠️ Verifique el valor vigente a la fecha de su consulta, pues se actualiza por decreto supremo.\nPagar por debajo de la RMV en jornada completa es infracción **muy grave** ante SUNAFIL y genera adeudos laborales exigibles judicialmente. Además, muchos derechos (asignación familiar = 10% RMV) se calculan sobre ella.",sugg:["¿Qué es la asignación familiar?","¿Cómo denuncio ante SUNAFIL?"]},
 {kw:["asignacion familiar","tengo hijos y no me pagan asignacion"],title:"Asignación familiar – Ley 25129",resp:"**Ley 25129:** los trabajadores del régimen privado con **hijos menores de 18 años** (o hasta 24 si cursan estudios superiores) tienen derecho a una **asignación familiar equivalente al 10% de la RMV** mensual, cualquiera sea el número de hijos.\n- Requisito: acreditar la paternidad/maternidad ante el empleador (partida de nacimiento).\n- Es un concepto **remunerativo**: entra al cálculo de CTS, gratificaciones y vacaciones.\n- Su impago se reclama vía SUNAFIL o demanda de beneficios sociales (prescribe a los 4 años del cese).",sugg:["¿Cuánto es la RMV actual?","Generar demanda de beneficios sociales"]},
 {kw:["prescripcion laboral","hasta cuando puedo reclamar beneficios","plazo para demandar al empleador"],title:"Prescripción laboral – Ley 27321",resp:"**Ley 27321:** las acciones por derechos derivados de la relación laboral **prescriben a los 4 años, contados desde el día siguiente al cese** del vínculo. Aplica a CTS, gratificaciones, vacaciones, horas extras, reintegros.\n⚠️ No confunda con la **caducidad de 30 días** para impugnar el despido (Art. 36 LPCL): son plazos distintos. Puede haber perdido la acción de despido y conservar intacta la de beneficios sociales.\nMientras el vínculo esté vigente, el plazo de prescripción no corre.",sugg:["¿Qué plazo tengo para demandar el despido?","Ver guía de plazos"]},
 /* ---- CIVIL / FAMILIA ---- */
-{kw:["alimentos","pension de alimentos","demanda de alimentos","pension alimenticia"],title:"Demanda de alimentos – Arts. 472° y 481° CC",resp:"Los **alimentos** comprenden sustento, habitación, vestido, educación, salud y recreación (**Art. 472° CC**). El juez fija la pensión según las **necesidades del alimentista y las posibilidades del obligado** (**Art. 481° CC**).\nDatos clave:\n- Se demanda ante el **Juzgado de Paz Letrado**, de su propio domicilio si lo prefiere.\n- **No requiere abogado** (Ley 28439) ni paga tasas.\n- Tope de descuento por planilla: **60%** de los ingresos (Art. 648.6 CPC).\n- El incumplimiento habilita denuncia penal por **OAF (Art. 149 CP)** y el registro REDAM.\nJurisIA tiene el modelo de demanda y una guía paso a paso.",sugg:["¿Qué documentos necesito para demandar alimentos?","¿Cómo aumento una pensión ya fijada?","¿Quiénes se deben alimentos?"]},
+{kw:["alimentos","pension de alimentos","demanda de alimentos","pension alimenticia"],title:"Demanda de alimentos – Arts. 472° y 481° CC",resp:"Los **alimentos** comprenden sustento, habitación, vestido, educación, salud y recreación (**Art. 472° CC**). El juez fija la pensión según las **necesidades del alimentista y las posibilidades del obligado** (**Art. 481° CC**).\nDatos clave:\n- Se demanda ante el **Juzgado de Paz Letrado**, de su propio domicilio si lo prefiere.\n- **No requiere abogado** (Ley 28439) ni paga tasas.\n- Tope de descuento por planilla: **60%** de los ingresos (Art. 648.6 CPC).\n- El incumplimiento habilita denuncia penal por **OAF (Art. 149 CP)** y el registro REDAM.\nDuraLex tiene el modelo de demanda y una guía paso a paso.",sugg:["¿Qué documentos necesito para demandar alimentos?","¿Cómo aumento una pensión ya fijada?","¿Quiénes se deben alimentos?"]},
 {kw:["aumento de pension","aumentar alimentos","subir la pension"],title:"Aumento de pensión – Art. 482° CC",resp:"**Art. 482° CC:** la pensión se **incrementa** según el aumento de las necesidades del alimentista y las posibilidades del obligado. Puede pedirlo en cualquier momento ante el mismo Juzgado de Paz Letrado.\nSustente el pedido con:\n- Nuevos gastos del menor (edad escolar, salud, actividades).\n- Mejora económica del obligado (nuevo empleo, negocio, bienes).\nMientras se tramita, la pensión vigente se mantiene. También existe la **reducción** de pensión (la puede pedir el obligado si su capacidad disminuyó).",sugg:["Generar demanda de aumento de alimentos","¿Qué pasa si no paga la pensión?"]},
 {kw:["no paga la pension","omision a la asistencia familiar","oaf","deudor alimentario"],title:"Incumplimiento de pensión – OAF y REDAM",resp:"Si el obligado no paga la pensión ordenada por sentencia:\n1. Solicite la **liquidación de pensiones devengadas** en el mismo expediente.\n2. Aprobada la liquidación, pida el **requerimiento de pago bajo apercibimiento** de remitir copias al Ministerio Público.\n3. Ante el incumplimiento, se denuncia por **omisión de asistencia familiar (Art. 149° CP**, pena de hasta 3 años).\n4. Puede pedir su inscripción en el **REDAM** (Ley 28970): impide al deudor contratar con el Estado y lo reporta a las centrales de riesgo.\nTambién procede el **embargo hasta del 60%** de sus ingresos.",sugg:["¿Cómo se calcula la liquidación de devengadas?","Generar demanda de alimentos"]},
 {kw:["quienes se deben alimentos","alimentos para padres","alimentos entre hermanos","hijo mayor de edad alimentos"],title:"Obligados recíprocos – Art. 474° CC",resp:"**Art. 474° CC:** se deben alimentos recíprocamente los **cónyuges**, los **ascendientes y descendientes** y los **hermanos**. Algunas precisiones:\n- Los padres pueden demandar alimentos a sus **hijos** si están en estado de necesidad.\n- El hijo **mayor de 18 años** conserva la pensión si sigue **estudios exitosos** (hasta los 28 según jurisprudencia) o si está incapacitado (Art. 483 CC).\n- El orden de prelación entre obligados lo fija el Art. 475 CC.",sugg:["Generar demanda de alimentos","¿Hasta qué edad se pagan alimentos?"]},
-{kw:["desalojo","ocupante precario","recuperar mi casa","inquilino no se va","no paga la renta"],title:"Desalojo – Art. 911° CC y Art. 585° CPC",resp:"Vías según el caso:\n- **Ocupación precaria (Art. 911 CC):** ocupa sin título o con título fenecido → desalojo en **proceso sumarísimo** ante el Juzgado Civil (IV Pleno Casatorio).\n- **Falta de pago o vencimiento de contrato:** desalojo ante Juzgado de Paz Letrado o Civil según la renta.\n- **Cláusula de allanamiento futuro (Ley 30201):** desalojo exprés si el contrato la incluye.\n- **Desalojo notarial (Ley 30933):** para contratos con firmas legalizadas e inscripción FUAO.\nJurisIA incluye el modelo de demanda por ocupación precaria.",sugg:["Generar demanda de desalojo","¿Qué es un ocupante precario?"]},
-{kw:["deuda","me deben dinero","cobrar una deuda","prestamo no pagado","letra de cambio","pagare"],title:"Cobro de deudas – Art. 1219° CC",resp:"Para cobrar una deuda impaga:\n1. **Carta notarial de requerimiento** (constituye en mora al deudor – Art. 1333 CC).\n2. Si tiene **título ejecutivo** (letra de cambio protestada, pagaré, documento con firma legalizada): **proceso único de ejecución**, mucho más rápido (Art. 688 CPC).\n3. Sin título ejecutivo: demanda de **obligación de dar suma de dinero** (hasta 100 URP: Juzgado de Paz Letrado).\n4. Puede pedir **medidas cautelares** (embargo) para asegurar el cobro.\nPrescripción: **10 años** (acción personal, Art. 2001.1 CC). JurisIA tiene los modelos de carta notarial y demanda.",sugg:["Generar carta notarial de requerimiento","Generar demanda de obligación de dar suma de dinero"]},
+{kw:["desalojo","ocupante precario","recuperar mi casa","inquilino no se va","no paga la renta"],title:"Desalojo – Art. 911° CC y Art. 585° CPC",resp:"Vías según el caso:\n- **Ocupación precaria (Art. 911 CC):** ocupa sin título o con título fenecido → desalojo en **proceso sumarísimo** ante el Juzgado Civil (IV Pleno Casatorio).\n- **Falta de pago o vencimiento de contrato:** desalojo ante Juzgado de Paz Letrado o Civil según la renta.\n- **Cláusula de allanamiento futuro (Ley 30201):** desalojo exprés si el contrato la incluye.\n- **Desalojo notarial (Ley 30933):** para contratos con firmas legalizadas e inscripción FUAO.\nDuraLex incluye el modelo de demanda por ocupación precaria.",sugg:["Generar demanda de desalojo","¿Qué es un ocupante precario?"]},
+{kw:["deuda","me deben dinero","cobrar una deuda","prestamo no pagado","letra de cambio","pagare"],title:"Cobro de deudas – Art. 1219° CC",resp:"Para cobrar una deuda impaga:\n1. **Carta notarial de requerimiento** (constituye en mora al deudor – Art. 1333 CC).\n2. Si tiene **título ejecutivo** (letra de cambio protestada, pagaré, documento con firma legalizada): **proceso único de ejecución**, mucho más rápido (Art. 688 CPC).\n3. Sin título ejecutivo: demanda de **obligación de dar suma de dinero** (hasta 100 URP: Juzgado de Paz Letrado).\n4. Puede pedir **medidas cautelares** (embargo) para asegurar el cobro.\nPrescripción: **10 años** (acción personal, Art. 2001.1 CC). DuraLex tiene los modelos de carta notarial y demanda.",sugg:["Generar carta notarial de requerimiento","Generar demanda de obligación de dar suma de dinero"]},
 {kw:["divorcio","divorciarme","separacion de hecho","divorcio por causal"],title:"Divorcio – Arts. 333° y 349° CC",resp:"Tres caminos según su situación:\n- **Divorcio rápido (mutuo acuerdo):** vía **municipal o notarial** (Ley 29227) si tienen separación convencional, sin hijos menores ni bienes (o con acuerdos resueltos). Es el más económico.\n- **Divorcio por causal (Art. 333 CC):** judicial, ante el Juzgado de Familia. La causal más usada es la **separación de hecho** (2 años sin hijos menores; 4 con ellos). Otras: violencia, adulterio, abandono.\n- **Separación convencional judicial** y ulterior divorcio.\nEn la separación de hecho el juez puede fijar **indemnización al cónyuge perjudicado** (Art. 345-A CC, III Pleno Casatorio).",sugg:["Generar demanda de divorcio por causal","¿Qué pasa con los bienes al divorciarme?"]},
-{kw:["filiacion","reconocimiento de paternidad","prueba de adn","no reconoce a mi hijo"],title:"Filiación extramatrimonial – Ley 28457",resp:"Si el padre no reconoce voluntariamente al hijo, la **Ley 28457** regula un proceso especial muy célere ante el **Juzgado de Paz Letrado**:\n1. Presentada la demanda, el juez emite el **mandato de paternidad**.\n2. El demandado solo puede **oponerse sometiéndose al ADN** en 10 días.\n3. Si no se opone o **se niega al ADN**, se declara la paternidad (Art. 402.6 CC).\n4. Puede **acumular la pensión de alimentos** en la misma demanda (Ley 30628) y, en caso de pobreza, el costo del ADN es asumido por el Estado.\nJurisIA tiene el modelo de demanda.",sugg:["Generar demanda de filiación","¿Puedo pedir alimentos en el mismo proceso?"]},
+{kw:["filiacion","reconocimiento de paternidad","prueba de adn","no reconoce a mi hijo"],title:"Filiación extramatrimonial – Ley 28457",resp:"Si el padre no reconoce voluntariamente al hijo, la **Ley 28457** regula un proceso especial muy célere ante el **Juzgado de Paz Letrado**:\n1. Presentada la demanda, el juez emite el **mandato de paternidad**.\n2. El demandado solo puede **oponerse sometiéndose al ADN** en 10 días.\n3. Si no se opone o **se niega al ADN**, se declara la paternidad (Art. 402.6 CC).\n4. Puede **acumular la pensión de alimentos** en la misma demanda (Ley 30628) y, en caso de pobreza, el costo del ADN es asumido por el Estado.\nDuraLex tiene el modelo de demanda.",sugg:["Generar demanda de filiación","¿Puedo pedir alimentos en el mismo proceso?"]},
 {kw:["indemnizacion","daños y perjuicios","me chocaron","accidente de transito","responsabilidad civil"],title:"Indemnización – Arts. 1969° y 1985° CC",resp:"Quien por **dolo o culpa** causa daño a otro debe indemnizarlo (**Art. 1969 CC**); si el daño proviene de un **bien o actividad riesgosa** (vehículos, maquinaria), la responsabilidad es **objetiva** (Art. 1970 CC: no necesita probar culpa).\nLa indemnización comprende (**Art. 1985 CC**): daño emergente, **lucro cesante**, daño a la persona y **daño moral**.\n⚠️ Plazo de prescripción: **solo 2 años** desde el hecho (Art. 2001.4 CC).\nEn accidentes de tránsito: el SOAT cubre gastos inmediatos sin investigación de culpa; la indemnización civil va por cuerda separada.",sugg:["Generar demanda de indemnización","¿Qué plazo tengo para demandar?"]},
 {kw:["prescripcion adquisitiva","usucapion","titulo de propiedad por posesion","poseo hace años un terreno"],title:"Prescripción adquisitiva – Art. 950° CC",resp:"**Art. 950° CC:** puede adquirir la propiedad de un inmueble poseyéndolo de forma **continua, pacífica y pública como propietario**:\n- **10 años** (usucapión extraordinaria, sin más requisitos).\n- **5 años** si tiene justo título y buena fe (ordinaria).\nSe tramita como **proceso abreviado** (Art. 504 CPC) con requisitos especiales: planos visados, certificación registral y **declaración de 3 a 6 testigos** (Art. 505 CPC). También existe la vía **notarial** para predios urbanos (Ley 27157). La sentencia es título inscribible en SUNARP (Art. 952 CC).",sugg:["Generar demanda de prescripción adquisitiva","¿Qué es el desalojo por precario?"]},
-{kw:["terceria","embargaron mis bienes por deuda ajena","levantar embargo"],title:"Tercería de propiedad – Art. 533° CPC",resp:"Si **embargaron un bien suyo por la deuda de otra persona** (ex propietario, familiar, inquilino), la vía es la **tercería de propiedad**:\n- Se demanda contra el **acreedor Y el deudor** del proceso donde se trabó el embargo.\n- Requisito clave (Art. 535 CPC): probar su propiedad con **documento público o privado de fecha cierta ANTERIOR al embargo** (escritura pública, legalización notarial).\n- Efecto: **suspende el remate** del bien (Art. 536 CPC).\nJurisIA incluye el modelo de demanda de tercería.",sugg:["Generar demanda de tercería","¿Qué es fecha cierta?"]},
-{kw:["carta notarial","requerimiento de pago","constituir en mora"],title:"Carta notarial – Art. 1333° CC",resp:"La **carta notarial** es el medio formal de intimar a su deudor y **constituirlo en mora** (Art. 1333 CC): desde su recepción corren los **intereses moratorios** y queda probada su gestión de cobro.\nContenido recomendado: identificación de la deuda y su origen, monto exacto, **plazo perentorio de pago** (5-15 días) y apercibimiento de acciones legales.\nSe entrega por conducto del notario, quien certifica la fecha y entrega. Es también requisito práctico previo a varias acciones (cumplimiento, desalojo con allanamiento, resolución de contrato).\nJurisIA genera la carta con el modelo respectivo.",sugg:["Generar carta notarial","¿Cómo cobro judicialmente una deuda?"]},
+{kw:["terceria","embargaron mis bienes por deuda ajena","levantar embargo"],title:"Tercería de propiedad – Art. 533° CPC",resp:"Si **embargaron un bien suyo por la deuda de otra persona** (ex propietario, familiar, inquilino), la vía es la **tercería de propiedad**:\n- Se demanda contra el **acreedor Y el deudor** del proceso donde se trabó el embargo.\n- Requisito clave (Art. 535 CPC): probar su propiedad con **documento público o privado de fecha cierta ANTERIOR al embargo** (escritura pública, legalización notarial).\n- Efecto: **suspende el remate** del bien (Art. 536 CPC).\nDuraLex incluye el modelo de demanda de tercería.",sugg:["Generar demanda de tercería","¿Qué es fecha cierta?"]},
+{kw:["carta notarial","requerimiento de pago","constituir en mora"],title:"Carta notarial – Art. 1333° CC",resp:"La **carta notarial** es el medio formal de intimar a su deudor y **constituirlo en mora** (Art. 1333 CC): desde su recepción corren los **intereses moratorios** y queda probada su gestión de cobro.\nContenido recomendado: identificación de la deuda y su origen, monto exacto, **plazo perentorio de pago** (5-15 días) y apercibimiento de acciones legales.\nSe entrega por conducto del notario, quien certifica la fecha y entrega. Es también requisito práctico previo a varias acciones (cumplimiento, desalojo con allanamiento, resolución de contrato).\nDuraLex genera la carta con el modelo respectivo.",sugg:["Generar carta notarial","¿Cómo cobro judicialmente una deuda?"]},
 {kw:["herencia","sucesion intestada","murio mi padre sin testamento","declaratoria de herederos"],title:"Sucesión intestada – Arts. 815° y ss. CC",resp:"Si el causante **no dejó testamento**, los herederos se declaran mediante **sucesión intestada**, en dos vías:\n- **Notarial** (Ley 26662): si hay acuerdo entre los interesados; es la más rápida.\n- **Judicial**: ante el Juzgado de Paz Letrado, si hay controversia.\nOrden sucesorio (Art. 816 CC): 1° hijos y descendientes, 2° padres y ascendientes, 3° cónyuge o conviviente (que concurre además con los dos primeros órdenes), luego hermanos, tíos, etc.\nTras la declaratoria, inscriba la sucesión en **SUNARP** y luego tramite la división y partición de los bienes.",sugg:["¿Cómo se dividen los bienes de la herencia?","¿Qué derechos tiene el conviviente?"]},
 {kw:["union de hecho","convivientes","derechos de convivencia","mi conviviente fallecio"],title:"Unión de hecho – Art. 326° CC",resp:"**Art. 326° CC:** la unión de hecho **voluntaria, libre de impedimento matrimonial y con al menos 2 años continuos** genera una **sociedad de bienes** sujeta al régimen de gananciales.\nPara hacer valer sus derechos debe **reconocerla**: notarialmente (de común acuerdo, Ley 29560) o judicialmente. Una vez reconocida e inscrita en SUNARP, el conviviente tiene:\n- Derechos sobre los **bienes comunes** adquiridos durante la unión.\n- **Derechos hereditarios** como si fuera cónyuge (Ley 30007).\n- Derecho a pensión de viudez en ciertos regímenes.",sugg:["¿Cómo se reconoce una unión de hecho?","¿Qué es la sucesión intestada?"]},
 /* ---- PENAL ---- */
-{kw:["denuncia penal","como denuncio un delito","donde denuncio","me estafaron","me robaron"],title:"Cómo presentar una denuncia penal – Art. 326° NCPP",resp:"**Cualquier persona** puede denunciar un delito (Art. 326 NCPP), verbalmente o por escrito, ante:\n- La **comisaría** del lugar del hecho (ideal en flagrancia o delitos patrimoniales), o\n- La **Fiscalía Penal de turno** (recomendable en casos complejos: estafas, delitos de funcionarios).\nLa denuncia debe contener (Art. 328): sus datos, el **relato circunstanciado** y la identificación del autor si la conoce. No necesita abogado para denunciar.\nEl fiscal abrirá **diligencias preliminares** y decidirá si formaliza la investigación. JurisIA genera el escrito de denuncia con el modelo respectivo.",sugg:["Generar denuncia penal","¿Qué es la reparación civil?","Diferencia entre hurto y robo"]},
-{kw:["habeas corpus","detencion arbitraria","detenido injustamente","me tienen detenido"],title:"Hábeas corpus – Art. 200.1° Constitución",resp:"El **hábeas corpus** protege la **libertad individual** frente a detenciones arbitrarias, exceso de plazos, desapariciones, seguimientos ilegales y afectaciones conexas (Art. 33 Ley 31307).\nCaracterísticas (Ley 31307):\n- Lo puede presentar **cualquier persona** a favor del detenido, **sin abogado ni tasas**, incluso verbalmente.\n- Se dirige a cualquier **juez constitucional/penal** del lugar.\n- El juez puede constituirse de inmediato en el lugar de la detención.\nPlazos de detención (Art. 2.24.f Constitución): **48 horas** regla general; **15 días** en terrorismo, espionaje, drogas y crimen organizado.\nJurisIA tiene el modelo de demanda.",sugg:["Generar demanda de hábeas corpus","¿Cuánto puede durar una detención policial?"]},
-{kw:["prision preventiva","preso sin condena","cesacion de prision"],title:"Prisión preventiva – Arts. 268° y 283° NCPP",resp:"La prisión preventiva es **excepcional** y exige la concurrencia de tres presupuestos (**Art. 268 NCPP**): graves y fundados elementos de convicción, prognosis de pena **mayor a 4 años** y **peligro procesal** (fuga u obstaculización). La Casación **626-2013-Moquegua** ordenó el debate riguroso de cada uno, más la proporcionalidad y el plazo.\nSi la situación cambió (nuevas pruebas, arraigo acreditado), procede la **cesación** (Art. 283 NCPP) y su sustitución por comparecencia.\nJurisIA incluye el modelo de solicitud de cesación.",sugg:["Generar solicitud de cesación de prisión preventiva","¿Qué es el peligro de fuga?"]},
-{kw:["reparacion civil","actor civil","soy victima de un delito","quien me paga el daño del delito"],title:"Reparación civil y actor civil – Arts. 98°-101° NCPP",resp:"La víctima de un delito tiene derecho a la **reparación civil** (restitución del bien + indemnización, Art. 93 CP). Para reclamarla dentro del proceso penal debe **constituirse en actor civil**:\n- Se solicita ante el **Juez de Investigación Preparatoria** (Art. 100 NCPP).\n- Oportunidad: **antes de que culmine la investigación preparatoria** (Art. 101).\n- Le permite ofrecer pruebas del daño, intervenir en el proceso y apelar en lo civil.\nSi no se constituye, puede demandar la indemnización en la **vía civil** (pero no en ambas).\nJurisIA tiene el modelo de solicitud.",sugg:["Generar constitución en actor civil","Generar demanda de indemnización civil"]},
+{kw:["denuncia penal","como denuncio un delito","donde denuncio","me estafaron","me robaron"],title:"Cómo presentar una denuncia penal – Art. 326° NCPP",resp:"**Cualquier persona** puede denunciar un delito (Art. 326 NCPP), verbalmente o por escrito, ante:\n- La **comisaría** del lugar del hecho (ideal en flagrancia o delitos patrimoniales), o\n- La **Fiscalía Penal de turno** (recomendable en casos complejos: estafas, delitos de funcionarios).\nLa denuncia debe contener (Art. 328): sus datos, el **relato circunstanciado** y la identificación del autor si la conoce. No necesita abogado para denunciar.\nEl fiscal abrirá **diligencias preliminares** y decidirá si formaliza la investigación. DuraLex genera el escrito de denuncia con el modelo respectivo.",sugg:["Generar denuncia penal","¿Qué es la reparación civil?","Diferencia entre hurto y robo"]},
+{kw:["habeas corpus","detencion arbitraria","detenido injustamente","me tienen detenido"],title:"Hábeas corpus – Art. 200.1° Constitución",resp:"El **hábeas corpus** protege la **libertad individual** frente a detenciones arbitrarias, exceso de plazos, desapariciones, seguimientos ilegales y afectaciones conexas (Art. 33 Ley 31307).\nCaracterísticas (Ley 31307):\n- Lo puede presentar **cualquier persona** a favor del detenido, **sin abogado ni tasas**, incluso verbalmente.\n- Se dirige a cualquier **juez constitucional/penal** del lugar.\n- El juez puede constituirse de inmediato en el lugar de la detención.\nPlazos de detención (Art. 2.24.f Constitución): **48 horas** regla general; **15 días** en terrorismo, espionaje, drogas y crimen organizado.\nDuraLex tiene el modelo de demanda.",sugg:["Generar demanda de hábeas corpus","¿Cuánto puede durar una detención policial?"]},
+{kw:["prision preventiva","preso sin condena","cesacion de prision"],title:"Prisión preventiva – Arts. 268° y 283° NCPP",resp:"La prisión preventiva es **excepcional** y exige la concurrencia de tres presupuestos (**Art. 268 NCPP**): graves y fundados elementos de convicción, prognosis de pena **mayor a 4 años** y **peligro procesal** (fuga u obstaculización). La Casación **626-2013-Moquegua** ordenó el debate riguroso de cada uno, más la proporcionalidad y el plazo.\nSi la situación cambió (nuevas pruebas, arraigo acreditado), procede la **cesación** (Art. 283 NCPP) y su sustitución por comparecencia.\nDuraLex incluye el modelo de solicitud de cesación.",sugg:["Generar solicitud de cesación de prisión preventiva","¿Qué es el peligro de fuga?"]},
+{kw:["reparacion civil","actor civil","soy victima de un delito","quien me paga el daño del delito"],title:"Reparación civil y actor civil – Arts. 98°-101° NCPP",resp:"La víctima de un delito tiene derecho a la **reparación civil** (restitución del bien + indemnización, Art. 93 CP). Para reclamarla dentro del proceso penal debe **constituirse en actor civil**:\n- Se solicita ante el **Juez de Investigación Preparatoria** (Art. 100 NCPP).\n- Oportunidad: **antes de que culmine la investigación preparatoria** (Art. 101).\n- Le permite ofrecer pruebas del daño, intervenir en el proceso y apelar en lo civil.\nSi no se constituye, puede demandar la indemnización en la **vía civil** (pero no en ambas).\nDuraLex tiene el modelo de solicitud.",sugg:["Generar constitución en actor civil","Generar demanda de indemnización civil"]},
 {kw:["violencia familiar","me agrede mi pareja","ley 30364","medidas de proteccion"],title:"Violencia familiar – Ley 30364",resp:"La **Ley 30364** protege frente a la violencia contra la mujer y los integrantes del grupo familiar (física, psicológica, sexual y económica).\nRuta de atención:\n1. **Denuncie** en comisaría, fiscalía o ante el Juzgado de Familia: sin abogado, sin tasas, incluso verbalmente. También línea 100 y CEM.\n2. El Juzgado de Familia dicta **medidas de protección en 24-72 horas** (retiro del agresor, prohibición de acercamiento, etc.).\n3. El caso pasa a la Fiscalía Penal por las **agresiones (Art. 122-B CP)** o el delito que corresponda.\nEl incumplimiento de las medidas de protección es delito de **resistencia a la autoridad**.",sugg:["¿Qué medidas de protección existen?","Generar denuncia penal"]},
 {kw:["hurto","robo","diferencia entre hurto y robo"],title:"Hurto vs. Robo – Arts. 185° y 188° CP",resp:"La diferencia está en la **violencia**:\n- **Hurto (Art. 185 CP):** apoderarse de bien ajeno **sin violencia** (ej.: le sustraen el celular del bolsillo sin que lo note). Pena base: 1-3 años. El hurto simple requiere que el bien supere 1 RMV; el **hurto agravado** (Art. 186: en casa habitada, de noche, dos o más personas) no tiene ese mínimo y llega a 6 años.\n- **Robo (Art. 188 CP):** apoderarse **con violencia o amenaza** contra la persona (arrebato con golpe, asalto con arma). Pena base: 3-8 años; el **robo agravado** (Art. 189) puede superar los 12 años.",sugg:["Generar denuncia penal","¿Qué hago si me robaron?"]},
 {kw:["flagrancia","me detuvieron en flagrancia","que es flagrancia"],title:"Flagrancia delictiva – Art. 259° NCPP",resp:"La policía puede detener **sin orden judicial solo en flagrancia** (Art. 259 NCPP), que existe cuando:\n- El agente es **descubierto cometiendo el delito** o acaba de cometerlo.\n- Es identificado (video, testigos) y capturado dentro de las **24 horas**.\n- Es hallado dentro de las 24 horas con **objetos o huellas** del delito.\nFuera de estos supuestos, la detención requiere **mandato judicial**; una detención sin flagrancia ni orden es arbitraria y habilita el **hábeas corpus**. La detención en flagrancia dura máximo **48 horas** (salvo delitos exceptuados).",sugg:["Generar demanda de hábeas corpus","¿Cuáles son mis derechos al ser detenido?"]},
@@ -2935,26 +2942,26 @@ const CHAT_KB = [
 {kw:["derechos del detenido","que hago si me detienen","abogado de oficio"],title:"Derechos del detenido – Art. 71° NCPP",resp:"Toda persona detenida tiene derecho a (Art. 71 NCPP y Art. 139 Constitución):\n- Conocer los **motivos de su detención** y el fiscal a cargo.\n- **Comunicarse** con un familiar o persona de confianza.\n- Ser asistido por un **abogado defensor desde el primer momento** — si no puede pagarlo, exija un **defensor público gratuito** (Ley 29360).\n- **Guardar silencio**: no está obligado a declarar sin su abogado.\n- Ser examinado por un médico legista.\nLa vulneración de estos derechos habilita la **tutela de derechos** ante el Juez de Investigación Preparatoria (Art. 71.4 NCPP) y, si afecta la libertad, el hábeas corpus.",sugg:["Generar demanda de hábeas corpus","¿Cuánto dura una detención?"]},
 /* ---- ADMINISTRATIVO ---- */
 {kw:["lpag","ley 27444","procedimiento administrativo","tuo lpag"],title:"TUO de la LPAG – DS 004-2019-JUS",resp:"El **TUO de la Ley 27444 (DS 004-2019-JUS)** rige todos los procedimientos administrativos ante entidades públicas. Puntos esenciales:\n- **Derechos del administrado** (Art. 66): trato respetuoso, acceso al expediente, cumplimiento de plazos.\n- **Recursos** (Arts. 217-220): reconsideración (misma autoridad, nueva prueba) y apelación (superior jerárquico) — plazo de **15 días hábiles**.\n- **Silencio administrativo:** positivo o negativo según el procedimiento (Ley 29060 y TUO).\n- **Nulidad** de actos contrarios a la ley (Art. 10).\nAgotada la vía, procede la demanda **contencioso administrativa** (Ley 27584, 3 meses).",sugg:["¿Qué es el recurso de reconsideración?","¿Qué es el silencio administrativo?","Generar recurso de apelación"]},
-{kw:["reconsideracion","recurso de reconsideracion"],title:"Recurso de reconsideración – Art. 219° TUO LPAG",resp:"Se interpone **ante el mismo órgano** que dictó el acto, dentro de **15 días hábiles** de notificado, y debe sustentarse en **NUEVA PRUEBA** (documento, informe o pericia no evaluada antes). En órganos de instancia única no se exige nueva prueba.\nEs **opcional**: puede saltarla e ir directo a la apelación. Su interposición no suspende la ejecución del acto, salvo que la ley disponga lo contrario o se solicite y conceda la suspensión.\nJurisIA genera el recurso con el modelo respectivo.",sugg:["Generar recurso de reconsideración","¿Qué es el recurso de apelación?"]},
-{kw:["apelacion administrativa","recurso de apelacion","apelar una resolucion"],title:"Recurso de apelación – Art. 220° TUO LPAG",resp:"Procede cuando la impugnación se sustenta en **diferente interpretación de las pruebas** o en **cuestiones de puro derecho** (no requiere nueva prueba). Reglas:\n- Plazo: **15 días hábiles** desde la notificación.\n- Se **presenta ante el órgano que dictó el acto**, que eleva el expediente al **superior jerárquico**.\n- Lo resuelto por el superior normalmente **agota la vía administrativa** (Art. 226), abriendo la puerta al contencioso administrativo.\nJurisIA incluye modelos de apelación administrativa general, apelación INDECOPI y apelación laboral judicial.",sugg:["Generar recurso de apelación","¿Qué es la demanda contencioso administrativa?"]},
+{kw:["reconsideracion","recurso de reconsideracion"],title:"Recurso de reconsideración – Art. 219° TUO LPAG",resp:"Se interpone **ante el mismo órgano** que dictó el acto, dentro de **15 días hábiles** de notificado, y debe sustentarse en **NUEVA PRUEBA** (documento, informe o pericia no evaluada antes). En órganos de instancia única no se exige nueva prueba.\nEs **opcional**: puede saltarla e ir directo a la apelación. Su interposición no suspende la ejecución del acto, salvo que la ley disponga lo contrario o se solicite y conceda la suspensión.\nDuraLex genera el recurso con el modelo respectivo.",sugg:["Generar recurso de reconsideración","¿Qué es el recurso de apelación?"]},
+{kw:["apelacion administrativa","recurso de apelacion","apelar una resolucion"],title:"Recurso de apelación – Art. 220° TUO LPAG",resp:"Procede cuando la impugnación se sustenta en **diferente interpretación de las pruebas** o en **cuestiones de puro derecho** (no requiere nueva prueba). Reglas:\n- Plazo: **15 días hábiles** desde la notificación.\n- Se **presenta ante el órgano que dictó el acto**, que eleva el expediente al **superior jerárquico**.\n- Lo resuelto por el superior normalmente **agota la vía administrativa** (Art. 226), abriendo la puerta al contencioso administrativo.\nDuraLex incluye modelos de apelación administrativa general, apelación INDECOPI y apelación laboral judicial.",sugg:["Generar recurso de apelación","¿Qué es la demanda contencioso administrativa?"]},
 {kw:["silencio administrativo","no responden mi solicitud","no contestan mi tramite"],title:"Silencio administrativo – Ley y TUO LPAG",resp:"Cuando la administración **no resuelve en el plazo**, opera el silencio administrativo:\n- **Positivo (SAP):** la solicitud se entiende **APROBADA** — regla general en procedimientos de evaluación previa que no afectan interés público relevante. Puede exigir su ejecución presentando una declaración jurada de haber operado el SAP.\n- **Negativo (SAN):** se entiende **denegada** solo para efectos de que usted pueda impugnar (recurso o demanda contenciosa); la entidad sigue obligada a resolver.\nRevise el TUPA del procedimiento para saber cuál aplica. La demora injustificada también puede quejarse ante la propia entidad y la Defensoría del Pueblo.",sugg:["Generar queja ante la Defensoría del Pueblo","¿Cómo apelo una resolución?"]},
-{kw:["acceso a la informacion","informacion publica","transparencia","ley 27806"],title:"Acceso a la información pública – Ley 27806",resp:"**Art. 2.5 de la Constitución y Ley 27806:** toda persona puede solicitar información de cualquier entidad pública **sin expresar la causa** de su pedido.\n- Plazo de entrega: **10 días hábiles**.\n- Costo: solo la **reproducción** (la entrega digital suele ser gratuita).\n- Excepciones taxativas: información secreta, reservada o confidencial (Arts. 15-17).\nSi no responden o deniegan sin fundamento: **apelación ante el Tribunal de Transparencia** y, en última instancia, **hábeas data**. JurisIA genera la solicitud con el modelo respectivo.",sugg:["Generar solicitud de acceso a la información","¿Qué es el hábeas data?"]},
-{kw:["indecopi","reclamo consumidor","producto defectuoso","libro de reclamaciones"],title:"Protección al consumidor – Ley 29571",resp:"Ante un producto o servicio defectuoso, la **Ley 29571** le da tres vías escalonadas:\n1. **Libro de Reclamaciones** del proveedor (respuesta en 15 días hábiles).\n2. **Reclamo conciliatorio** ante el SAC de INDECOPI (gratuito).\n3. **Denuncia formal** ante la Comisión u OPS: puede terminar en multa y **medidas correctivas** a su favor (devolución, reposición, cumplimiento de oferta). Plazo: **2 años** desde la infracción.\nEl argumento central es el **deber de idoneidad** (Art. 19): lo recibido debe corresponder a lo ofrecido. JurisIA incluye modelos de denuncia y de apelación ante el Tribunal de INDECOPI, y una guía completa.",sugg:["Generar denuncia INDECOPI","Ver guía INDECOPI","Generar apelación ante INDECOPI"]},
-{kw:["onp","pension de jubilacion","19990","me denegaron la pension","aportaciones onp"],title:"Pensión ONP – DL 19990",resp:"Para la pensión de jubilación del **Sistema Nacional de Pensiones (DL 19990)** necesita: **65 años de edad y 20 años de aportes** (régimen general).\nSi la ONP le deniega por «aportes no acreditados», recuerde el precedente **STC 4762-2007-PA/TC**: certificados de trabajo, boletas y liquidaciones **sí acreditan aportaciones**, y la pérdida de planillas del empleador no puede perjudicarlo.\nVías: recurso de **apelación administrativa**, demanda **contencioso administrativa** o **amparo** (si se afecta el contenido esencial — precedente Anicama, STC 1417-2005-AA).\nJurisIA tiene el modelo de solicitud/recurso ONP.",sugg:["Generar solicitud de pensión ONP","¿Puedo pasarme de la AFP a la ONP?"]},
-{kw:["afp","desafiliacion afp","pasarme a la onp","me afiliaron con engaños"],title:"Desafiliación de AFP – Ley 28991",resp:"Puede **retornar del Sistema Privado (AFP) al Sistema Nacional (ONP)** si se encuentra en alguno de los supuestos de la **Ley 28991** y la STC 1776-2004-AA/TC:\n- Perteneció al SNP antes de 2002 con derecho a pensión al momento de afiliarse.\n- Fue afiliado con **falta o distorsión de información**.\n- Realiza **labores de riesgo** (minería, construcción civil).\nEl trámite se inicia ante la propia **AFP/SBS** con el formulario de desafiliación. Sus aportes se trasladan según las normas reglamentarias (DS 063-2007-EF).\nJurisIA genera la solicitud con el modelo respectivo.",sugg:["Generar solicitud de desafiliación AFP","¿Cómo acredito aportes a la ONP?"]},
-{kw:["proteccion de datos","datos personales","me llaman con publicidad","arco","ley 29733"],title:"Protección de datos personales – Ley 29733",resp:"La **Ley 29733** le reconoce los derechos **ARCO** sobre sus datos personales:\n- **A**cceso: saber qué datos suyos tratan.\n- **R**ectificación: corregir datos inexactos.\n- **C**ancelación: que los supriman.\n- **O**posición: que dejen de usarlos (típico: publicidad no consentida, spam telefónico).\nPrimero solicite directamente a la empresa (JurisIA tiene el modelo). Si no responde o deniega, reclame ante la **Autoridad Nacional de Protección de Datos Personales** (MINJUSDH), que puede imponer multas. En sede judicial, la garantía es el **hábeas data**.",sugg:["Generar solicitud ARCO","¿Qué es el hábeas data?"]},
-{kw:["defensoria del pueblo","queja defensoria","maltrato de entidad publica"],title:"Queja ante la Defensoría del Pueblo – Ley 26520",resp:"La **Defensoría del Pueblo** (Arts. 161-162 Constitución) defiende los derechos de la persona y **supervisa a la administración estatal**. Puede quejarse contra municipalidades, hospitales, UGEL, comisarías, programas sociales, etc.\n- La queja es **gratuita, sin formalidades y sin abogado** (Ley 26520).\n- La Defensoría investiga, requiere información y emite **recomendaciones y recordatorios de deberes legales**.\n- ⚠️ No sustituye los recursos administrativos ni judiciales, ni suspende sus plazos: úsela en paralelo.\nJurisIA genera la queja con el modelo respectivo.",sugg:["Generar queja ante la Defensoría","¿Qué es el silencio administrativo?"]},
-{kw:["contencioso administrativa","demandar al estado","ley 27584"],title:"Proceso contencioso administrativo – Ley 27584",resp:"Es el proceso para el **control judicial de la administración** (Art. 148 Constitución, TUO Ley 27584). Procede contra actos administrativos firmes, silencio, inercia y actuaciones materiales.\nRequisitos clave:\n- **Agotar la vía administrativa** (recursos de ley).\n- Plazo: **3 meses** desde la notificación del acto que agota la vía.\nPretensiones (Art. 5): nulidad del acto, **plena jurisdicción** (reconocimiento del derecho + medidas), cese de actuaciones materiales, cumplimiento de obligaciones.\nJurisIA incluye el modelo de demanda.",sugg:["Generar demanda contencioso administrativa","¿Cómo agoto la vía administrativa?"]},
+{kw:["acceso a la informacion","informacion publica","transparencia","ley 27806"],title:"Acceso a la información pública – Ley 27806",resp:"**Art. 2.5 de la Constitución y Ley 27806:** toda persona puede solicitar información de cualquier entidad pública **sin expresar la causa** de su pedido.\n- Plazo de entrega: **10 días hábiles**.\n- Costo: solo la **reproducción** (la entrega digital suele ser gratuita).\n- Excepciones taxativas: información secreta, reservada o confidencial (Arts. 15-17).\nSi no responden o deniegan sin fundamento: **apelación ante el Tribunal de Transparencia** y, en última instancia, **hábeas data**. DuraLex genera la solicitud con el modelo respectivo.",sugg:["Generar solicitud de acceso a la información","¿Qué es el hábeas data?"]},
+{kw:["indecopi","reclamo consumidor","producto defectuoso","libro de reclamaciones"],title:"Protección al consumidor – Ley 29571",resp:"Ante un producto o servicio defectuoso, la **Ley 29571** le da tres vías escalonadas:\n1. **Libro de Reclamaciones** del proveedor (respuesta en 15 días hábiles).\n2. **Reclamo conciliatorio** ante el SAC de INDECOPI (gratuito).\n3. **Denuncia formal** ante la Comisión u OPS: puede terminar en multa y **medidas correctivas** a su favor (devolución, reposición, cumplimiento de oferta). Plazo: **2 años** desde la infracción.\nEl argumento central es el **deber de idoneidad** (Art. 19): lo recibido debe corresponder a lo ofrecido. DuraLex incluye modelos de denuncia y de apelación ante el Tribunal de INDECOPI, y una guía completa.",sugg:["Generar denuncia INDECOPI","Ver guía INDECOPI","Generar apelación ante INDECOPI"]},
+{kw:["onp","pension de jubilacion","19990","me denegaron la pension","aportaciones onp"],title:"Pensión ONP – DL 19990",resp:"Para la pensión de jubilación del **Sistema Nacional de Pensiones (DL 19990)** necesita: **65 años de edad y 20 años de aportes** (régimen general).\nSi la ONP le deniega por «aportes no acreditados», recuerde el precedente **STC 4762-2007-PA/TC**: certificados de trabajo, boletas y liquidaciones **sí acreditan aportaciones**, y la pérdida de planillas del empleador no puede perjudicarlo.\nVías: recurso de **apelación administrativa**, demanda **contencioso administrativa** o **amparo** (si se afecta el contenido esencial — precedente Anicama, STC 1417-2005-AA).\nDuraLex tiene el modelo de solicitud/recurso ONP.",sugg:["Generar solicitud de pensión ONP","¿Puedo pasarme de la AFP a la ONP?"]},
+{kw:["afp","desafiliacion afp","pasarme a la onp","me afiliaron con engaños"],title:"Desafiliación de AFP – Ley 28991",resp:"Puede **retornar del Sistema Privado (AFP) al Sistema Nacional (ONP)** si se encuentra en alguno de los supuestos de la **Ley 28991** y la STC 1776-2004-AA/TC:\n- Perteneció al SNP antes de 2002 con derecho a pensión al momento de afiliarse.\n- Fue afiliado con **falta o distorsión de información**.\n- Realiza **labores de riesgo** (minería, construcción civil).\nEl trámite se inicia ante la propia **AFP/SBS** con el formulario de desafiliación. Sus aportes se trasladan según las normas reglamentarias (DS 063-2007-EF).\nDuraLex genera la solicitud con el modelo respectivo.",sugg:["Generar solicitud de desafiliación AFP","¿Cómo acredito aportes a la ONP?"]},
+{kw:["proteccion de datos","datos personales","me llaman con publicidad","arco","ley 29733"],title:"Protección de datos personales – Ley 29733",resp:"La **Ley 29733** le reconoce los derechos **ARCO** sobre sus datos personales:\n- **A**cceso: saber qué datos suyos tratan.\n- **R**ectificación: corregir datos inexactos.\n- **C**ancelación: que los supriman.\n- **O**posición: que dejen de usarlos (típico: publicidad no consentida, spam telefónico).\nPrimero solicite directamente a la empresa (DuraLex tiene el modelo). Si no responde o deniega, reclame ante la **Autoridad Nacional de Protección de Datos Personales** (MINJUSDH), que puede imponer multas. En sede judicial, la garantía es el **hábeas data**.",sugg:["Generar solicitud ARCO","¿Qué es el hábeas data?"]},
+{kw:["defensoria del pueblo","queja defensoria","maltrato de entidad publica"],title:"Queja ante la Defensoría del Pueblo – Ley 26520",resp:"La **Defensoría del Pueblo** (Arts. 161-162 Constitución) defiende los derechos de la persona y **supervisa a la administración estatal**. Puede quejarse contra municipalidades, hospitales, UGEL, comisarías, programas sociales, etc.\n- La queja es **gratuita, sin formalidades y sin abogado** (Ley 26520).\n- La Defensoría investiga, requiere información y emite **recomendaciones y recordatorios de deberes legales**.\n- ⚠️ No sustituye los recursos administrativos ni judiciales, ni suspende sus plazos: úsela en paralelo.\nDuraLex genera la queja con el modelo respectivo.",sugg:["Generar queja ante la Defensoría","¿Qué es el silencio administrativo?"]},
+{kw:["contencioso administrativa","demandar al estado","ley 27584"],title:"Proceso contencioso administrativo – Ley 27584",resp:"Es el proceso para el **control judicial de la administración** (Art. 148 Constitución, TUO Ley 27584). Procede contra actos administrativos firmes, silencio, inercia y actuaciones materiales.\nRequisitos clave:\n- **Agotar la vía administrativa** (recursos de ley).\n- Plazo: **3 meses** desde la notificación del acto que agota la vía.\nPretensiones (Art. 5): nulidad del acto, **plena jurisdicción** (reconocimiento del derecho + medidas), cese de actuaciones materiales, cumplimiento de obligaciones.\nDuraLex incluye el modelo de demanda.",sugg:["Generar demanda contencioso administrativa","¿Cómo agoto la vía administrativa?"]},
 /* ---- CONSTITUCIONAL ---- */
-{kw:["amparo","accion de amparo","vulneraron mis derechos"],title:"Acción de amparo – Art. 200.2° Constitución",resp:"El **amparo** protege los derechos constitucionales distintos de la libertad individual (hábeas corpus) y la autodeterminación informativa (hábeas data): trabajo, debido proceso, salud, educación, igualdad, propiedad, pensión.\nRequisitos (Ley 31307):\n- Acto lesivo **concreto y actual** contra el contenido constitucional del derecho.\n- Que **no exista vía ordinaria igualmente satisfactoria** (precedente Elgo Ríos, STC 02383-2013-PA).\n- Plazo: **60 días hábiles** (30 si es contra resolución judicial).\nEfecto: **reponer las cosas al estado anterior** a la violación. JurisIA tiene el modelo de demanda y una guía completa.",sugg:["Generar demanda de amparo","Ver guía del amparo","¿Amparo o proceso laboral?"]},
-{kw:["accion de cumplimiento","la autoridad no cumple la ley","no ejecutan mi resolucion"],title:"Acción de cumplimiento – Art. 200.6° Constitución",resp:"Procede contra la **autoridad renuente a acatar una norma legal o un acto administrativo firme** (típico: la entidad reconoce su derecho por resolución… y nunca paga).\nRequisitos:\n- Mandato **vigente, cierto, claro e incondicional** (precedente Villanueva, STC 0168-2005-PC).\n- **Requerimiento previo por documento de fecha cierta** (carta notarial) y esperar **10 días hábiles**.\nSi la autoridad persiste, el juez constitucional le **ordena cumplir** bajo responsabilidad. JurisIA genera la demanda con el modelo respectivo.",sugg:["Generar demanda de cumplimiento","¿Qué es un documento de fecha cierta?"]},
-{kw:["habeas data","informacion sobre mi","rectificar datos en entidad publica"],title:"Hábeas data – Art. 200.3° Constitución",resp:"El **hábeas data** protege dos derechos:\n1. **Acceso a la información pública** (Art. 2.5 Constitución): cuando una entidad le niega información que no está en las excepciones legales.\n2. **Autodeterminación informativa** (Art. 2.6): conocer, rectificar, suprimir o impedir el uso de sus datos en registros públicos o privados.\nRequisito especial (Ley 31307): **requerimiento previo por documento de fecha cierta** y silencio o negativa de la entidad (10 días).\nAntes del hábeas data, agote la solicitud directa (JurisIA tiene los modelos de acceso a la información y derechos ARCO).",sugg:["Generar solicitud de acceso a la información","Generar solicitud ARCO"]},
-{kw:["tribunal constitucional","precedente vinculante","que es el tc"],title:"Tribunal Constitucional y precedentes vinculantes",resp:"El **Tribunal Constitucional** es el órgano de control de la Constitución (Art. 201). Conoce en última instancia los procesos de amparo, hábeas corpus, hábeas data y cumplimiento (recurso de agravio constitucional), y en instancia única la inconstitucionalidad y los conflictos de competencia.\nSus **precedentes vinculantes** obligan a todos los poderes públicos. En JurisIA encontrará los más citados: **Anicama** (pensión), **Baylón** (vías laborales), **Villanueva** (cumplimiento), **Elgo Ríos** (vía satisfactoria), **Huatuco** (reposición pública) — véalos en la sección Jurisprudencia.",sugg:["Ver jurisprudencia constitucional","¿Qué es el amparo?"]},
+{kw:["amparo","accion de amparo","vulneraron mis derechos"],title:"Acción de amparo – Art. 200.2° Constitución",resp:"El **amparo** protege los derechos constitucionales distintos de la libertad individual (hábeas corpus) y la autodeterminación informativa (hábeas data): trabajo, debido proceso, salud, educación, igualdad, propiedad, pensión.\nRequisitos (Ley 31307):\n- Acto lesivo **concreto y actual** contra el contenido constitucional del derecho.\n- Que **no exista vía ordinaria igualmente satisfactoria** (precedente Elgo Ríos, STC 02383-2013-PA).\n- Plazo: **60 días hábiles** (30 si es contra resolución judicial).\nEfecto: **reponer las cosas al estado anterior** a la violación. DuraLex tiene el modelo de demanda y una guía completa.",sugg:["Generar demanda de amparo","Ver guía del amparo","¿Amparo o proceso laboral?"]},
+{kw:["accion de cumplimiento","la autoridad no cumple la ley","no ejecutan mi resolucion"],title:"Acción de cumplimiento – Art. 200.6° Constitución",resp:"Procede contra la **autoridad renuente a acatar una norma legal o un acto administrativo firme** (típico: la entidad reconoce su derecho por resolución… y nunca paga).\nRequisitos:\n- Mandato **vigente, cierto, claro e incondicional** (precedente Villanueva, STC 0168-2005-PC).\n- **Requerimiento previo por documento de fecha cierta** (carta notarial) y esperar **10 días hábiles**.\nSi la autoridad persiste, el juez constitucional le **ordena cumplir** bajo responsabilidad. DuraLex genera la demanda con el modelo respectivo.",sugg:["Generar demanda de cumplimiento","¿Qué es un documento de fecha cierta?"]},
+{kw:["habeas data","informacion sobre mi","rectificar datos en entidad publica"],title:"Hábeas data – Art. 200.3° Constitución",resp:"El **hábeas data** protege dos derechos:\n1. **Acceso a la información pública** (Art. 2.5 Constitución): cuando una entidad le niega información que no está en las excepciones legales.\n2. **Autodeterminación informativa** (Art. 2.6): conocer, rectificar, suprimir o impedir el uso de sus datos en registros públicos o privados.\nRequisito especial (Ley 31307): **requerimiento previo por documento de fecha cierta** y silencio o negativa de la entidad (10 días).\nAntes del hábeas data, agote la solicitud directa (DuraLex tiene los modelos de acceso a la información y derechos ARCO).",sugg:["Generar solicitud de acceso a la información","Generar solicitud ARCO"]},
+{kw:["tribunal constitucional","precedente vinculante","que es el tc"],title:"Tribunal Constitucional y precedentes vinculantes",resp:"El **Tribunal Constitucional** es el órgano de control de la Constitución (Art. 201). Conoce en última instancia los procesos de amparo, hábeas corpus, hábeas data y cumplimiento (recurso de agravio constitucional), y en instancia única la inconstitucionalidad y los conflictos de competencia.\nSus **precedentes vinculantes** obligan a todos los poderes públicos. En DuraLex encontrará los más citados: **Anicama** (pensión), **Baylón** (vías laborales), **Villanueva** (cumplimiento), **Elgo Ríos** (vía satisfactoria), **Huatuco** (reposición pública) — véalos en la sección Jurisprudencia.",sugg:["Ver jurisprudencia constitucional","¿Qué es el amparo?"]},
 /* ---- TRIBUTARIO / MUNICIPAL ---- */
-{kw:["sunat me multo","multa de sunat","reclamacion tributaria","orden de pago","reclamar a sunat"],title:"Reclamación tributaria – Art. 137° CT",resp:"Contra las resoluciones de multa, de determinación y órdenes de pago de SUNAT (o de una municipalidad) procede el **recurso de reclamación**:\n- Plazo: **20 días hábiles** desde la notificación (5 días en comiso, internamiento y cierre).\n- Presentada en plazo, **no se exige pagar** la deuda reclamada.\n- SUNAT resuelve en 9 meses; si se lo deniegan, puede **apelar al Tribunal Fiscal** (15 días hábiles).\nJurisIA tiene los modelos de reclamación y apelación.",sugg:["Generar reclamación tributaria","¿Cómo apelo al Tribunal Fiscal?","¿Mi deuda tributaria ya prescribió?"]},
-{kw:["prescripcion tributaria","deuda tributaria antigua","deuda del predial","me cobran deudas viejas","prescripcion de impuestos"],title:"Prescripción de deudas tributarias – Art. 43° CT",resp:"Las deudas tributarias **prescriben a los 4 años** (6 si no presentó declaración): vencido el plazo sin notificaciones válidas, la SUNAT o la municipalidad **ya no pueden cobrarlas**. Claves:\n- La prescripción **no opera de oficio**: debe solicitarla por escrito (Art. 47 CT).\n- Las notificaciones válidas de valores o cobranza coactiva **interrumpen** el plazo (Art. 45).\n- Muy frecuente en **predial y arbitrios** municipales antiguos.\n⚠️ No pague antes de verificar: lo pagado por deuda prescrita no se devuelve. JurisIA genera la solicitud.",sugg:["Generar solicitud de prescripción","¿Puedo fraccionar mi deuda?"]},
-{kw:["fraccionamiento","pagar en cuotas sunat","no puedo pagar mis impuestos","facilidades de pago"],title:"Fraccionamiento tributario – Art. 36° CT",resp:"Si no puede pagar su deuda tributaria al contado, el **Art. 36° del Código Tributario** permite solicitar su **aplazamiento y/o fraccionamiento**:\n- En **SUNAT**: por SOL con el Formulario Virtual 687, hasta 72 cuotas según el caso.\n- En **municipalidades/SAT**: conforme a su ordenanza de fraccionamiento.\n- El acogimiento **suspende la cobranza coactiva** de la deuda fraccionada.\n⚠️ El incumplimiento de cuotas habilita el cobro coactivo de todo el saldo. JurisIA tiene el modelo de solicitud.",sugg:["Generar solicitud de fraccionamiento","¿Qué es la cobranza coactiva?"]},
-{kw:["papeleta","multa de transito","me pusieron una papeleta","impugnar papeleta","sat papeleta"],title:"Impugnación de papeletas – DS 016-2009-MTC",resp:"Si considera injusta una papeleta de tránsito:\n1. **Descargo:** preséntelo ante el SAT o la municipalidad dentro de los **5 días hábiles** de impuesta o notificada.\n2. Si emiten resolución de sanción en su contra: **reconsideración o apelación** en 15 días hábiles (TUO LPAG).\n3. Pruebas útiles: fotos del lugar, ausencia de señalización, GPS, error en la placa, venta previa del vehículo.\nSi la papeleta es legítima, evalúe el **pronto pago** (descuentos de hasta 83% en los primeros días). Las papeletas también **prescriben** según el reglamento. JurisIA genera el descargo.",sugg:["Generar descargo de papeleta","¿Mi papeleta ya prescribió?"]},
+{kw:["sunat me multo","multa de sunat","reclamacion tributaria","orden de pago","reclamar a sunat"],title:"Reclamación tributaria – Art. 137° CT",resp:"Contra las resoluciones de multa, de determinación y órdenes de pago de SUNAT (o de una municipalidad) procede el **recurso de reclamación**:\n- Plazo: **20 días hábiles** desde la notificación (5 días en comiso, internamiento y cierre).\n- Presentada en plazo, **no se exige pagar** la deuda reclamada.\n- SUNAT resuelve en 9 meses; si se lo deniegan, puede **apelar al Tribunal Fiscal** (15 días hábiles).\nDuraLex tiene los modelos de reclamación y apelación.",sugg:["Generar reclamación tributaria","¿Cómo apelo al Tribunal Fiscal?","¿Mi deuda tributaria ya prescribió?"]},
+{kw:["prescripcion tributaria","deuda tributaria antigua","deuda del predial","me cobran deudas viejas","prescripcion de impuestos"],title:"Prescripción de deudas tributarias – Art. 43° CT",resp:"Las deudas tributarias **prescriben a los 4 años** (6 si no presentó declaración): vencido el plazo sin notificaciones válidas, la SUNAT o la municipalidad **ya no pueden cobrarlas**. Claves:\n- La prescripción **no opera de oficio**: debe solicitarla por escrito (Art. 47 CT).\n- Las notificaciones válidas de valores o cobranza coactiva **interrumpen** el plazo (Art. 45).\n- Muy frecuente en **predial y arbitrios** municipales antiguos.\n⚠️ No pague antes de verificar: lo pagado por deuda prescrita no se devuelve. DuraLex genera la solicitud.",sugg:["Generar solicitud de prescripción","¿Puedo fraccionar mi deuda?"]},
+{kw:["fraccionamiento","pagar en cuotas sunat","no puedo pagar mis impuestos","facilidades de pago"],title:"Fraccionamiento tributario – Art. 36° CT",resp:"Si no puede pagar su deuda tributaria al contado, el **Art. 36° del Código Tributario** permite solicitar su **aplazamiento y/o fraccionamiento**:\n- En **SUNAT**: por SOL con el Formulario Virtual 687, hasta 72 cuotas según el caso.\n- En **municipalidades/SAT**: conforme a su ordenanza de fraccionamiento.\n- El acogimiento **suspende la cobranza coactiva** de la deuda fraccionada.\n⚠️ El incumplimiento de cuotas habilita el cobro coactivo de todo el saldo. DuraLex tiene el modelo de solicitud.",sugg:["Generar solicitud de fraccionamiento","¿Qué es la cobranza coactiva?"]},
+{kw:["papeleta","multa de transito","me pusieron una papeleta","impugnar papeleta","sat papeleta"],title:"Impugnación de papeletas – DS 016-2009-MTC",resp:"Si considera injusta una papeleta de tránsito:\n1. **Descargo:** preséntelo ante el SAT o la municipalidad dentro de los **5 días hábiles** de impuesta o notificada.\n2. Si emiten resolución de sanción en su contra: **reconsideración o apelación** en 15 días hábiles (TUO LPAG).\n3. Pruebas útiles: fotos del lugar, ausencia de señalización, GPS, error en la placa, venta previa del vehículo.\nSi la papeleta es legítima, evalúe el **pronto pago** (descuentos de hasta 83% en los primeros días). Las papeletas también **prescriben** según el reglamento. DuraLex genera el descargo.",sugg:["Generar descargo de papeleta","¿Mi papeleta ya prescribió?"]},
 /* ---- GENERAL ---- */
 {kw:["urp","uit","unidad de referencia procesal","cuanto es la urp"],title:"URP y UIT – Valores de referencia",resp:"- **UIT (Unidad Impositiva Tributaria):** se fija cada año por decreto supremo (2026: **S/ 5,500**). ⚠️ Verifique el valor del año en curso.\n- **URP (Unidad de Referencia Procesal) = 10% de la UIT** (2026: S/ 550). Se usa para competencias y tasas judiciales: p. ej., los Juzgados de Paz Letrados laborales conocen pretensiones hasta **50 URP**; el embargo de remuneraciones procede sobre el exceso de **5 URP**.\nLas tasas judiciales se calculan en función de la URP según los cuadros anuales del Poder Judicial (los procesos de alimentos y laborales hasta 70 URP están exonerados).",sugg:["¿Cuánto cuesta demandar?","¿Qué juzgado es competente para mi caso?"]},
 {kw:["conciliacion extrajudicial","antes de demandar","centro de conciliacion"],title:"Conciliación extrajudicial – Ley 26872",resp:"En varias materias civiles la conciliación extrajudicial es **requisito de procedencia** antes de demandar (Ley 26872): pagos de deudas, desalojos por vencimiento, indemnizaciones, otorgamiento de escritura, división de bienes.\n- Se solicita en un **centro de conciliación** autorizado por el MINJUSDH.\n- Si la otra parte no asiste o no hay acuerdo, se emite el **acta** que habilita la demanda.\n- El **acta con acuerdo** vale como **título ejecutivo**.\nNo es exigible en alimentos, violencia familiar ni contra ausentes; en materia laboral rige la conciliación administrativa del MTPE, siempre voluntaria.",sugg:["¿Cómo cobro una deuda?","¿Cuánto cuesta demandar?"]},
@@ -3020,7 +3027,7 @@ const CHAT_DEFAULT_SUGGS = ["¿Qué es el despido arbitrario?","¿Cómo demando 
    ============================================================ */
 const $ = id => document.getElementById(id);
 const norm = s => (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 const fill = (tpl,vals) => (tpl||"").replace(/\{(\w+)\}/g,(m,k)=> (vals[k]&&vals[k].trim()) ? vals[k].trim() : "________");
 const ORD = ["PRIMERO","SEGUNDO","TERCERO","CUARTO","QUINTO","SEXTO","SÉTIMO","OCTAVO","NOVENO","DÉCIMO","DÉCIMO PRIMERO","DÉCIMO SEGUNDO","DÉCIMO TERCERO","DÉCIMO CUARTO","DÉCIMO QUINTO"];
 const fechaHoy = () => new Date().toLocaleDateString("es-PE",{day:"numeric",month:"long",year:"numeric"});
@@ -3277,7 +3284,7 @@ function generateDoc(doc,vals){
   L.push("        "+(isCarta?"FIRMA DEL REMITENTE":"FIRMA DEL RECURRENTE")+"                        FIRMA DE ABOGADO(A)");
   L.push("     DNI N° "+v("dni")+"                              (CAL / Registro N° ______)");
   L.push("");
-  L.push("— Documento modelo generado con JurisIA. Es orientativo y NO constituye asesoría legal.");
+  L.push("— Documento modelo generado con DuraLex. Es orientativo y NO constituye asesoría legal.");
   L.push("  Revíselo con un abogado colegiado antes de presentarlo. —");
   return L.join("\n");
 }
@@ -3286,7 +3293,7 @@ function downloadDoc(){
   const blob=new Blob([wizDocText],{type:"text/plain;charset=utf-8"});
   const a=document.createElement("a");
   a.href=URL.createObjectURL(blob);
-  a.download=(wizDoc?wizDoc.id:"escrito")+"_jurisia.txt";
+  a.download=(wizDoc?wizDoc.id:"escrito")+"_duralex.txt";
   document.body.appendChild(a);a.click();a.remove();
   showToast("⬇️ Documento descargado");
 }
@@ -3314,7 +3321,7 @@ function renderDocs(){
   const c=$("docs-list");
   if(!savedDocs.length){c.innerHTML='<div class="empty-state"><span class="es-icon">📁</span>Aún no tiene documentos guardados en esta sesión.<br>Genere un escrito en <b>Redactar</b> y guárdelo aquí.</div>';return;}
   c.innerHTML=savedDocs.map(d=>
-    '<div class="docrow bl-'+d.area+'"><div class="dr-info"><h3>'+esc(d.name)+'</h3><span><span class="tag tag-'+d.area+'">'+AREAS[d.area].name+"</span> · Guardado: "+d.date+'</span></div>'+
+    '<div class="docrow bl-'+esc(d.area)+'"><div class="dr-info"><h3>'+esc(d.name)+'</h3><span><span class="tag tag-'+esc(d.area)+'">'+esc(AREAS[d.area]?AREAS[d.area].name:d.area)+"</span> · Guardado: "+esc(d.date)+'</span></div>'+
     '<div class="dr-actions"><button class="btn btn-ghost btn-sm" onclick="viewSaved('+d.id+')">👁 Ver</button>'+
     '<button class="btn btn-primary btn-sm" onclick="dlSavedWord('+d.id+')">📄 Word</button>'+
     '<button class="btn btn-primary btn-sm" onclick="dlSaved('+d.id+')">⬇️ .txt</button>'+
@@ -3326,14 +3333,14 @@ function dlSaved(id){const d=savedDocs.find(x=>x.id===id);if(!d)return;const blo
 function delSaved(id){const i=savedDocs.findIndex(x=>x.id===id);if(i>-1)savedDocs.splice(i,1);$("st-saved").textContent=savedDocs.length;renderDocs();}
 
 /* ============================================================
-   CHAT LEGAL IA
+   CHAT LEGAL
    ============================================================ */
 let chatStarted=false;
 function initChat(){
   if(chatStarted)return;
   chatStarted=true;
   $("topics-list").innerHTML=CHAT_TOPICS.map(t=>'<button class="topic-item" onclick="askChat(\''+t.send.replace(/'/g,"\\'")+'\')">'+t.label+"</button>").join("");
-  botSay("Asistente Legal JurisIA","¡Bienvenido(a)! Soy su asistente legal orientativo. Puedo explicarle normas peruanas, **artículos específicos** (pruebe con «Art. 34 del LPCL» o «artículo 472 del Código Civil»), plazos y trámites, y guiarlo hacia el modelo de escrito adecuado.\n- Elija un **tema frecuente** del panel, o\n- Escriba su consulta con sus propias palabras.\n⚠️ Recuerde: brindo información general, no asesoría legal profesional.");
+  botSay("Asistente Legal DuraLex","¡Bienvenido(a)! Soy su asistente legal orientativo. Puedo explicarle normas peruanas, **artículos específicos** (pruebe con «Art. 34 del LPCL» o «artículo 472 del Código Civil»), plazos y trámites, y guiarlo hacia el modelo de escrito adecuado.\n- Elija un **tema frecuente** del panel, o\n- Escriba su consulta con sus propias palabras.\n⚠️ Recuerde: brindo información general, no asesoría legal profesional.");
   setSuggs(CHAT_DEFAULT_SUGGS);
   $("chat-input").addEventListener("keydown",e=>{if(e.key==="Enter")sendChat();});
 }
@@ -3515,7 +3522,7 @@ function saveBlob(content,fname,mime){
 }
 function downloadWord(){
   if(!wizDocText)return;
-  saveBlob(docAsHtml(wizDoc.name,wizDocText),(wizDoc?wizDoc.id:"escrito")+"_jurisia.doc","application/msword");
+  saveBlob(docAsHtml(wizDoc.name,wizDocText),(wizDoc?wizDoc.id:"escrito")+"_duralex.doc","application/msword");
   showToast("📄 Documento Word descargado");
 }
 function dlSavedWord(id){
@@ -3538,6 +3545,7 @@ function printPDF(){
    ============================================================ */
 function dParse(v){if(!v)return null;const p=v.split("-");if(p.length!==3)return null;const d=new Date(+p[0],+p[1]-1,+p[2]);return isNaN(d.getTime())?null:d;}
 function dFmt(d){return d.toLocaleDateString("es-PE",{weekday:"long",day:"numeric",month:"long",year:"numeric"});}
+function addMonthsClamped(d,n){const r=new Date(d.getFullYear(),d.getMonth()+n,1);const last=new Date(r.getFullYear(),r.getMonth()+1,0).getDate();r.setDate(Math.min(d.getDate(),last));return r;}
 function addBusinessDays(d,n){const r=new Date(d);let c=0;while(c<n){r.setDate(r.getDate()+1);const w=r.getDay();if(w!==0&&w!==6)c++;}return r;}
 function diffYMD(a,b){let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();if(d<0){m--;d+=30;}if(m<0){y--;m+=12;}return {y:Math.max(0,y),m:Math.max(0,m),d:Math.max(0,d)};}
 function money(n){return "S/ "+n.toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2});}
@@ -3609,8 +3617,8 @@ function calcPlazo(){
   if(isNaN(i)||!PLAZOS[i]||!f){showRes("pz-res","⚠️ Elija el tipo de acción e ingrese la fecha.");return;}
   const pz=PLAZOS[i];let v=new Date(f);
   if(pz.kind==="hab")v=addBusinessDays(f,pz.n);
-  else if(pz.kind==="mes")v.setMonth(v.getMonth()+pz.n);
-  else if(pz.kind==="anio")v.setFullYear(v.getFullYear()+pz.n);
+  else if(pz.kind==="mes")v=addMonthsClamped(f,pz.n);
+  else if(pz.kind==="anio")v=addMonthsClamped(f,12*pz.n);
   else v.setDate(v.getDate()+pz.n);
   const hoy=new Date();hoy.setHours(0,0,0,0);
   const vencido=v<hoy;
@@ -3652,22 +3660,22 @@ function gsChat(q){showView("chat");setTimeout(()=>askChat(q),150);}
 const APP_URL="https://angelvc-23.github.io/jurisia/";
 function shareWA(){
   if(!wizDocText)return;
-  const cuerpo=wizDocText.length>3200?wizDocText.slice(0,3200)+"\n\n(…) El documento continúa: descárguelo completo en Word desde JurisIA.":wizDocText;
-  const txt="⚖️ *"+wizDoc.name+"* — generado con JurisIA\n\n"+cuerpo+"\n\n📲 Genere el suyo gratis: "+APP_URL;
+  const cuerpo=wizDocText.length>3200?wizDocText.slice(0,3200)+"\n\n(…) El documento continúa: descárguelo completo en Word desde DuraLex.":wizDocText;
+  const txt="⚖️ *"+wizDoc.name+"* — generado con DuraLex\n\n"+cuerpo+"\n\n📲 Genere el suyo gratis: "+APP_URL;
   window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank");
 }
 function shareMail(){
   if(!wizDocText)return;
-  const cuerpo=wizDocText.length>1700?wizDocText.slice(0,1700)+"\n\n(…) El documento continúa: descárguelo completo en Word desde JurisIA.":wizDocText;
-  location.href="mailto:?subject="+encodeURIComponent(wizDoc.name+" — JurisIA")+"&body="+encodeURIComponent(cuerpo+"\n\nGenerado con JurisIA: "+APP_URL);
+  const cuerpo=wizDocText.length>1700?wizDocText.slice(0,1700)+"\n\n(…) El documento continúa: descárguelo completo en Word desde DuraLex.":wizDocText;
+  location.href="mailto:?subject="+encodeURIComponent(wizDoc.name+" — DuraLex")+"&body="+encodeURIComponent(cuerpo+"\n\nGenerado con DuraLex: "+APP_URL);
 }
 
 /* ============================================================
    EXPORTAR / IMPORTAR SESIÓN (sin almacenamiento del navegador)
    ============================================================ */
 function exportSession(){
-  const data={app:"JurisIA",version:"2.4",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
-  saveBlob(JSON.stringify(data,null,1),"jurisia_sesion.json","application/json");
+  const data={app:"DuraLex",version:"2.5",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
+  saveBlob(JSON.stringify(data,null,1),"duralex_sesion.json","application/json");
   showToast("💾 Sesión exportada. Guarde el archivo para restaurarla luego.");
 }
 function importSession(inp){
@@ -3676,8 +3684,13 @@ function importSession(inp){
   rd.onload=()=>{
     try{
       const d=JSON.parse(rd.result);
-      if(d.app!=="JurisIA"||!Array.isArray(d.docs))throw new Error("formato");
-      d.docs.forEach(x=>{if(x&&x.name&&x.text&&x.area)savedDocs.push(x);});
+      if((d.app!=="DuraLex"&&d.app!=="JurisIA")||!Array.isArray(d.docs))throw new Error("formato");
+      d.docs.forEach(x=>{
+        if(!x||typeof x.name!=="string"||typeof x.text!=="string"||!Object.prototype.hasOwnProperty.call(AREAS,x.area))return;
+        const id=Number(x.id);
+        savedDocs.push({name:x.name,text:x.text,area:x.area,date:typeof x.date==="string"?x.date:"",
+          id:(Number.isSafeInteger(id)&&!savedDocs.some(o=>o.id===id))?id:Date.now()+savedDocs.length});
+      });
       $("st-saved").textContent=savedDocs.length;
       if(d.borrador&&d.borrador.id){
         const doc=DOC_TYPES.find(t=>t.id===d.borrador.id);
@@ -3687,7 +3700,7 @@ function importSession(inp){
       }
       renderDocs();
       showToast("📂 Sesión restaurada correctamente");
-    }catch(e){showToast("⚠️ El archivo no es una sesión válida de JurisIA");}
+    }catch(e){showToast("⚠️ El archivo no es una sesión válida de DuraLex");}
     inp.value="";
   };
   rd.readAsText(f);
@@ -3698,22 +3711,22 @@ function importSession(inp){
    ============================================================ */
 const TERMS_HTML='<div class="guia-full" style="border:none;padding:0;max-width:none">'+
 '<p><em>Vigente desde julio de 2026.</em></p>'+
-'<h2>1. Naturaleza del servicio</h2><p>JurisIA es una herramienta informativa y educativa que genera documentos modelo y brinda orientación general sobre la normativa peruana. <b>No es un estudio de abogados, no presta asesoría legal profesional y su uso no crea relación abogado–cliente.</b></p>'+
+'<h2>1. Naturaleza del servicio</h2><p>DuraLex es una herramienta informativa y educativa que genera documentos modelo y brinda orientación general sobre la normativa peruana. <b>No es un estudio de abogados, no presta asesoría legal profesional y su uso no crea relación abogado–cliente.</b></p>'+
 '<h2>2. Uso bajo su responsabilidad</h2><p>Los modelos, cálculos, plazos y respuestas del chat son referenciales y pueden contener errores u omisiones, o quedar desactualizados por cambios normativos. Antes de presentar cualquier documento ante una autoridad, debe revisarlo con un abogado colegiado y habilitado. Usted es el único responsable del uso que dé a los contenidos generados.</p>'+
-'<h2>3. Sin garantías</h2><p>El servicio se ofrece «tal cual», de forma gratuita y sin garantía de disponibilidad, exactitud o idoneidad para un fin específico. JurisIA no se responsabiliza por decisiones tomadas con base en la información de la plataforma ni por la pérdida de plazos procesales.</p>'+
+'<h2>3. Sin garantías</h2><p>El servicio se ofrece «tal cual», de forma gratuita y sin garantía de disponibilidad, exactitud o idoneidad para un fin específico. DuraLex no se responsabiliza por decisiones tomadas con base en la información de la plataforma ni por la pérdida de plazos procesales.</p>'+
 '<h2>4. Uso permitido</h2><p>Puede usar la plataforma para fines personales, educativos o profesionales lícitos. No está permitido usarla para fines ilegales, para generar documentos con información falsa destinada a engañar a una autoridad, ni para revender sus contenidos como propios.</p>'+
-'<h2>5. Propiedad intelectual</h2><p>El nombre JurisIA, su identidad visual y el software son de titularidad de su autor. Los documentos que usted genera con sus propios datos le pertenecen.</p>'+
+'<h2>5. Propiedad intelectual</h2><p>El nombre DuraLex, su identidad visual y el software son de titularidad de su autor. Los documentos que usted genera con sus propios datos le pertenecen.</p>'+
 '<h2>6. Cambios</h2><p>Estos términos pueden actualizarse; la versión vigente será siempre la publicada en esta página.</p></div>';
 const PRIV_HTML='<div class="guia-full" style="border:none;padding:0;max-width:none">'+
 '<p><em>Vigente desde julio de 2026 · Conforme a la Ley 29733, Ley de Protección de Datos Personales.</em></p>'+
-'<h2>1. No recolectamos sus datos</h2><p>JurisIA funciona íntegramente en su navegador. Los nombres, hechos y datos que usted escribe <b>no se envían, almacenan ni procesan en ningún servidor</b>: existen solo en la memoria de su dispositivo y se borran al cerrar la página.</p>'+
+'<h2>1. No recolectamos sus datos</h2><p>DuraLex funciona íntegramente en su navegador. Los nombres, hechos y datos que usted escribe <b>no se envían, almacenan ni procesan en ningún servidor</b>: existen solo en la memoria de su dispositivo y se borran al cerrar la página.</p>'+
 '<h2>2. Sin cookies ni rastreadores</h2><p>No usamos cookies, ni análisis de tráfico, ni identificadores publicitarios de ningún tipo.</p>'+
-'<h2>3. Única conexión externa</h2><p>Al cargar la página se descarga la tipografía desde Google Fonts (o desde el caché local si instaló la app). Esa conexión revela a Google su dirección IP, como cualquier visita web, pero <b>no transmite nada de lo que usted escribe</b>. Si instala JurisIA como aplicación, la tipografía queda guardada y la app funciona sin internet.</p>'+
+'<h2>3. Única conexión externa</h2><p>Al cargar la página se descarga la tipografía desde Google Fonts (o desde el caché local si instaló la app). Esa conexión revela a Google su dirección IP, como cualquier visita web, pero <b>no transmite nada de lo que usted escribe</b>. Si instala DuraLex como aplicación, la tipografía queda guardada y la app funciona sin internet.</p>'+
 '<h2>4. Archivos que usted genera</h2><p>Los documentos descargados y las sesiones exportadas se guardan únicamente donde usted decida. Trátelos con cuidado: contienen sus datos personales.</p>'+
 '<h2>5. Enlaces a terceros</h2><p>Los enlaces a servicios del Estado (SPIJ, CEJ, SUNAFIL, etc.) lo llevan a sitios con sus propias políticas de privacidad.</p>'+
-'<h2>6. Sus derechos</h2><p>Dado que no recolectamos datos personales, no existen bancos de datos sobre los cuales ejercer derechos ARCO ante JurisIA. Cualquier consulta sobre esta política puede canalizarse a través del repositorio público del proyecto.</p></div>';
-function openTerms(){openModal("Términos y Condiciones de JurisIA",TERMS_HTML);}
-function openPrivacy(){openModal("Política de Privacidad de JurisIA",PRIV_HTML);}
+'<h2>6. Sus derechos</h2><p>Dado que no recolectamos datos personales, no existen bancos de datos sobre los cuales ejercer derechos ARCO ante DuraLex. Cualquier consulta sobre esta política puede canalizarse a través del repositorio público del proyecto.</p></div>';
+function openTerms(){openModal("Términos y Condiciones de DuraLex",TERMS_HTML);}
+function openPrivacy(){openModal("Política de Privacidad de DuraLex",PRIV_HTML);}
 
 /* ============================================================
    INICIALIZACIÓN
