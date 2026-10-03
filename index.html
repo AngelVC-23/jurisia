@@ -282,6 +282,20 @@ a{color:var(--primary);text-decoration:none}
 .juris-card h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);margin-bottom:8px;line-height:1.4}
 .juris-card .jc-excerpt{font-size:13px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--accent);padding-left:11px;margin-bottom:11px;line-height:1.55}
 .jc-tags{display:flex;gap:6px;flex-wrap:wrap}
+.juris-card{cursor:pointer;display:flex;flex-direction:column}
+.juris-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.jc-tipo{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--accent-pale);color:var(--primary);margin-bottom:9px}
+.jc-tipo.pv{background:var(--primary);color:#fff}
+.jc-more{margin-top:auto;padding-top:12px;font-size:13px;font-weight:700;color:var(--primary)}
+.jf-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--ink-soft);margin-bottom:12px}
+.jf-meta b{color:var(--accent-text);letter-spacing:.3px}
+.jf h3{font-family:'Libre Caslon Text',Georgia,serif;font-size:20px;color:var(--primary);line-height:1.3;margin-bottom:16px}
+.jf h4{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent-text);margin:18px 0 6px}
+.jf blockquote{margin:0;font-style:italic;color:var(--ink);border-left:3px solid var(--accent);padding:4px 0 4px 14px;line-height:1.6}
+.jf p{line-height:1.65}
+.jf-nota{background:var(--notice-bg);border:1px solid var(--notice);color:var(--notice);border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:6px;line-height:1.5}
+.jf-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.jf-src{font-size:12px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
 
 /* ---------- Guías ---------- */
 .guias-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
@@ -389,7 +403,7 @@ a{color:var(--primary);text-decoration:none}
       </div>
       <div class="hero-stats">
         <div class="hstat"><b>61</b><span>Modelos de escritos</span></div>
-        <div class="hstat"><b>24</b><span>Precedentes clave</span></div>
+        <div class="hstat"><b>29</b><span>Precedentes clave</span></div>
         <div class="hstat"><b>6</b><span>Áreas del derecho</span></div>
         <div class="hstat"><b>60+</b><span>Temas en el chat</span></div>
       </div>
@@ -513,7 +527,7 @@ a{color:var(--primary);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">DuraLex v2.5 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
+      <div class="sidebar-foot">DuraLex v2.7 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
     </aside>
 
     <main class="main">
@@ -2689,34 +2703,272 @@ const DOC_TYPES = [
 }
 ];
 /* ============================================================
-   DATOS — JURISPRUDENCIA (24 precedentes)
+   DATOS — JURISPRUDENCIA (29 precedentes)
    ============================================================ */
 const JURISPRUDENCIA = [
-{ref:"CAS. LAB. N° 5423-2014 LIMA",area:"laboral",org:"Corte Suprema",year:"2015",title:"Despido arbitrario – Cálculo de indemnización (Art. 38 LPCL)",excerpt:"\"La indemnización por despido arbitrario equivale a una remuneración y media ordinaria mensual por cada año completo de servicios, con un máximo de doce remuneraciones, computándose las fracciones de año por dozavos y treintavos.\"",tags:["Laboral","Despido arbitrario","Indemnización"]},
-{ref:"STC N° 976-2001-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2003",title:"Caso Llanos Huasco – Tipología del despido: incausado, fraudulento y nulo",excerpt:"\"El despido será incausado cuando se despide al trabajador sin expresarle causa alguna; y fraudulento, cuando se le imputa hechos notoriamente inexistentes, falsos o imaginarios. En ambos casos procede la reposición.\"",tags:["Laboral","Despido incausado","Despido fraudulento","Reposición"]},
-{ref:"STC N° 1124-2001-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2002",title:"Caso Sindicato Telefónica – Contenido esencial del derecho al trabajo",excerpt:"\"El contenido esencial del derecho al trabajo implica dos aspectos: el de acceder a un puesto de trabajo y el derecho a no ser despedido sino por causa justa.\"",tags:["Laboral","Derecho al trabajo","Despido"]},
-{ref:"STC N° 206-2005-PA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2005",title:"Caso Baylón Flores – Vías procedimentales para cuestionar el despido",excerpt:"\"Solo en los casos en que las vías ordinarias no sean idóneas, satisfactorias o eficaces para la cautela del derecho, o por la necesidad de protección urgente, será posible acudir a la vía extraordinaria del amparo.\" (Precedente vinculante)",tags:["Laboral","Amparo","Precedente vinculante"]},
-{ref:"II PLENO JURISDICCIONAL SUPREMO LABORAL",area:"laboral",org:"Corte Suprema",year:"2014",title:"Competencia de los juzgados de trabajo en pretensiones de reposición",excerpt:"\"Los jueces de trabajo en los procesos laborales ordinarios regulados por la Ley 29497 están facultados para conocer las pretensiones de reposición por despido incausado o despido fraudulento.\"",tags:["Laboral","Reposición","NLPT","Pleno"]},
-{ref:"VI PLENO JURISDICCIONAL SUPREMO LABORAL",area:"laboral",org:"Corte Suprema",year:"2017",title:"Responsabilidad del empleador en accidentes de trabajo (Art. 53 Ley 29783)",excerpt:"\"El empleador, como garante de la seguridad y salud en el centro laboral, responde por los daños derivados del incumplimiento de su deber de prevención, probado el daño el trabajador no está obligado a acreditar la culpa del empleador.\"",tags:["Laboral","Accidente de trabajo","SST","Pleno"]},
-{ref:"CAS. N° 2195-2011 UCAYALI (IV PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2012",title:"Desalojo por ocupación precaria – Supuestos de posesión precaria",excerpt:"\"Una persona tendrá la condición de precaria cuando ocupe un inmueble ajeno sin pago de renta y sin título para ello, o cuando dicho título no genere ningún efecto de protección para quien lo ostente.\" (Doctrina jurisprudencial vinculante)",tags:["Civil","Desalojo","Precario","Pleno Casatorio"]},
-{ref:"CAS. N° 4664-2010 PUNO (III PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2011",title:"Divorcio por separación de hecho – Indemnización al cónyuge perjudicado",excerpt:"\"En los procesos de familia el juez tiene facultades tuitivas y debe flexibilizar algunos principios procesales; en la separación de hecho, el juez se pronunciará de oficio o a pedido de parte sobre la indemnización del Art. 345-A CC.\"",tags:["Civil","Familia","Divorcio","Pleno Casatorio"]},
-{ref:"CAS. N° 2229-2008 LAMBAYEQUE (II PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2009",title:"Prescripción adquisitiva de dominio – Posesión y coposesión",excerpt:"\"La correcta interpretación del Art. 950 del Código Civil debe hacerse en el sentido que nada obsta para que dos o más coposeedores homogéneos puedan usucapir, siempre que la posesión sea continua, pacífica y pública como propietarios.\"",tags:["Civil","Usucapión","Prescripción adquisitiva","Pleno Casatorio"]},
-{ref:"CAS. N° 4442-2015 MOQUEGUA (IX PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2017",title:"Otorgamiento de escritura pública – Control de validez del contrato",excerpt:"\"En el proceso de otorgamiento de escritura pública el juez puede analizar la validez del acto jurídico cuya formalización se pretende, declarando de oficio su nulidad manifiesta, previo debate contradictorio.\"",tags:["Civil","Escritura pública","Contratos","Pleno Casatorio"]},
-{ref:"CAS. N° 1465-2007 CAJAMARCA (I PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2008",title:"Transacción extrajudicial – Excepción en indemnización por daños",excerpt:"\"La transacción extrajudicial no homologada judicialmente puede ser opuesta como excepción procesal, conforme a los Arts. 446 inc. 10 y 453 inc. 4 del CPC.\" (Caso derrame de mercurio – Yanacocha)",tags:["Civil","Transacción","Indemnización","Pleno Casatorio"]},
-{ref:"CAS. N° 1242-2017 LIMA ESTE (X PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2020",title:"Prueba de oficio – Alcances del Art. 194 del CPC",excerpt:"\"La prueba de oficio es excepcional y complementaria: procede ante insuficiencia probatoria, siempre que la fuente de prueba haya sido citada por las partes, respetando el contradictorio y sin sustituir la carga probatoria de las partes.\"",tags:["Civil","Prueba","Proceso civil","Pleno Casatorio"]},
-{ref:"CASACIÓN N° 626-2013 MOQUEGUA",area:"penal",org:"Corte Suprema",year:"2015",title:"Prisión preventiva – Presupuestos y audiencia (doctrina jurisprudencial)",excerpt:"\"En la audiencia de prisión preventiva debe debatirse ordenadamente cada presupuesto: sospecha grave, prognosis de pena superior a 4 años, peligro procesal, así como la proporcionalidad y la duración de la medida.\"",tags:["Penal","Prisión preventiva","NCPP"]},
-{ref:"ACUERDO PLENARIO N° 1-2011/CJ-116",area:"penal",org:"Corte Suprema",year:"2011",title:"Delitos contra la libertad sexual – Valoración de la declaración de la víctima",excerpt:"\"La declaración de la víctima puede ser prueba suficiente para enervar la presunción de inocencia si reúne: ausencia de incredibilidad subjetiva, verosimilitud corroborada y persistencia en la incriminación.\"",tags:["Penal","Prueba","Violencia sexual","Acuerdo Plenario"]},
-{ref:"ACUERDO PLENARIO N° 2-2005/CJ-116",area:"penal",org:"Corte Suprema",year:"2005",title:"Testigo único y declaración del agraviado como prueba de cargo",excerpt:"\"El testimonio del agraviado, aun cuando sea el único testigo de los hechos, tiene entidad para ser considerado prueba válida de cargo, siempre que se cumplan las garantías de certeza establecidas.\"",tags:["Penal","Prueba","Testigo","Acuerdo Plenario"]},
-{ref:"ACUERDO PLENARIO N° 5-2008/CJ-116",area:"penal",org:"Corte Suprema",year:"2008",title:"Conclusión anticipada del juicio oral – Alcances y control judicial",excerpt:"\"La conformidad del acusado importa la aceptación de los hechos objeto de acusación; el juez conserva el control de legalidad sobre la tipicidad, la pena y la reparación civil.\"",tags:["Penal","Conclusión anticipada","Juicio oral","Acuerdo Plenario"]},
-{ref:"STC N° 6423-2007-PHC/TC",area:"penal",org:"Tribunal Constitucional",year:"2009",title:"Caso Ruiz Dianderas – Plazo estrictamente necesario de la detención",excerpt:"\"El plazo de detención policial no puede exceder el estrictamente necesario para realizar las diligencias urgentes; el límite máximo legal no es un plazo a agotarse automáticamente.\" (Doctrina jurisprudencial vinculante)",tags:["Penal","Detención","Hábeas corpus","Libertad individual"]},
-{ref:"STC N° 1417-2005-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2005",title:"Caso Anicama – Contenido esencial del derecho a la pensión",excerpt:"\"Forman parte del contenido esencial directamente protegido por el amparo las disposiciones que establecen los requisitos para el acceso al sistema pensionario y a la pensión, y el derecho a no ser privado arbitrariamente de ella.\" (Precedente vinculante)",tags:["Administrativo","Pensiones","ONP","Precedente vinculante"]},
-{ref:"STC N° 4762-2007-PA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2008",title:"Caso Tarazona Valverde – Acreditación de aportaciones ante la ONP",excerpt:"\"Los certificados de trabajo, boletas de pago y liquidaciones de beneficios sociales son idóneos para acreditar períodos de aportación; la pérdida de las planillas del empleador no puede perjudicar al asegurado.\" (Precedente vinculante)",tags:["Administrativo","Pensiones","Aportaciones","Precedente vinculante"]},
-{ref:"STC N° 1776-2004-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2007",title:"Libre desafiliación de las AFP y retorno al Sistema Nacional de Pensiones",excerpt:"\"Procede el retorno del Sistema Privado de Pensiones al Sistema Nacional en los supuestos de titulares protegidos por la ley, falta de información o labores de riesgo, en resguardo del derecho fundamental a la pensión.\"",tags:["Administrativo","AFP","Desafiliación","Pensiones"]},
-{ref:"STC N° 2050-2002-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2003",title:"Caso Ramos Colque – Ne bis in idem en el procedimiento sancionador",excerpt:"\"El principio ne bis in idem impide que una persona sea sancionada o procesada dos veces por los mismos hechos, con identidad de sujeto, hecho y fundamento, tanto entre sanciones administrativas como entre estas y las penales.\"",tags:["Administrativo","Sancionador","Ne bis in idem","Debido proceso"]},
-{ref:"STC N° 0168-2005-PC/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2005",title:"Caso Villanueva Valverde – Requisitos del mandato en el proceso de cumplimiento",excerpt:"\"Para que el cumplimiento de la norma legal o acto administrativo sea exigible a través de este proceso, el mandato debe ser vigente, cierto y claro, no estar sujeto a controversia compleja ni a interpretaciones dispares, y ser de ineludible cumplimiento.\" (Precedente vinculante)",tags:["Constitucional","Cumplimiento","Precedente vinculante"]},
-{ref:"STC N° 02383-2013-PA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2015",title:"Caso Elgo Ríos – Vía igualmente satisfactoria en el amparo",excerpt:"\"Existe una vía igualmente satisfactoria cuando la estructura del proceso ordinario es idónea, la resolución que se emita puede brindar tutela adecuada, no existe riesgo de irreparabilidad ni necesidad de tutela urgente.\" (Precedente vinculante)",tags:["Constitucional","Amparo","Procedencia","Precedente vinculante"]},
-{ref:"STC N° 05057-2013-PA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2015",title:"Caso Huatuco Huatuco – Reposición en el sector público y concurso de méritos",excerpt:"\"El ingreso a la administración pública se realiza necesariamente por concurso público de méritos para una plaza presupuestada y vacante de duración indeterminada; no procede la reposición sin dicho requisito.\" (Precedente vinculante)",tags:["Constitucional","Laboral público","Reposición","Precedente vinculante"]}
+{ref:"STC N° 976-2001-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2003",title:"Caso Llanos Huasco – Tipología del despido: incausado, fraudulento y nulo",excerpt:"Se produce el denominado despido incausado, cuando: Se despide al trabajador, ya sea de manera verbal o mediante comunicación escrita, sin expresarle causa alguna derivada de la conducta o la labor que la justifique. […] Se produce el denominado despido fraudulento, cuando: Se despide al trabajador con ánimo perverso y auspiciado por el engaño […] como sucede cuando se imputa al trabajador hechos notoriamente inexistentes, falsos o imaginarios.",tags:["Laboral","Despido incausado","Despido fraudulento","Reposición"]},
+{ref:"STC N° 1124-2001-AA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2002",title:"Caso Sindicato Telefónica – Contenido esencial del derecho al trabajo",excerpt:"Este Tribunal estima que el contenido esencial de este derecho constitucional implica dos aspectos. El de acceder a un puesto de trabajo, por una parte y, por otra, el derecho a no ser despedido sino por causa justa.",tags:["Laboral","Derecho al trabajo","Despido"]},
+{ref:"STC N° 206-2005-PA/TC",area:"laboral",org:"Tribunal Constitucional",year:"2005",title:"Caso Baylón Flores – Vías procedimentales para cuestionar el despido",excerpt:"Consecuentemente, solo en los casos en que tales vías ordinarias no sean idóneas, satisfactorias o eficaces para la cautela del derecho, o por la necesidad de protección urgente, o en situaciones especiales que han de ser analizadas, caso por caso, por los jueces, será posible acudir a la vía extraordinaria del amparo, correspondiendo al demandante la carga de la prueba para demostrar que el proceso de amparo es la vía idónea y eficaz para restablecer el ejercicio de su derecho constitucional vulnerado.",tags:["Laboral","Amparo","Precedente vinculante"]},
+{ref:"II PLENO JURISDICCIONAL SUPREMO LABORAL",area:"laboral",org:"Corte Suprema",year:"2014",title:"Competencia de los juzgados de trabajo en pretensiones de reposición",excerpt:"Al amparo de la Ley N° 26636, los jueces de trabajo están facultados para conocer una pretensión de reposición por despido incausado o despido fraudulento, en los procesos laborales ordinarios regulados por la Ley Procesal del Trabajo. […] de conformidad con el numeral 2 del artículo 2 de la Nueva Ley Procesal del Trabajo.",tags:["Laboral","Reposición","NLPT","Pleno"]},
+{ref:"VI PLENO JURISDICCIONAL SUPREMO LABORAL",area:"laboral",org:"Corte Suprema",year:"2017",title:"Responsabilidad del empleador en accidentes de trabajo (Art. 53 Ley 29783)",excerpt:"El empleador, como garante de la seguridad y salud en el centro laboral, siempre será responsable por cualquier evento dañoso para la vida o salud del trabajador.",tags:["Laboral","Accidente de trabajo","SST","Pleno"]},
+{ref:"CAS. N° 2195-2011 UCAYALI (IV PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2012",title:"Desalojo por ocupación precaria – Supuestos de posesión precaria",excerpt:"Una persona tendrá la condición de precaria cuando ocupe un inmueble ajeno, sin pago de renta y sin título para ello, o cuando dicho título no genere ningún efecto de protección para quien lo ostente, frente al reclamante, por haberse extinguido el mismo.",tags:["Civil","Desalojo","Precario","Pleno Casatorio"]},
+{ref:"CAS. N° 4664-2010 PUNO (III PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2011",title:"Divorcio por separación de hecho – Indemnización al cónyuge perjudicado",excerpt:"En los procesos de familia, como en los de alimentos, divorcio, filiación, violencia familiar, entre otros, el Juez tiene facultades tuitivas y, en consecuencia, se debe flexibilizar algunos principios y normas procesales como los de iniciativa de parte, congruencia, formalidad, eventualidad, preclusión, acumulación de pretensiones, en atención a la naturaleza de los conflictos que debe solucionar.",tags:["Civil","Familia","Divorcio","Pleno Casatorio"]},
+{ref:"CAS. N° 2229-2008 LAMBAYEQUE (II PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2009",title:"Prescripción adquisitiva de dominio – Posesión y coposesión",excerpt:"La correcta interpretación del artículo 950 del Código Civil debe hacerse en el sentido de que nada obsta para que dos o más coposeedores homogéneos puedan usucapir, puesto que de ser amparada su pretensión devendrían en copropietarios, figura jurídica que está prevista en nuestra legislación.",tags:["Civil","Usucapión","Prescripción adquisitiva","Pleno Casatorio"]},
+{ref:"CAS. N° 4442-2015 MOQUEGUA (IX PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2017",title:"Otorgamiento de escritura pública – Control de validez del contrato",excerpt:"En los procesos de otorgamiento de escritura pública el juez debe realizar un específico control de validez del negocio jurídico que se pretende formalizar, es decir, debe constatar que este no incurra en una nulidad manifiesta.",tags:["Civil","Escritura pública","Contratos","Pleno Casatorio"]},
+{ref:"CAS. N° 1465-2007 CAJAMARCA (I PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2008",title:"Transacción extrajudicial – Excepción en indemnización por daños",excerpt:"La transacción extrajudicial no homologada judicialmente puede ser opuesta como excepción procesal conforme a lo regulado por el inciso 10) del artículo 446º e inciso 4 del artículo 453º del Código Procesal Civil, por interpretación sistemática de dichas normas con las que contiene el Código Civil sobre la transacción.",tags:["Civil","Transacción","Indemnización","Pleno Casatorio"]},
+{ref:"CAS. N° 1242-2017 LIMA ESTE (X PLENO CASATORIO)",area:"civil",org:"Corte Suprema",year:"2020",title:"Prueba de oficio – Alcances del Art. 194 del CPC",excerpt:"La regla general respecto de la aportación de los elementos de prueba al proceso es que sean las partes quienes se encarguen de hacerlo.",tags:["Civil","Prueba","Proceso civil","Pleno Casatorio"]},
+{ref:"CASACIÓN N° 626-2013 MOQUEGUA",area:"penal",org:"Corte Suprema",year:"2015",title:"Prisión preventiva – Presupuestos y audiencia (doctrina jurisprudencial)",excerpt:"Establece como doctrina jurisprudencial vinculante que la audiencia y la resolución de prisión preventiva deben analizar, por separado y en este orden, los graves y fundados elementos de convicción, la prognosis de pena superior a cuatro años, el peligro procesal, y además la proporcionalidad y la duración de la medida.",tags:["Penal","Prisión preventiva","NCPP"]},
+{ref:"ACUERDO PLENARIO N° 1-2011/CJ-116",area:"penal",org:"Corte Suprema",year:"2011",title:"Delitos contra la libertad sexual – No se exige que la víctima haya opuesto resistencia",excerpt:"Esta falta de exigencia de resistencia de la víctima como un presupuesto material indispensable para la configuración del delito de violación sexual, encuentra explicación racional doble: de un lado, porque el tipo penal comprende la amenaza como medio comisivo del delito; y, de otro, por la presencia de las circunstancias contextuales concretas que pueden hacer inútil una resistencia.",tags:["Penal","Prueba","Violencia sexual","Acuerdo Plenario"]},
+{ref:"ACUERDO PLENARIO N° 2-2005/CJ-116",area:"penal",org:"Corte Suprema",year:"2005",title:"Testigo único y declaración del agraviado como prueba de cargo",excerpt:"La declaración de un coacusado, testigo o agraviado puede ser prueba de cargo válida, aun siendo la única, si se verifican garantías de certeza: ausencia de incredibilidad subjetiva (que no existan relaciones de odio o venganza), verosimilitud (corroborada con datos periféricos) y persistencia en la incriminación.",tags:["Penal","Prueba","Testigo","Acuerdo Plenario"]},
+{ref:"ACUERDO PLENARIO N° 5-2008/CJ-116",area:"penal",org:"Corte Suprema",year:"2008",title:"Conclusión anticipada del juicio oral – Alcances y control judicial",excerpt:"Fija los alcances de la conformidad del acusado con los cargos (conclusión anticipada del juicio oral, art. 5 de la Ley 28122): el juez controla su legalidad y la pena, y la conformidad permite una reducción de la pena.",tags:["Penal","Conclusión anticipada","Juicio oral","Acuerdo Plenario"]},
+{ref:"STC N° 6423-2007-PHC/TC",area:"penal",org:"Tribunal Constitucional",year:"2009",title:"Caso Ruiz Dianderas – Plazo estrictamente necesario de la detención",excerpt:"Y en cualquiera de los casos, el límite máximo de la detención será el que resulte estrictamente necesario para realizar las actuaciones o diligencias, es decir, será establecido en cada caso concreto, según los parámetros señalados supra.",tags:["Penal","Detención","Hábeas corpus","Libertad individual"]},
+{ref:"STC N° 1417-2005-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2005",title:"Caso Anicama – Contenido esencial del derecho a la pensión",excerpt:"Forma parte del contenido esencial directamente protegido por el derecho fundamental a la pensión, las disposiciones legales que establecen los requisitos para la obtención de un derecho a la pensión. Así, será objeto de protección en la vía de amparo los supuestos en los que, presentada la contingencia, se deniegue a una persona el reconocimiento de una pensión de jubilación o cesantía, a pesar de haber cumplido los requisitos legales para obtenerla (edad requerida y determinados años de aportación).",tags:["Administrativo","Pensiones","ONP","Precedente vinculante"]},
+{ref:"STC N° 4762-2007-PA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2008",title:"Caso Tarazona Valverde – Acreditación de aportaciones ante la ONP",excerpt:"El demandante con la finalidad de generar suficiente convicción en el juez de la razonabilidad de su petitorio puede adjuntar a su demanda como instrumento de prueba, los siguientes documentos: certificado de trabajo, las boletas de pago de remuneraciones, los libros de planillas de remuneraciones, la liquidación de tiempo de servicios o de beneficios sociales, las constancias de aportaciones de ORCINEA, del IPSS o de EsSalud, entre otros documentos. Dichos instrumentos pueden ser presentados en original, copia legalizada o fedateada, mas no en copia simple.",tags:["Administrativo","Pensiones","Aportaciones","Precedente vinculante"]},
+{ref:"STC N° 1776-2004-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2007",title:"Libre desafiliación de las AFP y retorno al Sistema Nacional de Pensiones",excerpt:"Es conveniente que este Colegiado explique por qué sí corresponde la existencia de retorno al SNP, por más que ella no pueda ser total.",tags:["Administrativo","AFP","Desafiliación","Pensiones"]},
+{ref:"STC N° 2050-2002-AA/TC",area:"administrativo",org:"Tribunal Constitucional",year:"2003",title:"Caso Ramos Colque – Ne bis in idem en el procedimiento sancionador",excerpt:"En su formulación material, el enunciado según el cual, «nadie puede ser castigado dos veces por un mismo hecho», expresa la imposibilidad de que recaigan dos sanciones sobre el mismo sujeto por una misma infracción […]. Su aplicación, pues, impide que una persona sea sancionada o castigada dos (o más veces) por una misma infracción cuando exista identidad de sujeto, hecho y fundamento.",tags:["Administrativo","Sancionador","Ne bis in idem","Debido proceso"]},
+{ref:"STC N° 0168-2005-PC/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2005",title:"Caso Villanueva Valverde – Requisitos del mandato en el proceso de cumplimiento",excerpt:"Para que el cumplimiento de la norma legal, la ejecución del acto administrativo y la orden de emisión de una resolución sean exigibles a través del proceso de cumplimiento, además de la renuencia del funcionario o autoridad pública, el mandato contenido en aquellos deberá contar con los siguientes requisitos mínimos comunes: a) Ser un mandato vigente. b) Ser un mandato cierto y claro […]. c) No estar sujeto a controversia compleja ni a interpretaciones dispares. d) Ser de ineludible y obligatorio cumplimiento. e) Ser incondicional.",tags:["Constitucional","Cumplimiento","Precedente vinculante"]},
+{ref:"STC N° 02383-2013-PA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2015",title:"Caso Elgo Ríos – Vía igualmente satisfactoria en el amparo",excerpt:"La vía ordinaria será «igualmente satisfactoria» a la vía del proceso constitucional de amparo, si en un caso concreto se demuestra, de manera copulativa, el cumplimiento de estos elementos: Que la estructura del proceso es idónea para la tutela del derecho; Que la resolución que se fuera a emitir podría brindar tutela adecuada; Que no existe riesgo de que se produzca la irreparabilidad; y Que no existe necesidad de una tutela urgente derivada de la relevancia del derecho o de la gravedad de las consecuencias.",tags:["Constitucional","Amparo","Procedencia","Precedente vinculante"]},
+{ref:"STC N° 05057-2013-PA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2015",title:"Caso Huatuco Huatuco – Reposición en el sector público y concurso de méritos",excerpt:"El Tribunal Constitucional estima que existen suficientes y justificadas razones para asumir que el ingreso a la administración pública mediante un contrato a plazo indeterminado exige necesariamente un previo concurso público de méritos para una plaza presupuestada y vacante de duración indeterminada.",tags:["Constitucional","Laboral público","Reposición","Precedente vinculante"]},
+{ref: "STC N° 00041-2004-AI/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2004", "title": "Arbitrios municipales (Santiago de Surco) – Criterios para distribuir su costo", "excerpt": "Tales criterios no son válidos en la medida que no se constate una vinculación directa o indirecta entre el servicio público prestado y la intensidad de su goce; contrario sensu, de verificarse esta conexión en cada caso y evaluando su pertinencia, los mismos serán susceptibles de ser admitidos.", "tags": ["Tributario", "Arbitrios", "Municipalidad"]},
+{ref: "STC N° 00053-2004-AI/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2005", "title": "Arbitrios municipales (Miraflores) – Ratificación y publicación de la ordenanza", "excerpt": "La ratificación es un requisito esencial para la validez de la ordenanza que crea arbitrios. La publicación del Acuerdo de Concejo Provincial que ratifica, es un requisito para su vigencia. […] Sólo a partir del día siguiente de la publicación de dicho acuerdo dentro del plazo, la municipalidad distrital se encuentra legitimada para cobrar arbitrios.", "tags": ["Tributario", "Arbitrios", "Ordenanza", "Ratificación"]},
+{ref: "STC N° 04082-2012-PA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2016", "title": "Caso Medina de Baca – Intereses moratorios mientras SUNAT demora en resolver", "excerpt": "DISPONER que la Sunat efectúe el cálculo de los intereses moratorios […] sin aplicar la regla de la capitalización de intereses contenida en el artículo 7 de la Ley 27038, y sin aplicar la regla del cobro de intereses durante la etapa de impugnación administrativa de las resoluciones de determinación y de multa, contenida, en el extremo de la apelación ante el Tribunal Fiscal, en el artículo 6 del Decreto Legislativo 981.", "tags": ["Tributario", "Intereses moratorios", "Plazo razonable", "SUNAT"]},
+{ref: "STC N° 06089-2006-PA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2007", "title": "Caso Express Cars – Reserva de ley en materia tributaria", "excerpt": "La Reserva de Ley en materia tributaria es una reserva relativa, ya que puede admitir excepcionalmente derivaciones al Reglamento, siempre y cuando, los parámetros estén claramente establecidos en la propia Ley.", "tags": ["Tributario", "Reserva de ley", "Principio de legalidad"]},
+{ref: "STC N° 02302-2003-AA/TC", "area": "tributario", "org": "Tribunal Constitucional", "year": "2005", "title": "Caso Inversiones Dream – Cómo probar que un tributo es confiscatorio", "excerpt": "Hemos venido señalando que para acreditar la confiscatoriedad en cada caso, es necesario acreditar la afectación real al patrimonio empresarial de la persona jurídica, como en el caso de autos.", "tags": ["Tributario", "No confiscatoriedad", "Carga de la prueba"]},
+{ref: "STC N° 06681-2013-PA/TC", "area": "laboral", "org": "Tribunal Constitucional", "year": "2016", "title": "Caso Cruz Llamos – Alcances del precedente Huatuco", "excerpt": "No toda persona que se vincula a la función pública necesariamente está realizando carrera administrativa, y que solo a esta último grupo de personas, los que vienen efectuando carrera administrativa, les corresponde aplicar las reglas del «precedente Huatuco», referidas al pedido de reposición.", "tags": ["Laboral", "Sector público", "Precedente Huatuco", "Reposición"]}
 ];
+
+/* Ficha ampliada de cada sentencia (se fusiona con JURISPRUDENCIA por "ref").
+   tipo: carácter de la decisión · doc: modelos de escritos relacionados ·
+   practica: explicación en lenguaje simple · nota: advertencia de vigencia ·
+   pdf: ruta local del PDF oficial (carpeta /jurisprudencia), cuando se haya incorporado. */
+const JURIS_EXTRA = {
+"STC N° 976-2001-AA/TC":{tipo:"Doctrina del TC",doc:["reposicion-incausado","despido-nulo"],
+ practica:"Esta sentencia explica que no todo despido es igual. Si lo despidieron sin decirle el motivo (incausado) o inventando una falta (fraudulento), usted puede pedir volver a su puesto, no solo una indemnización. El despido nulo (por embarazo, sindicato, discriminación, etc.) también permite la reposición."},
+"STC N° 1124-2001-AA/TC":{tipo:"Doctrina del TC",doc:["reposicion-incausado"],
+ practica:"El derecho al trabajo incluye no ser despedido sin una causa justa. Es la base constitucional que permite a un trabajador despedido sin motivo pedir su reposición."},
+"STC N° 206-2005-PA/TC":{tipo:"Precedente vinculante",doc:["amparo","reposicion-incausado"],
+ nota:"Las reglas sobre cuándo se puede usar el amparo fueron precisadas después por el precedente Elgo Ríos (STC 02383-2013-PA/TC) y por el Nuevo Código Procesal Constitucional (Ley 31307, 2021). Confirme con un abogado qué vía corresponde a su caso.",
+ practica:"Por regla general, un despido se discute ante el juez laboral. El amparo (proceso constitucional) solo procede cuando la vía laboral no es igual de rápida y eficaz para proteger su derecho."},
+"II PLENO JURISDICCIONAL SUPREMO LABORAL":{tipo:"Pleno jurisdiccional",doc:["reposicion-incausado"],
+ practica:"Si fue víctima de un despido incausado o fraudulento, puede pedir su reposición directamente ante el juez de trabajo, sin necesidad de acudir al amparo. El mismo pleno acordó (tema 3.2) que el plazo para demandar es de 30 días hábiles desde el despido."},
+"VI PLENO JURISDICCIONAL SUPREMO LABORAL":{tipo:"Pleno jurisdiccional",doc:["accidente-trabajo"],
+ practica:"Si sufrió un accidente de trabajo, el empleador debe responder cuando no cumplió sus deberes de seguridad y salud (equipos de protección, capacitación, supervisión). Usted puede reclamar una indemnización por los daños sufridos."},
+"CAS. N° 2195-2011 UCAYALI (IV PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["desalojo-precario"],
+ practica:"Es precario quien ocupa un inmueble sin ningún título o cuando el título que tenía ya terminó (por ejemplo, un contrato de alquiler resuelto). En esos casos el propietario puede pedir el desalojo por ocupación precaria."},
+"CAS. N° 4664-2010 PUNO (III PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["divorcio-causal"],
+ practica:"En el divorcio por separación de hecho, el juez debe proteger al cónyuge que resulte más perjudicado por la separación, y puede fijarle una indemnización o la adjudicación preferente de bienes."},
+"CAS. N° 2229-2008 LAMBAYEQUE (II PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["prescripcion-adquisitiva"],
+ practica:"Quienes poseen juntos un inmueble (coposeedores) pueden adquirirlo por prescripción adquisitiva, si cumplen los requisitos de posesión continua, pacífica, pública y como propietarios durante el plazo de ley."},
+"CAS. N° 4442-2015 MOQUEGUA (IX PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["otorgamiento-escritura"],
+ practica:"Cuando pide que la otra parte firme la escritura pública de una compraventa, el juez puede revisar si el contrato es válido. Si es nulo, no ordenará otorgar la escritura."},
+"CAS. N° 1465-2007 CAJAMARCA (I PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["indemnizacion"],
+ practica:"Si firmó una transacción con quien le causó un daño, esa transacción puede impedir que después reclame una indemnización por lo mismo. Revise bien lo que firma antes de aceptar un acuerdo."},
+"CAS. N° 1242-2017 LIMA ESTE (X PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:[],
+ practica:"El juez puede ordenar de oficio pruebas que las partes no ofrecieron, cuando sean necesarias para resolver el caso, siempre de manera excepcional y respetando el derecho de defensa."},
+"CASACIÓN N° 626-2013 MOQUEGUA":{tipo:"Doctrina jurisprudencial vinculante",doc:["cese-prision"],
+ practica:"La prisión preventiva es excepcional. El fiscal debe probar en audiencia que hay graves indicios del delito, una pena probable mayor a cuatro años y un peligro real de fuga u obstaculización, y debe justificar la duración de la medida."},
+"ACUERDO PLENARIO N° 1-2011/CJ-116":{tipo:"Acuerdo plenario",doc:["denuncia-penal","actor-civil"],
+ practica:"En delitos sexuales, la declaración de la víctima puede ser suficiente para condenar si es coherente y se corrobora con otros elementos. No se exige que la víctima demuestre que se resistió."},
+"ACUERDO PLENARIO N° 2-2005/CJ-116":{tipo:"Acuerdo plenario",doc:["denuncia-penal"],
+ practica:"La declaración de un solo testigo o de la propia víctima puede servir como prueba para condenar, siempre que sea creíble, coherente, persistente y no exista un motivo de odio o venganza detrás."},
+"ACUERDO PLENARIO N° 5-2008/CJ-116":{tipo:"Acuerdo plenario",doc:[],
+ practica:"Si el acusado acepta los cargos al inicio del juicio oral (conclusión anticipada), el juicio termina antes y puede recibir una reducción de la pena, bajo control del juez."},
+"STC N° 6423-2007-PHC/TC":{tipo:"Doctrina del TC",doc:["habeas-corpus"],
+ practica:"La policía solo puede detenerlo el tiempo estrictamente necesario para las investigaciones, aunque no se haya cumplido el plazo máximo legal. Si la detención se prolonga sin justificación, procede el hábeas corpus."},
+"STC N° 1417-2005-AA/TC":{tipo:"Precedente vinculante",doc:["pension-onp","amparo"],
+ practica:"No todo reclamo de pensión puede ir por amparo. Procede cuando se le niega el acceso a la pensión o cuando su monto es tan bajo que afecta su subsistencia; los demás reclamos van por el proceso contencioso administrativo."},
+"STC N° 4762-2007-PA/TC":{tipo:"Precedente vinculante",doc:["pension-onp"],
+ practica:"Si la ONP no le reconoce años de aportes, puede probarlos con certificados de trabajo, boletas de pago, planillas, liquidaciones de beneficios u otros documentos de la época. Deben presentarse en original, copia legalizada o fedateada: las copias simples no sirven en el amparo."},
+"STC N° 1776-2004-AA/TC":{tipo:"Doctrina del TC",doc:["desafiliacion-afp"],
+ practica:"Si se afilió a una AFP sin información suficiente, o cumple los supuestos de ley, tiene derecho a desafiliarse y regresar al Sistema Nacional de Pensiones (ONP)."},
+"STC N° 2050-2002-AA/TC":{tipo:"Doctrina del TC",doc:["reconsideracion","apelacion-adm"],
+ practica:"Nadie puede ser sancionado dos veces por el mismo hecho y con el mismo fundamento (ne bis in idem). Si una entidad lo sanciona de nuevo por lo mismo, puede impugnar esa sanción."},
+"STC N° 0168-2005-PC/TC":{tipo:"Precedente vinculante",doc:["cumplimiento"],
+ practica:"Puede exigir a una autoridad que cumpla una norma o un acto administrativo mediante el proceso de cumplimiento, siempre que el mandato sea claro, vigente, cierto e incondicional. Antes debe requerirla por escrito."},
+"STC N° 02383-2013-PA/TC":{tipo:"Precedente vinculante",doc:["amparo"],
+ nota:"Verifique su aplicación tras la entrada en vigor del Nuevo Código Procesal Constitucional (Ley 31307, 2021).",
+ practica:"El juez revisará si existe otra vía judicial igual de rápida y eficaz para su caso. Solo si no existe, o si hay urgencia por un daño irreparable, el amparo será la vía adecuada."},
+"STC N° 05057-2013-PA/TC":{tipo:"Precedente vinculante",doc:["reposicion-incausado","desnaturalizacion"],
+ nota:"El Tribunal Constitucional precisó sus alcances en la STC 06681-2013-PA/TC (caso Cruz Llamos). Consulte con un abogado si trabaja en el sector público.",
+ practica:"En el Estado, para ser repuesto en un puesto permanente debe haber ingresado por concurso público a una plaza presupuestada. Si no fue así, en lugar de la reposición puede corresponderle una indemnización."}
+};
+JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_EXTRA[j.ref]||{}));
+/* Verificación contra el texto oficial (oct. 2026): cita literal, fundamento y PDF oficial */
+const JURIS_FUENTE = {
+"II PLENO JURISDICCIONAL SUPREMO LABORAL": {"cita": true, "fj": "Tema 3.1", "pdf": "https://www.pj.gob.pe/wps/wcm/connect/a9a42300428d1ac3b429bc5aa55ef1d3/II_Pleno_Jurisdiccional_Supremo_en_Materia_Laboral.pdf?MOD=AJPERES&CACHEID=a9a42300428d1ac3b429bc5aa55ef1d3"},
+"STC N° 976-2001-AA/TC": {
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2003/00976-2001-AA.pdf"
+},
+"STC N° 1124-2001-AA/TC": {
+"cita": true,
+"fj": "FJ 12",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2002/01124-2001-AA.pdf"
+},
+"STC N° 206-2005-PA/TC": {
+"cita": true,
+"fj": "FJ 6",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/00206-2005-AA.pdf"
+},
+"STC N° 6423-2007-PHC/TC": {
+"cita": true,
+"fj": "FJ 10",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2010/06423-2007-HC.pdf"
+},
+"STC N° 1417-2005-AA/TC": {
+"cita": true,
+"fj": "FJ 37.b",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/01417-2005-AA.pdf"
+},
+"STC N° 4762-2007-PA/TC": {
+"cita": true,
+"fj": "FJ 26.a",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2007/04762-2007-AA.pdf"
+},
+"STC N° 1776-2004-AA/TC": {
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2007/01776-2004-AA.pdf"
+},
+"STC N° 2050-2002-AA/TC": {
+"cita": true,
+"fj": "FJ 19.a",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2003/02050-2002-AA.pdf"
+},
+"STC N° 0168-2005-PC/TC": {
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/00168-2005-AC.pdf"
+},
+"STC N° 02383-2013-PA/TC": {
+"cita": true,
+"fj": "FJ 15",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2015/02383-2013-AA.pdf"
+},
+"STC N° 05057-2013-PA/TC": {
+"cita": true,
+"fj": "FJ 9",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2015/05057-2013-AA.pdf"
+},
+"VI PLENO JURISDICCIONAL SUPREMO LABORAL": {
+"cita": true,
+"fj": "Acuerdo 1.2",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/9a9761804245dc2ead70bd5aa55ef1d3/V%2CVI+y+VII+Plenos+Jurisdiccionales+Supremos+en+Materia+Laboral+y+Previsional.pdf?MOD=AJPERES&CACHEID=9a9761804245dc2ead70bd5aa55ef1d3"
+},
+"CAS. N° 2195-2011 UCAYALI (IV PLENO CASATORIO)": {
+"cita": true,
+"fj": "Precedente vinculante",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/8055938042620513b3ddbb5aa55ef1d3/Cuarto_Pleno_Casatorio_Civil.pdf?MOD=AJPERES&CACHEID=8055938042620513b3ddbb5aa55ef1d3"
+},
+"CAS. N° 4664-2010 PUNO (III PLENO CASATORIO)": {
+"cita": true,
+"fj": "Precedente vinculante 1",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/e876d6004233554ba0a4b85aa55ef1d3/Tercer_Pleno_Casatorio_Civil.pdf?MOD=AJPERES&CACHEID=e876d6004233554ba0a4b85aa55ef1d3"
+},
+"CAS. N° 2229-2008 LAMBAYEQUE (II PLENO CASATORIO)": {
+"cita": true,
+"fj": "Precedente vinculante",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/864a4e8042b52c1f9bfcbb5aa55ef1d3/Segundo_Pleno_Casatorio_Civil_.pdf?MOD=AJPERES&CACHEID=864a4e8042b52c1f9bfcbb5aa55ef1d3"
+},
+"CAS. N° 4442-2015 MOQUEGUA (IX PLENO CASATORIO)": {
+"cita": true,
+"fj": "FJ 72",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/50f2e60042336d8aa159b95aa55ef1d3/Noveno_Pleno_Casatorio_Civil_Otorgamiento_de_escritura_publica.pdf?MOD=AJPERES&CACHEID=50f2e60042336d8aa159b95aa55ef1d3"
+},
+"CAS. N° 1465-2007 CAJAMARCA (I PLENO CASATORIO)": {
+"cita": true,
+"fj": "Precedente vinculante 1",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/44e57b0042b4ec90982cb85aa55ef1d3/Primer_Pleno_Casatorio_Civil.pdf?MOD=AJPERES&CACHEID=44e57b0042b4ec90982cb85aa55ef1d3"
+},
+"CAS. N° 1242-2017 LIMA ESTE (X PLENO CASATORIO)": {
+"cita": true,
+"fj": "Apartado «Excepcional: poder complementario»",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/2ceb3a00459603ac9e7bde807c1f73f9/WEB_D%C3%A9cimo+Pleno+Casatorio+Civil_12-01-22.pdf?MOD=AJPERES&CACHEID=2ceb3a00459603ac9e7bde807c1f73f9"
+},
+"ACUERDO PLENARIO N° 1-2011/CJ-116": {
+"cita": true,
+"fj": "FJ 18",
+"pdf": "https://www.pj.gob.pe/wps/wcm/connect/853e61804245bf23ac06bc5aa55ef1d3/VII_Pleno_Jurisdiccional_de_las_Salas_Penales_Permanente_y_Transitoria_2011.pdf?MOD=AJPERES&CACHEID=853e61804245bf23ac06bc5aa55ef1d3"
+},
+"CASACIÓN N° 626-2013 MOQUEGUA": {
+"cita": false
+},
+"ACUERDO PLENARIO N° 2-2005/CJ-116": {
+"cita": false
+},
+"ACUERDO PLENARIO N° 5-2008/CJ-116": {
+"cita": false
+}
+};
+JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_FUENTE[j.ref]||{}));
+/* Ampliación oct. 2026 (verificadas contra el PDF oficial) */
+const JURIS_NUEVAS = {
+"STC N° 00041-2004-AI/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reclamacion-tributaria"
+],
+"cita": true,
+"fj": "FJ 39",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/00041-2004-AI.pdf",
+"practica": "Los arbitrios (limpieza, parques, serenazgo) deben cobrarse según el costo real del servicio y cuánto lo usa cada vecino. El tamaño, uso o ubicación del predio solo valen como criterio si se relacionan con ese servicio; si su municipalidad cobra sin esa conexión, puede reclamar."
+},
+"STC N° 00053-2004-AI/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reclamacion-tributaria"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/00053-2004-AI.pdf",
+"practica": "Una municipalidad distrital solo puede cobrarle arbitrios si la ordenanza fue ratificada por la municipalidad provincial y ese acuerdo se publicó a tiempo. Si no fue así, el cobro puede cuestionarse."
+},
+"STC N° 04082-2012-PA/TC": {
+"tipo": "Sentencia del TC",
+"doc": [
+"reclamacion-tributaria",
+"apelacion-tf"
+],
+"cita": true,
+"fj": "Fallo, punto 2",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2016/04082-2012-AA.pdf",
+"nota": "Decisión para un caso concreto. Normas posteriores regulan hoy la suspensión de intereses cuando la administración excede los plazos para resolver; confirme la norma vigente con un especialista.",
+"practica": "Si SUNAT o el Tribunal Fiscal tardan años más allá del plazo legal en resolver su reclamo, los intereses que se acumularon por esa demora pueden cuestionarse. En este caso el TC ordenó recalcular la deuda sin capitalizar intereses y sin cobrarlos durante la apelación."
+},
+"STC N° 06089-2006-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reclamacion-tributaria"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2007/06089-2006-AA.pdf",
+"practica": "Los elementos esenciales de un tributo (quién paga, por qué y cuánto) deben estar en una ley. Un reglamento solo puede completarlos dentro de los límites que la ley fije claramente."
+},
+"STC N° 02302-2003-AA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [],
+"cita": true,
+"fj": "FJ 21",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2005/02302-2003-AA.pdf",
+"practica": "No basta con afirmar que un impuesto es excesivo: quien alega que es confiscatorio debe probar con documentos (estados financieros, pericias) cómo afecta realmente su patrimonio."
+},
+"STC N° 06681-2013-PA/TC": {
+"tipo": "Doctrina del TC",
+"doc": [
+"reposicion-incausado",
+"desnaturalizacion"
+],
+"cita": true,
+"fj": "",
+"pdf": "https://www.tc.gob.pe/jurisprudencia/2016/06681-2013-AA.pdf",
+"practica": "Si trabaja para el Estado en un puesto que no forma parte de la carrera administrativa (por ejemplo, obreros municipales), el requisito de concurso público del precedente Huatuco no se le aplica automáticamente y podría pedir su reposición."
+}
+};
+JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_NUEVAS[j.ref]||{}));
+
+
 
 /* ============================================================
    DATOS — GUÍAS LEGALES (6)
@@ -3479,13 +3731,46 @@ function renderJuris(){
   const list=JURISPRUDENCIA.filter(j=>{
     if(jurisArea!=="todas"&&j.area!==jurisArea)return false;
     if(!q)return true;
-    return norm(j.ref+" "+j.title+" "+j.excerpt+" "+j.tags.join(" ")).includes(q);
+    return norm(j.ref+" "+j.title+" "+j.excerpt+" "+j.tags.join(" ")+" "+(j.tipo||"")+" "+(j.practica||"")).includes(q);
   });
-  $("juris-grid").innerHTML=list.length?list.map(j=>
-    '<div class="juris-card bl-'+j.area+'"><div class="jc-ref"><span>'+esc(j.ref)+'</span><span class="jc-org">'+esc(j.org)+" · "+j.year+'</span></div>'+
-    '<h3>'+esc(j.title)+'</h3><div class="jc-excerpt">'+esc(j.excerpt)+'</div>'+
-    '<div class="jc-tags">'+j.tags.map(t=>'<span class="tag tag-'+j.area+'">'+esc(t)+"</span>").join("")+"</div></div>"
-  ).join(""):'<div class="empty-state"><span class="es-icon">🔎</span>No se encontraron resultados para su búsqueda.</div>';
+  $("juris-grid").innerHTML=list.length?list.map(j=>{
+    const i=JURISPRUDENCIA.indexOf(j);
+    return '<div class="juris-card bl-'+esc(j.area)+'" role="button" tabindex="0" aria-label="Ver ficha de '+esc(j.ref)+'" onclick="openJuris('+i+')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();openJuris('+i+')}">'+
+    (j.tipo?'<span class="jc-tipo'+(/vinculante/i.test(j.tipo)?" pv":"")+'">'+esc(j.tipo)+'</span>':"")+
+    '<div class="jc-ref"><span>'+esc(j.ref)+'</span><span class="jc-org">'+esc(j.org)+" · "+esc(j.year)+'</span></div>'+
+    '<h3>'+esc(j.title)+'</h3><div class="jc-excerpt">'+(j.cita?"«"+esc(j.excerpt)+"»":"Resumen: "+esc(j.excerpt))+'</div>'+
+    '<div class="jc-tags">'+j.tags.map(t=>'<span class="tag tag-'+esc(j.area)+'">'+esc(t)+"</span>").join("")+"</div>"+
+    '<span class="jc-more">Ver ficha completa →</span></div>';
+  }).join(""):'<div class="empty-state"><span class="es-icon">🔎</span>No se encontraron resultados para su búsqueda.</div>';
+}
+/* Búsqueda del texto oficial: TC → tc.gob.pe; Corte Suprema → pj.gob.pe */
+function jurisOfficialSearch(j){
+  let q;
+  const tc=j.ref.match(/(\d{1,5})-(\d{4})-([A-Z]{2,3})/);
+  if(j.org==="Tribunal Constitucional"&&tc)q='site:tc.gob.pe "'+tc[1].padStart(5,"0")+"-"+tc[2]+'"';
+  else q='site:pj.gob.pe "'+j.ref.replace(/\s*\(.*\)\s*/,"")+'"';
+  return "https://www.google.com/search?q="+encodeURIComponent(q);
+}
+function openJuris(i){
+  const j=JURISPRUDENCIA[i];if(!j)return;
+  const docs=(j.doc||[]).map(id=>DOC_TYPES.find(d=>d.id===id)).filter(Boolean);
+  const html='<div class="jf">'+
+    '<div class="jf-meta">'+(j.tipo?'<span class="jc-tipo'+(/vinculante/i.test(j.tipo)?" pv":"")+'" style="margin:0">'+esc(j.tipo)+'</span>':"")+
+      '<b>'+esc(j.ref)+'</b><span>'+esc(j.org)+" · "+esc(j.year)+'</span><span class="tag tag-'+esc(j.area)+'">'+esc(AREAS[j.area]?AREAS[j.area].name:j.area)+'</span></div>'+
+    '<h3>'+esc(j.title)+'</h3>'+
+    (j.nota?'<div class="jf-nota">⚠️ '+esc(j.nota)+'</div>':"")+
+    (j.cita?'<h4>Criterio del tribunal · cita textual'+(j.fj?' ('+esc(j.fj)+')':'')+'</h4><blockquote>«'+esc(j.excerpt)+'»</blockquote>'
+           :'<h4>Criterio del tribunal · resumen</h4><p>'+esc(j.excerpt)+'</p><p class="jf-src" style="margin-top:4px">Resumen elaborado por DuraLex: no se pudo descargar el texto oficial para citarlo literalmente.</p>')+
+    (j.practica?'<h4>¿Qué significa para usted?</h4><p>'+esc(j.practica)+'</p>':"")+
+    '<div class="jf-actions">'+
+      (j.pdf?'<a class="btn btn-primary btn-sm" href="'+esc(j.pdf)+'" target="_blank" rel="noopener">📄 Ver texto oficial (PDF)</a>':"")+
+      '<a class="btn '+(j.pdf?"btn-ghost":"btn-primary")+' btn-sm" href="'+esc(jurisOfficialSearch(j))+'" target="_blank" rel="noopener">🔎 Buscar texto oficial</a>'+
+      docs.map(d=>'<button class="btn btn-gold btn-sm" onclick="closeModal();gsDoc(\''+d.id+'\')">📝 Usar modelo: '+esc(d.name)+'</button>').join("")+
+    '</div>'+
+    '<p class="jf-src">'+(j.pdf?"El PDF se abre en la web oficial del "+(j.org==="Tribunal Constitucional"?"Tribunal Constitucional (tc.gob.pe)":"Poder Judicial (pj.gob.pe)")+"; la cita fue verificada contra ese documento. ":"La búsqueda abre los resultados en la web oficial del "+(j.org==="Tribunal Constitucional"?"Tribunal Constitucional (tc.gob.pe)":"Poder Judicial (pj.gob.pe)")+". ")+
+      'La explicación en lenguaje simple es orientativa y no reemplaza la lectura de la sentencia ni la asesoría de un abogado.</p>'+
+  '</div>';
+  openModal("Ficha de jurisprudencia",html);
 }
 
 /* ============================================================
@@ -3674,7 +3959,7 @@ function shareMail(){
    EXPORTAR / IMPORTAR SESIÓN (sin almacenamiento del navegador)
    ============================================================ */
 function exportSession(){
-  const data={app:"DuraLex",version:"2.5",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
+  const data={app:"DuraLex",version:"2.7",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
   saveBlob(JSON.stringify(data,null,1),"duralex_sesion.json","application/json");
   showToast("💾 Sesión exportada. Guarde el archivo para restaurarla luego.");
 }
