@@ -1,7 +1,7 @@
-/* DuraLex — Service Worker v2.6.0
+/* DuraLex — Service Worker v2.7.0
    Estrategia: network-first para la página (siempre la última versión si hay internet),
    cache-first para estáticos y tipografías (funcionamiento offline). */
-const CACHE = "duralex-v2.6.0";
+const CACHE = "duralex-v2.7.0";
 const CORE = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./og.png"];
 
 self.addEventListener("install", (e) => {
