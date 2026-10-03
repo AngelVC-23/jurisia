@@ -282,6 +282,20 @@ a{color:var(--primary);text-decoration:none}
 .juris-card h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;color:var(--primary);margin-bottom:8px;line-height:1.4}
 .juris-card .jc-excerpt{font-size:13px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--accent);padding-left:11px;margin-bottom:11px;line-height:1.55}
 .jc-tags{display:flex;gap:6px;flex-wrap:wrap}
+.juris-card{cursor:pointer;display:flex;flex-direction:column}
+.juris-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.jc-tipo{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--accent-pale);color:var(--primary);margin-bottom:9px}
+.jc-tipo.pv{background:var(--primary);color:#fff}
+.jc-more{margin-top:auto;padding-top:12px;font-size:13px;font-weight:700;color:var(--primary)}
+.jf-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--ink-soft);margin-bottom:12px}
+.jf-meta b{color:var(--accent-text);letter-spacing:.3px}
+.jf h3{font-family:'Libre Caslon Text',Georgia,serif;font-size:20px;color:var(--primary);line-height:1.3;margin-bottom:16px}
+.jf h4{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent-text);margin:18px 0 6px}
+.jf blockquote{margin:0;font-style:italic;color:var(--ink);border-left:3px solid var(--accent);padding:4px 0 4px 14px;line-height:1.6}
+.jf p{line-height:1.65}
+.jf-nota{background:var(--notice-bg);border:1px solid var(--notice);color:var(--notice);border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:6px;line-height:1.5}
+.jf-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.jf-src{font-size:12px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
 
 /* ---------- Guías ---------- */
 .guias-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
@@ -513,7 +527,7 @@ a{color:var(--primary);text-decoration:none}
         <button data-view="tools" onclick="showView('tools')"><span class="sicon">🧮</span>Herramientas</button>
         <button data-view="docs" onclick="showView('docs')"><span class="sicon">📁</span>Mis Documentos</button>
       </nav>
-      <div class="sidebar-foot">DuraLex v2.5 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
+      <div class="sidebar-foot">DuraLex v2.6 · Perú 🇵🇪<br>Herramienta orientativa.<br>No sustituye a un abogado.<br>🔒 Sus datos no salen de su navegador.<br><a href="#" onclick="openTerms();return false" style="color:var(--accent)">Términos</a> · <a href="#" onclick="openPrivacy();return false" style="color:var(--accent)">Privacidad</a></div>
     </aside>
 
     <main class="main">
@@ -2718,6 +2732,66 @@ const JURISPRUDENCIA = [
 {ref:"STC N° 05057-2013-PA/TC",area:"constitucional",org:"Tribunal Constitucional",year:"2015",title:"Caso Huatuco Huatuco – Reposición en el sector público y concurso de méritos",excerpt:"\"El ingreso a la administración pública se realiza necesariamente por concurso público de méritos para una plaza presupuestada y vacante de duración indeterminada; no procede la reposición sin dicho requisito.\" (Precedente vinculante)",tags:["Constitucional","Laboral público","Reposición","Precedente vinculante"]}
 ];
 
+/* Ficha ampliada de cada sentencia (se fusiona con JURISPRUDENCIA por "ref").
+   tipo: carácter de la decisión · doc: modelos de escritos relacionados ·
+   practica: explicación en lenguaje simple · nota: advertencia de vigencia ·
+   pdf: ruta local del PDF oficial (carpeta /jurisprudencia), cuando se haya incorporado. */
+const JURIS_EXTRA = {
+"CAS. LAB. N° 5423-2014 LIMA":{tipo:"Casación",doc:["despido-arbitrario"],
+ practica:"Si lo despidieron sin causa y usted elige la indemnización (en lugar de pedir la reposición), le corresponde un sueldo y medio por cada año trabajado, con un máximo de 12 sueldos. Los meses y días sueltos también se pagan de forma proporcional. Puede estimar el monto en Herramientas → Indemnización por despido."},
+"STC N° 976-2001-AA/TC":{tipo:"Doctrina del TC",doc:["reposicion-incausado","despido-nulo"],
+ practica:"Esta sentencia explica que no todo despido es igual. Si lo despidieron sin decirle el motivo (incausado) o inventando una falta (fraudulento), usted puede pedir volver a su puesto, no solo una indemnización. El despido nulo (por embarazo, sindicato, discriminación, etc.) también permite la reposición."},
+"STC N° 1124-2001-AA/TC":{tipo:"Doctrina del TC",doc:["reposicion-incausado"],
+ practica:"El derecho al trabajo incluye no ser despedido sin una causa justa. Es la base constitucional que permite a un trabajador despedido sin motivo pedir su reposición."},
+"STC N° 206-2005-PA/TC":{tipo:"Precedente vinculante",doc:["amparo","reposicion-incausado"],
+ nota:"Las reglas sobre cuándo se puede usar el amparo fueron precisadas después por el precedente Elgo Ríos (STC 02383-2013-PA/TC) y por el Nuevo Código Procesal Constitucional (Ley 31307, 2021). Confirme con un abogado qué vía corresponde a su caso.",
+ practica:"Por regla general, un despido se discute ante el juez laboral. El amparo (proceso constitucional) solo procede cuando la vía laboral no es igual de rápida y eficaz para proteger su derecho."},
+"II PLENO JURISDICCIONAL SUPREMO LABORAL":{tipo:"Pleno jurisdiccional",doc:["reposicion-incausado"],
+ practica:"Si fue víctima de un despido incausado o fraudulento, puede pedir su reposición directamente ante el juez de trabajo, sin necesidad de acudir al amparo."},
+"VI PLENO JURISDICCIONAL SUPREMO LABORAL":{tipo:"Pleno jurisdiccional",doc:["accidente-trabajo"],
+ practica:"Si sufrió un accidente de trabajo, el empleador debe responder cuando no cumplió sus deberes de seguridad y salud (equipos de protección, capacitación, supervisión). Usted puede reclamar una indemnización por los daños sufridos."},
+"CAS. N° 2195-2011 UCAYALI (IV PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["desalojo-precario"],
+ practica:"Es precario quien ocupa un inmueble sin ningún título o cuando el título que tenía ya terminó (por ejemplo, un contrato de alquiler resuelto). En esos casos el propietario puede pedir el desalojo por ocupación precaria."},
+"CAS. N° 4664-2010 PUNO (III PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["divorcio-causal"],
+ practica:"En el divorcio por separación de hecho, el juez debe proteger al cónyuge que resulte más perjudicado por la separación, y puede fijarle una indemnización o la adjudicación preferente de bienes."},
+"CAS. N° 2229-2008 LAMBAYEQUE (II PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["prescripcion-adquisitiva"],
+ practica:"Quienes poseen juntos un inmueble (coposeedores) pueden adquirirlo por prescripción adquisitiva, si cumplen los requisitos de posesión continua, pacífica, pública y como propietarios durante el plazo de ley."},
+"CAS. N° 4442-2015 MOQUEGUA (IX PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["otorgamiento-escritura"],
+ practica:"Cuando pide que la otra parte firme la escritura pública de una compraventa, el juez puede revisar si el contrato es válido. Si es nulo, no ordenará otorgar la escritura."},
+"CAS. N° 1465-2007 CAJAMARCA (I PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:["indemnizacion"],
+ practica:"Si firmó una transacción con quien le causó un daño, esa transacción puede impedir que después reclame una indemnización por lo mismo. Revise bien lo que firma antes de aceptar un acuerdo."},
+"CAS. N° 1242-2017 LIMA ESTE (X PLENO CASATORIO)":{tipo:"Pleno casatorio · precedente vinculante",doc:[],
+ practica:"El juez puede ordenar de oficio pruebas que las partes no ofrecieron, cuando sean necesarias para resolver el caso, siempre de manera excepcional y respetando el derecho de defensa."},
+"CASACIÓN N° 626-2013 MOQUEGUA":{tipo:"Doctrina jurisprudencial vinculante",doc:["cese-prision"],
+ practica:"La prisión preventiva es excepcional. El fiscal debe probar en audiencia que hay graves indicios del delito, una pena probable mayor a cuatro años y un peligro real de fuga u obstaculización, y debe justificar la duración de la medida."},
+"ACUERDO PLENARIO N° 1-2011/CJ-116":{tipo:"Acuerdo plenario",doc:["denuncia-penal","actor-civil"],
+ practica:"En delitos sexuales, la declaración de la víctima puede ser suficiente para condenar si es coherente y se corrobora con otros elementos. No se exige que la víctima demuestre que se resistió."},
+"ACUERDO PLENARIO N° 2-2005/CJ-116":{tipo:"Acuerdo plenario",doc:["denuncia-penal"],
+ practica:"La declaración de un solo testigo o de la propia víctima puede servir como prueba para condenar, siempre que sea creíble, coherente, persistente y no exista un motivo de odio o venganza detrás."},
+"ACUERDO PLENARIO N° 5-2008/CJ-116":{tipo:"Acuerdo plenario",doc:[],
+ practica:"Si el acusado acepta los cargos al inicio del juicio oral (conclusión anticipada), el juicio termina antes y puede recibir una reducción de la pena, bajo control del juez."},
+"STC N° 6423-2007-PHC/TC":{tipo:"Doctrina del TC",doc:["habeas-corpus"],
+ practica:"La policía solo puede detenerlo el tiempo estrictamente necesario para las investigaciones, aunque no se haya cumplido el plazo máximo legal. Si la detención se prolonga sin justificación, procede el hábeas corpus."},
+"STC N° 1417-2005-AA/TC":{tipo:"Precedente vinculante",doc:["pension-onp","amparo"],
+ practica:"No todo reclamo de pensión puede ir por amparo. Procede cuando se le niega el acceso a la pensión o cuando su monto es tan bajo que afecta su subsistencia; los demás reclamos van por el proceso contencioso administrativo."},
+"STC N° 4762-2007-PA/TC":{tipo:"Precedente vinculante",doc:["pension-onp"],
+ practica:"Si la ONP no le reconoce años de aportes, puede probarlos con certificados de trabajo, boletas de pago, liquidaciones de beneficios u otros documentos de la época."},
+"STC N° 1776-2004-AA/TC":{tipo:"Doctrina del TC",doc:["desafiliacion-afp"],
+ practica:"Si se afilió a una AFP sin información suficiente, o cumple los supuestos de ley, tiene derecho a desafiliarse y regresar al Sistema Nacional de Pensiones (ONP)."},
+"STC N° 2050-2002-AA/TC":{tipo:"Doctrina del TC",doc:["reconsideracion","apelacion-adm"],
+ practica:"Nadie puede ser sancionado dos veces por el mismo hecho y con el mismo fundamento (ne bis in idem). Si una entidad lo sanciona de nuevo por lo mismo, puede impugnar esa sanción."},
+"STC N° 0168-2005-PC/TC":{tipo:"Precedente vinculante",doc:["cumplimiento"],
+ practica:"Puede exigir a una autoridad que cumpla una norma o un acto administrativo mediante el proceso de cumplimiento, siempre que el mandato sea claro, vigente, cierto e incondicional. Antes debe requerirla por escrito."},
+"STC N° 02383-2013-PA/TC":{tipo:"Precedente vinculante",doc:["amparo"],
+ nota:"Verifique su aplicación tras la entrada en vigor del Nuevo Código Procesal Constitucional (Ley 31307, 2021).",
+ practica:"El juez revisará si existe otra vía judicial igual de rápida y eficaz para su caso. Solo si no existe, o si hay urgencia por un daño irreparable, el amparo será la vía adecuada."},
+"STC N° 05057-2013-PA/TC":{tipo:"Precedente vinculante",doc:["reposicion-incausado","desnaturalizacion"],
+ nota:"El Tribunal Constitucional precisó sus alcances en la STC 06681-2013-PA/TC (caso Cruz Llamos). Consulte con un abogado si trabaja en el sector público.",
+ practica:"En el Estado, para ser repuesto en un puesto permanente debe haber ingresado por concurso público a una plaza presupuestada. Si no fue así, en lugar de la reposición puede corresponderle una indemnización."}
+};
+JURISPRUDENCIA.forEach(j=>Object.assign(j,JURIS_EXTRA[j.ref]||{}));
+
+
 /* ============================================================
    DATOS — GUÍAS LEGALES (6)
    ============================================================ */
@@ -3479,13 +3553,45 @@ function renderJuris(){
   const list=JURISPRUDENCIA.filter(j=>{
     if(jurisArea!=="todas"&&j.area!==jurisArea)return false;
     if(!q)return true;
-    return norm(j.ref+" "+j.title+" "+j.excerpt+" "+j.tags.join(" ")).includes(q);
+    return norm(j.ref+" "+j.title+" "+j.excerpt+" "+j.tags.join(" ")+" "+(j.tipo||"")+" "+(j.practica||"")).includes(q);
   });
-  $("juris-grid").innerHTML=list.length?list.map(j=>
-    '<div class="juris-card bl-'+j.area+'"><div class="jc-ref"><span>'+esc(j.ref)+'</span><span class="jc-org">'+esc(j.org)+" · "+j.year+'</span></div>'+
+  $("juris-grid").innerHTML=list.length?list.map(j=>{
+    const i=JURISPRUDENCIA.indexOf(j);
+    return '<div class="juris-card bl-'+esc(j.area)+'" role="button" tabindex="0" aria-label="Ver ficha de '+esc(j.ref)+'" onclick="openJuris('+i+')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();openJuris('+i+')}">'+
+    (j.tipo?'<span class="jc-tipo'+(/vinculante/i.test(j.tipo)?" pv":"")+'">'+esc(j.tipo)+'</span>':"")+
+    '<div class="jc-ref"><span>'+esc(j.ref)+'</span><span class="jc-org">'+esc(j.org)+" · "+esc(j.year)+'</span></div>'+
     '<h3>'+esc(j.title)+'</h3><div class="jc-excerpt">'+esc(j.excerpt)+'</div>'+
-    '<div class="jc-tags">'+j.tags.map(t=>'<span class="tag tag-'+j.area+'">'+esc(t)+"</span>").join("")+"</div></div>"
-  ).join(""):'<div class="empty-state"><span class="es-icon">🔎</span>No se encontraron resultados para su búsqueda.</div>';
+    '<div class="jc-tags">'+j.tags.map(t=>'<span class="tag tag-'+esc(j.area)+'">'+esc(t)+"</span>").join("")+"</div>"+
+    '<span class="jc-more">Ver ficha completa →</span></div>';
+  }).join(""):'<div class="empty-state"><span class="es-icon">🔎</span>No se encontraron resultados para su búsqueda.</div>';
+}
+/* Búsqueda del texto oficial: TC → tc.gob.pe; Corte Suprema → pj.gob.pe */
+function jurisOfficialSearch(j){
+  let q;
+  const tc=j.ref.match(/(\d{1,5})-(\d{4})-([A-Z]{2,3})/);
+  if(j.org==="Tribunal Constitucional"&&tc)q='site:tc.gob.pe "'+tc[1].padStart(5,"0")+"-"+tc[2]+'"';
+  else q='site:pj.gob.pe "'+j.ref.replace(/\s*\(.*\)\s*/,"")+'"';
+  return "https://www.google.com/search?q="+encodeURIComponent(q);
+}
+function openJuris(i){
+  const j=JURISPRUDENCIA[i];if(!j)return;
+  const docs=(j.doc||[]).map(id=>DOC_TYPES.find(d=>d.id===id)).filter(Boolean);
+  const html='<div class="jf">'+
+    '<div class="jf-meta">'+(j.tipo?'<span class="jc-tipo'+(/vinculante/i.test(j.tipo)?" pv":"")+'" style="margin:0">'+esc(j.tipo)+'</span>':"")+
+      '<b>'+esc(j.ref)+'</b><span>'+esc(j.org)+" · "+esc(j.year)+'</span><span class="tag tag-'+esc(j.area)+'">'+esc(AREAS[j.area]?AREAS[j.area].name:j.area)+'</span></div>'+
+    '<h3>'+esc(j.title)+'</h3>'+
+    (j.nota?'<div class="jf-nota">⚠️ '+esc(j.nota)+'</div>':"")+
+    '<h4>Criterio del tribunal</h4><blockquote>'+esc(j.excerpt)+'</blockquote>'+
+    (j.practica?'<h4>¿Qué significa para usted?</h4><p>'+esc(j.practica)+'</p>':"")+
+    '<div class="jf-actions">'+
+      (j.pdf?'<a class="btn btn-primary btn-sm" href="'+esc(j.pdf)+'" target="_blank" rel="noopener">📄 Ver sentencia completa (PDF)</a>':"")+
+      '<a class="btn '+(j.pdf?"btn-ghost":"btn-primary")+' btn-sm" href="'+esc(jurisOfficialSearch(j))+'" target="_blank" rel="noopener">🔎 Buscar texto oficial</a>'+
+      docs.map(d=>'<button class="btn btn-gold btn-sm" onclick="closeModal();gsDoc(\''+d.id+'\')">📝 Usar modelo: '+esc(d.name)+'</button>').join("")+
+    '</div>'+
+    '<p class="jf-src">'+(j.pdf?"PDF obtenido de la fuente oficial. ":"La búsqueda abre los resultados en la web oficial del "+(j.org==="Tribunal Constitucional"?"Tribunal Constitucional (tc.gob.pe)":"Poder Judicial (pj.gob.pe)")+". ")+
+      'La explicación en lenguaje simple es orientativa y no reemplaza la lectura de la sentencia ni la asesoría de un abogado.</p>'+
+  '</div>';
+  openModal("Ficha de jurisprudencia",html);
 }
 
 /* ============================================================
@@ -3674,7 +3780,7 @@ function shareMail(){
    EXPORTAR / IMPORTAR SESIÓN (sin almacenamiento del navegador)
    ============================================================ */
 function exportSession(){
-  const data={app:"DuraLex",version:"2.5",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
+  const data={app:"DuraLex",version:"2.6",fecha:new Date().toISOString(),docs:savedDocs,borrador:wizDoc?{id:wizDoc.id,valores:wizValues}:null};
   saveBlob(JSON.stringify(data,null,1),"duralex_sesion.json","application/json");
   showToast("💾 Sesión exportada. Guarde el archivo para restaurarla luego.");
 }
